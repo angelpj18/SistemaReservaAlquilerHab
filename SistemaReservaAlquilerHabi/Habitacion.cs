@@ -12,6 +12,7 @@ namespace SistemaReservaAlquilerHabi
         public string TipoHabitacion;
         public string Descripción;
 
+
         
     }
 }
