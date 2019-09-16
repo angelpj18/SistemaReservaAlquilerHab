@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaAlquilerHabi
 {
-    public class Class1
-    
+    class Reserva
+    {
+        int codReserva;
+        DateTime fechaInicio;
+        DateTime fechaFin;
+
+    }
 }
