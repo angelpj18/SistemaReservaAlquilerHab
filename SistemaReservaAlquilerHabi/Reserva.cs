@@ -12,5 +12,7 @@ namespace SistemaReservaAlquilerHabi
         DateTime fechaInicio;
         DateTime fechaFin;
 
+        public void RealizarReserva() { }
+
     }
 }

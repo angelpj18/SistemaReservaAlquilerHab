@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaAlquilerHabi
 {
-    class Alquiler
+    class Categoria
     {
-        
-        int codAlquiler;
-        string fechaAlquilerDesde;
-        string fechaAlquilerHasta;
-
-        public Alquiler() { }
     }
-
 }
