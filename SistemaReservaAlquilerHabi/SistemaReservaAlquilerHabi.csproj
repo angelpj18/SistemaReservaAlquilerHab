@@ -44,6 +44,7 @@
     <Compile Include="Alquiler.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Habitacion.cs" />
+    <Compile Include="Piso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reserva.cs" />
   </ItemGroup>
