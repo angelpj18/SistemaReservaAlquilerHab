@@ -7,9 +7,5 @@ using System.Threading.Tasks;
 namespace SistemaReservaAlquilerHabi
 {
     public class Class1
-    {
-        int codAlquiler;
-        string fechaAlquilerDesde;
-        string fechaAlquilerHasta;
-    }
+    
 }
