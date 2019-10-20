@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaReservaAlquilerHabi", "SistemaReservaAlquilerHabi\SistemaReservaAlquilerHabi.csproj", "{45B6220C-65C1-4182-9CFC-38B90825AAF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfazReservaHabitacion", "frmHabitación\InterfazReservaHabitacion.csproj", "{2AB167FC-2AB2-4E16-85B9-A13B06AE220E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfazResAlqHabit", "InterfazResAlqHabit\InterfazResAlqHabit.csproj", "{E5FA64A6-3077-4C20-892F-C141B9F47FD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{45B6220C-65C1-4182-9CFC-38B90825AAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45B6220C-65C1-4182-9CFC-38B90825AAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45B6220C-65C1-4182-9CFC-38B90825AAF0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2AB167FC-2AB2-4E16-85B9-A13B06AE220E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2AB167FC-2AB2-4E16-85B9-A13B06AE220E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2AB167FC-2AB2-4E16-85B9-A13B06AE220E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2AB167FC-2AB2-4E16-85B9-A13B06AE220E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FA64A6-3077-4C20-892F-C141B9F47FD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FA64A6-3077-4C20-892F-C141B9F47FD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FA64A6-3077-4C20-892F-C141B9F47FD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FA64A6-3077-4C20-892F-C141B9F47FD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

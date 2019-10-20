@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaReservaAlquilerHabi;
 
-namespace frmHabitación
+namespace InterfazReservaHabitacion
 {
     public partial class frmCategoria : Form
     {

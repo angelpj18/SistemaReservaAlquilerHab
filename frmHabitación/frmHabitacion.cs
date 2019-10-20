@@ -135,8 +135,10 @@ namespace frmHabitación
         {
             ActualizarListaHabitacion();
             cmbCategoria.DataSource = Enum.GetValues(typeof(CategoriaHabi));
+            cmbPiso.DataSource = Enum.GetValues(typeof(Piso));
  
             cmbCategoria.SelectedItem = null;
+            cmbPiso.SelectedItem = null;
         }
     }
 }

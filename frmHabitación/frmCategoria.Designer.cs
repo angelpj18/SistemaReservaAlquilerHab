@@ -1,4 +1,4 @@
-﻿namespace frmHabitación
+﻿namespace InterfazReservaHabitacion
 {
     partial class frmCategoria
     {
@@ -157,7 +157,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label4);
             this.Name = "frmCategoria";
-            this.Text = "frmCategoria";
+            this.Text = "Categoría";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCodigo)).EndInit();
             this.ResumeLayout(false);

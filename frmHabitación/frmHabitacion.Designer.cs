@@ -173,7 +173,6 @@
             // rdbSi
             // 
             this.rdbSi.AutoSize = true;
-            this.rdbSi.Checked = true;
             this.rdbSi.Location = new System.Drawing.Point(109, 183);
             this.rdbSi.Name = "rdbSi";
             this.rdbSi.Size = new System.Drawing.Size(34, 17);
