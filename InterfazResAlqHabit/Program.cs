@@ -16,7 +16,7 @@ namespace InterfazResAlqHabit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHabitación());
+            Application.Run(new frmHabitacion());
         }
     }
 }

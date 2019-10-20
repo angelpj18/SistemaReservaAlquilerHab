@@ -52,19 +52,19 @@
     <Compile Include="frmCategoria.Designer.cs">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHabitación.cs">
+    <Compile Include="frmHabitacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHabitación.Designer.cs">
-      <DependentUpon>frmHabitación.cs</DependentUpon>
+    <Compile Include="frmHabitacion.Designer.cs">
+      <DependentUpon>frmHabitacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCategoria.resx">
       <DependentUpon>frmCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHabitación.resx">
-      <DependentUpon>frmHabitación.cs</DependentUpon>
+    <EmbeddedResource Include="frmHabitacion.resx">
+      <DependentUpon>frmHabitacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,6 +87,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaReservaAlquilerHabi\SistemaReservaAlquilerHabi.csproj">
+      <Project>{45b6220c-65c1-4182-9cfc-38b90825aaf0}</Project>
+      <Name>SistemaReservaAlquilerHabi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
