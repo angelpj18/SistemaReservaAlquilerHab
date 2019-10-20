@@ -11,6 +11,7 @@ namespace SistemaReservaAlquilerHabi
         public string Id;
         public string TipoHabitacion;
         public string Descripción;
+        public string Categoria;
 
 
         
