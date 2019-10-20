@@ -6,14 +6,51 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaAlquilerHabi
 {
-    class Habitacion
+    public enum EstadoHab
     {
-        public string Id;
-        public string TipoHabitacion;
-        public string Descripción;
-        public string Categoria;
+        Si,
+        No
+    }
+    public class Habitacion
+    {
+        public string detalle { get; set; }
+        public string descripcion { get; set; }
+        public Categoria categoria { get; set; }
+        public Piso piso { get; set; }
+        public EstadoHab habilitado { get; set; }
 
 
-        
+        public static List<Habitacion> listaHabitaciones = new List<Habitacion>();
+
+
+
+        public static void AgregarHabitacion(Habitacion h)
+        {
+            listaHabitaciones.Add(h);
+        }
+
+
+        public static void EliminaHabitacion(Habitacion h)
+        {
+            listaHabitaciones.Remove(h);
+        }
+
+
+        public static void EditarHabitacion(Habitacion h, int indice)
+        {
+            Habitacion.listaHabitaciones[indice] = h;
+        }
+
+
+        public static List<Habitacion> ObtenerHabitacion()
+        {
+            return listaHabitaciones;
+        }
+
+
+        public override string ToString()
+        {
+            return this.detalle;
+        }
     }
 }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace SistemaReservaAlquilerHabi
 {
-    class Piso
+    public class Piso
     {
+
         int nroPiso;
         string descripcion;
     }
