@@ -45,5 +45,11 @@ namespace Interfaz_Reserva_Alqui_Habi
             frmCliente frmCli = new frmCliente();
             frmCli.Show();
         }
+
+        private void pisoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPiso frmpi = new frmPiso();
+            frmpi.Show();
+        }
     }
 }

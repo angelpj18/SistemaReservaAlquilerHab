@@ -32,41 +32,51 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Cliente cli = ObtenerClienteFormulario();
+            Cliente c = ObtenerClienteFormulario();
 
-            Cliente.AgregarCliente(cli);
+            Cliente.AgregarCliente(c);
+
             actualizarListaCliente();
             LimpiarFormulario();
         }
         private Cliente ObtenerClienteFormulario()
         {
             Cliente c = new Cliente();
-            c.ciCliente = txtCi.Text;
-            c.nombre = txtNombre.Text;
+            c.ciCliente = txtNombre.Text;
+            c.nombre = txtCi.Text;
             c.direccion = txtDireccion.Text;
             c.telefono = txtTelefono.Text;
+            c.email = txtEmail.Text;
 
             return c;
         }
         private void LimpiarFormulario()
         {
-            txtCi.Text = "";
             txtNombre.Text = "";
+            txtCi.Text = "";
             txtDireccion.Text = "";
             txtDireccion.Text = "";
             txtTelefono.Text = "";
+            txtEmail.Text = "";
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Cliente cli = (Cliente)lstCliente.SelectedItem;
-            if (cli != null)
-            {
-                int index = lstCliente.SelectedIndex;
-                Cliente.listaClientes[index] = ObtenerClienteFormulario();
-                actualizarListaCliente();
+            var c = ObtenerClienteFormulario();
+
+            if (this.lstCliente.SelectedItems.Count == 0)
+                {
+                    MessageBox.Show("Favor seleccione una fila");
+                }
+
+                else
+                {
+                    int indice = lstCliente.SelectedIndex;
+                    Cliente.EditarCliente(c, indice);
+                    actualizarListaCliente();
+                }
             }
-        }
+        
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -91,14 +101,14 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void lstCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cliente cli = (Cliente)lstCliente.SelectedItem;
-            if (cli != null)
+            Cliente c = (Cliente)lstCliente.SelectedItem;
+            if (c != null)
             {
-                txtCi.Text = cli.ciCliente;
-                txtNombre.Text = cli.nombre;
-                txtDireccion.Text = cli.direccion;
-                txtTelefono.Text = cli.telefono;
-                txtEmail.Text = cli.email;
+                txtCi.Text = c.nombre;
+                txtNombre.Text = c.ciCliente;
+                txtDireccion.Text = c.direccion;
+                txtTelefono.Text = c.telefono;
+                txtEmail.Text = c.email;
                 
             }
         }

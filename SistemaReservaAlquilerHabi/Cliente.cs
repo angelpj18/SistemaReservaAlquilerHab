@@ -14,6 +14,11 @@ namespace SistemaReservaAlquilerHabi
         public string telefono { get; set; }
         public string email { get; set; }
 
+        public override string ToString()
+        {
+            return nombre;
+        }
+
 
         public static List<Cliente> listaClientes = new List<Cliente>();
 
