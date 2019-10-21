@@ -17,7 +17,7 @@ namespace SistemaReservaAlquilerHabi
     }
     public class Categoria
     {
-        public int codigo { get; set; }
+        public string codigo { get; set; }
         public string descripcion { get; set; }
         public Categoria categoria { get; set; }
 

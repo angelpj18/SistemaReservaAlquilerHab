@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaReservaAlquilerHabi;
 
-namespace InterfazResAlqHabit
+namespace Interfaz_Reserva_Alqui_Habi
 {
     public partial class frmHabitacion : Form
     {
@@ -18,8 +18,15 @@ namespace InterfazResAlqHabit
             InitializeComponent();
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Habitacion habi = ObtenerHabitacionFormulario();
 
+            Habitacion.AgregarHabitacion(habi);
+            ActualizarListaHabitacion();
+            LimpiarFormulario();
 
+        }
 
         private void LimpiarFormulario()
         {
@@ -27,10 +34,7 @@ namespace InterfazResAlqHabit
             cmbCategoria.SelectedItem = null;
             cmbPiso.SelectedItem = null;
             txtDescripcion.Text = "";
-            rdbNo.Checked = false;
         }
-
-
 
         private void ActualizarListaHabitacion()
         {
@@ -38,12 +42,13 @@ namespace InterfazResAlqHabit
             lstHabitacion.DataSource = Habitacion.ObtenerHabitacion();
         }
 
-
-
         private Habitacion ObtenerHabitacionFormulario()
         {
             Habitacion h = new Habitacion();
             h.detalle = txtDetalle.Text;
+            h.categoria = (Categoria)cmbCategoria.SelectedItem;
+            h.piso = (Piso)cmbPiso.SelectedItem;
+            h.descripcion = txtDescripcion.Text;
 
             if (rdbSi.Checked)
             {
@@ -54,16 +59,41 @@ namespace InterfazResAlqHabit
                 h.habilitado = EstadoHab.No;
             }
 
-            h.categoria = (Categoria)cmbCategoria.SelectedItem;
-            h.piso = (Piso)cmbPiso.SelectedItem;
-            h.descripcion = txtDescripcion.Text;
-
             return h;
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (lstHabitacion.SelectedItems.Count > 0)
+            {
 
+                Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
+                Habitacion.listaHabitaciones.Remove(habi);
+                ActualizarListaHabitacion();
+                LimpiarFormulario();
+            }
+            else
+            {
+                MessageBox.Show("Para eliminar debe seleccionar una fila");
+            }
 
+        }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
+            if (habi != null)
+            {
+                int index = lstHabitacion.SelectedIndex;
+                Habitacion.listaHabitaciones[index] = ObtenerHabitacionFormulario();
+                ActualizarListaHabitacion();
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
 
         private void lstHabitacion_Click(object sender, EventArgs e)
         {
@@ -90,52 +120,11 @@ namespace InterfazResAlqHabit
         private void frmHabitacion_Load(object sender, EventArgs e)
         {
             ActualizarListaHabitacion();
-            cmbCategoria.DataSource = Enum.GetValues(typeof(CategoriaHabi));
-            cmbPiso.DataSource = Enum.GetValues(typeof(Piso));
+            cmbCategoria.DataSource = Categoria.ObtenerCatgoria();
+         // cmbPiso.DataSource = Piso.ObtenerPiso();
 
             cmbCategoria.SelectedItem = null;
             cmbPiso.SelectedItem = null;
-        }
-
-        private void btnAgregar_Click_1(object sender, EventArgs e)
-        {
-            Habitacion habitacion = ObtenerHabitacionFormulario();
-
-            Habitacion.AgregarHabitacion(habitacion);
-            ActualizarListaHabitacion();
-            LimpiarFormulario();
-        }
-
-        private void btnEliminar_Click_1(object sender, EventArgs e)
-        {
-            if (lstHabitacion.SelectedItems.Count > 0)
-            {
-
-                Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
-                Habitacion.listaHabitaciones.Remove(habi);
-                ActualizarListaHabitacion();
-                LimpiarFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Para eliminar debe seleccionar una fila");
-            }
-        }
-
-        private void btnEditar_Click_1(object sender, EventArgs e)
-        {
-            Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
-            if (habi != null)
-            {
-                int index = lstHabitacion.SelectedIndex;
-                Habitacion.listaHabitaciones[index] = ObtenerHabitacionFormulario();
-                ActualizarListaHabitacion();
-            }
-        }
-
-        private void btnLimpiar_Click_1(object sender, EventArgs e)
-        {
-            LimpiarFormulario();
         }
     }
 }

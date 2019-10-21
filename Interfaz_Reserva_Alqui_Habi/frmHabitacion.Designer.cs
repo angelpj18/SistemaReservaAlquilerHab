@@ -1,4 +1,4 @@
-﻿namespace InterfazResAlqHabit
+﻿namespace Interfaz_Reserva_Alqui_Habi
 {
     partial class frmHabitacion
     {
@@ -49,7 +49,7 @@
             // rdbNo
             // 
             this.rdbNo.AutoSize = true;
-            this.rdbNo.Location = new System.Drawing.Point(165, 180);
+            this.rdbNo.Location = new System.Drawing.Point(166, 184);
             this.rdbNo.Name = "rdbNo";
             this.rdbNo.Size = new System.Drawing.Size(39, 17);
             this.rdbNo.TabIndex = 49;
@@ -61,7 +61,7 @@
             // 
             this.rdbSi.AutoSize = true;
             this.rdbSi.Checked = true;
-            this.rdbSi.Location = new System.Drawing.Point(115, 179);
+            this.rdbSi.Location = new System.Drawing.Point(116, 183);
             this.rdbSi.Name = "rdbSi";
             this.rdbSi.Size = new System.Drawing.Size(34, 17);
             this.rdbSi.TabIndex = 48;
@@ -72,7 +72,7 @@
             // lblHabilitado
             // 
             this.lblHabilitado.AutoSize = true;
-            this.lblHabilitado.Location = new System.Drawing.Point(30, 179);
+            this.lblHabilitado.Location = new System.Drawing.Point(31, 183);
             this.lblHabilitado.Name = "lblHabilitado";
             this.lblHabilitado.Size = new System.Drawing.Size(54, 13);
             this.lblHabilitado.TabIndex = 47;
@@ -81,7 +81,7 @@
             // cmbPiso
             // 
             this.cmbPiso.FormattingEnabled = true;
-            this.cmbPiso.Location = new System.Drawing.Point(115, 108);
+            this.cmbPiso.Location = new System.Drawing.Point(116, 112);
             this.cmbPiso.Name = "cmbPiso";
             this.cmbPiso.Size = new System.Drawing.Size(121, 21);
             this.cmbPiso.TabIndex = 46;
@@ -89,7 +89,7 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(115, 76);
+            this.cmbCategoria.Location = new System.Drawing.Point(116, 80);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 45;
@@ -97,54 +97,55 @@
             // lstHabitacion
             // 
             this.lstHabitacion.FormattingEnabled = true;
-            this.lstHabitacion.Location = new System.Drawing.Point(256, 32);
+            this.lstHabitacion.Location = new System.Drawing.Point(257, 36);
             this.lstHabitacion.Name = "lstHabitacion";
-            this.lstHabitacion.Size = new System.Drawing.Size(177, 173);
+            this.lstHabitacion.Size = new System.Drawing.Size(177, 160);
             this.lstHabitacion.TabIndex = 44;
+            this.lstHabitacion.Click += new System.EventHandler(this.lstHabitacion_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(358, 238);
+            this.btnLimpiar.Location = new System.Drawing.Point(347, 242);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 34);
             this.btnLimpiar.TabIndex = 43;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(255, 238);
+            this.btnEditar.Location = new System.Drawing.Point(256, 242);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 34);
             this.btnEditar.TabIndex = 42;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(154, 238);
+            this.btnEliminar.Location = new System.Drawing.Point(155, 242);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 34);
             this.btnEliminar.TabIndex = 41;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(57, 238);
+            this.btnAgregar.Location = new System.Drawing.Point(58, 242);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 34);
             this.btnAgregar.TabIndex = 40;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(115, 141);
+            this.txtDescripcion.Location = new System.Drawing.Point(116, 145);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 39;
@@ -152,7 +153,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(30, 144);
+            this.label4.Location = new System.Drawing.Point(31, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 38;
@@ -161,7 +162,7 @@
             // lblPiso
             // 
             this.lblPiso.AutoSize = true;
-            this.lblPiso.Location = new System.Drawing.Point(30, 111);
+            this.lblPiso.Location = new System.Drawing.Point(31, 115);
             this.lblPiso.Name = "lblPiso";
             this.lblPiso.Size = new System.Drawing.Size(27, 13);
             this.lblPiso.TabIndex = 37;
@@ -170,7 +171,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(30, 79);
+            this.lblCategoria.Location = new System.Drawing.Point(31, 83);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(54, 13);
             this.lblCategoria.TabIndex = 36;
@@ -178,7 +179,7 @@
             // 
             // txtDetalle
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(115, 47);
+            this.txtDetalle.Location = new System.Drawing.Point(116, 51);
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.Size = new System.Drawing.Size(82, 20);
             this.txtDetalle.TabIndex = 35;
@@ -186,7 +187,7 @@
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.Location = new System.Drawing.Point(30, 47);
+            this.lblDetalle.Location = new System.Drawing.Point(31, 51);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(40, 13);
             this.lblDetalle.TabIndex = 34;
@@ -196,7 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 304);
+            this.ClientSize = new System.Drawing.Size(465, 313);
             this.Controls.Add(this.rdbNo);
             this.Controls.Add(this.rdbSi);
             this.Controls.Add(this.lblHabilitado);
@@ -214,7 +215,8 @@
             this.Controls.Add(this.txtDetalle);
             this.Controls.Add(this.lblDetalle);
             this.Name = "frmHabitacion";
-            this.Text = "frmHabitacion";
+            this.Text = "Habitación";
+            this.Load += new System.EventHandler(this.frmHabitacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
