@@ -7,14 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaReservaAlquilerHabi;
 
 namespace Interfaz_Reserva_Alqui_Habi
 {
     public partial class frmAlquiler : Form
     {
+
+      
         public frmAlquiler()
         {
             InitializeComponent();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+
+         
         }
     }
 }
