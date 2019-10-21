@@ -82,6 +82,12 @@
     <Compile Include="frmPiso.Designer.cs">
       <DependentUpon>frmPiso.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReserva.Designer.cs">
+      <DependentUpon>frmReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAlquiler.resx">
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPiso.resx">
       <DependentUpon>frmPiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReserva.resx">
+      <DependentUpon>frmReserva.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

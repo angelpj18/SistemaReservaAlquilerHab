@@ -51,5 +51,11 @@ namespace Interfaz_Reserva_Alqui_Habi
             frmPiso frmpi = new frmPiso();
             frmpi.Show();
         }
+
+        private void reservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReserva frmRe = new frmReserva();
+            frmRe.Show();
+        }
     }
 }
