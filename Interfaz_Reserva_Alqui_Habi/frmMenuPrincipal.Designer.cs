@@ -103,6 +103,7 @@
             this.pisoToolStripMenuItem.Name = "pisoToolStripMenuItem";
             this.pisoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pisoToolStripMenuItem.Text = "Piso";
+            this.pisoToolStripMenuItem.Click += new System.EventHandler(this.pisoToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
