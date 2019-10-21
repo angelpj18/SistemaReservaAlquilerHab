@@ -39,5 +39,11 @@ namespace Interfaz_Reserva_Alqui_Habi
             frmCategoria frmCateg = new frmCategoria();
             frmCateg.Show();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente frmCli = new frmCliente();
+            frmCli.Show();
+        }
     }
 }
