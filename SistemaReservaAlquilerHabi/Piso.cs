@@ -9,7 +9,39 @@ namespace SistemaReservaAlquilerHabi
     public class Piso
     {
 
-        int nroPiso;
-        string descripcion;
+        public string NroPiso { get; set; }
+        public string Descripcion { get; set; }
+
+        public override string ToString()
+        {
+            return Descripcion;
+        }
+
+        public static List<Piso> listaPisos = new List<Piso>();
+
+
+
+        public static void AgregarPiso(Piso p)
+        {
+            listaPisos.Add(p);
+        }
+
+
+        public static void EliminaPiso(Piso p)
+        {
+            listaPisos.Remove(p);
+        }
+
+
+        public static void EditarPiso(Piso p, int indice)
+        {
+            Piso.listaPisos[indice] = p;
+        }
+
+
+        public static List<Piso> ObtenerPiso()
+        {
+            return listaPisos;
+        }
     }
 }
