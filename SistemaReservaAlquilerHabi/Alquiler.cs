@@ -15,17 +15,19 @@ namespace SistemaReservaAlquilerHabi
     public enum EstadoReserva
     {
         Cancelada,
-        Reservada
+        Reservada,
+        EnEspera,
     }
     public class Alquiler
     {
-        public double Habitacion { get; set; }
-        public string Cliente { get; set; }
+        public string CodAlquiler { get; set; }
+        public Cliente Cliente { get; set; }
+        public Habitacion Habitacion { get; set; }
+       
+        public TipoReserva Tipo_reserva { get; set; }
+        public int Costo { get; set; }
 
-        public TipoReserva tipo_reserva { get; set; }
-        public double costo { get; set; }
-
-        public EstadoReserva estado_reserva { get; set; }
+        public EstadoReserva Estado_reserva { get; set; }
 
         public static List<Alquiler> listaAlquileres = new List<Alquiler>();
 
@@ -51,7 +53,7 @@ namespace SistemaReservaAlquilerHabi
 
         public override string ToString()
         {
-            return this.Cliente;
+            return this.CodAlquiler;
         }
     }
 
