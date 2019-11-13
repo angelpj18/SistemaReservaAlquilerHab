@@ -11,11 +11,19 @@ namespace SistemaReservaAlquilerHabi
         Si,
         No
     }
+    public enum CategoriaH
+    {
+        Individual,
+        Doble,
+        Premium,
+        Presidencial
+        
+    }
     public class Habitacion
     {
         public string detalle { get; set; }
         public string descripcion { get; set; }
-        public Categoria categoria { get; set; }
+        public CategoriaH categoria { get; set; }
         public Piso piso { get; set; }
         public EstadoHab habilitado { get; set; }
 

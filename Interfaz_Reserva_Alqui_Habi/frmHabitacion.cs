@@ -46,7 +46,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             Habitacion h = new Habitacion();
             h.detalle = txtDetalle.Text;
-            h.categoria = (Categoria)cmbCategoria.SelectedItem;
+            h.categoria = (CategoriaH)cmbCategoria.SelectedItem;
             h.piso = (Piso)cmbPiso.SelectedItem;
             h.descripcion = txtDescripcion.Text;
 
@@ -120,7 +120,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void frmHabitacion_Load(object sender, EventArgs e)
         {
             ActualizarListaHabitacion();
-            cmbCategoria.DataSource = Categoria.ObtenerCatgoria();
+            cmbCategoria.DataSource = Enum.GetValues(typeof(CategoriaH));
             cmbPiso.DataSource = Piso.ObtenerPiso();
 
             cmbCategoria.SelectedItem = null;
