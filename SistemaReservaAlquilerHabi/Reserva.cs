@@ -8,6 +8,9 @@ namespace SistemaReservaAlquilerHabi
 {
     public class Reserva
     {
+
+
+        //Tipo Reserva va a ser Enum
         public int codReserva { get; set; }
         public string detalle { get; set; }
         public string estado { get; set; }

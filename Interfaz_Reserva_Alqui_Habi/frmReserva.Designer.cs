@@ -238,9 +238,9 @@
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.Location = new System.Drawing.Point(43, 78);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(43, 13);
+            this.lblDetalle.Size = new System.Drawing.Size(66, 13);
             this.lblDetalle.TabIndex = 51;
-            this.lblDetalle.Text = "Detalle:";
+            this.lblDetalle.Text = "Descripcion:";
             // 
             // lblCodigo
             // 
