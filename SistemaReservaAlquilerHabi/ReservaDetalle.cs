@@ -13,7 +13,5 @@ namespace SistemaReservaAlquilerHabi
         public int Cantidad { get; set; }
 
 
-
-
     }
 }
