@@ -14,6 +14,7 @@ namespace SistemaReservaAlquilerHabi
     public enum CategoriaH
     {
         Individual,
+        Estandar,
         Doble,
         Premium,
         Presidencial
