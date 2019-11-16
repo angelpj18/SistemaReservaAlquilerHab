@@ -21,6 +21,7 @@ namespace SistemaReservaAlquilerHabi
     }
     public class Habitacion
     {
+        public int Numero { get; set; }
         public string detalle { get; set; }
         public string descripcion { get; set; }
         public CategoriaH categoria { get; set; }
