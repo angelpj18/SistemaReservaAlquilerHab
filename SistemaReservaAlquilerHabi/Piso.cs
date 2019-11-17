@@ -101,7 +101,7 @@ namespace SistemaReservaAlquilerHabi
         }
 
     }
-        public static List<Piso> ObtenerPiso()
+        public static List<Piso> ObtenerPisos()
         {
 
             Piso piso;
@@ -131,5 +131,27 @@ namespace SistemaReservaAlquilerHabi
             return listaPisos;
         }
         }
+
+        public static Piso ObtenerPiso(int id)
+        {
+            Piso piso = null;
+
+            if (listaPisos.Count == 0)
+            {
+                Piso.ObtenerPisos();
+            }
+
+            foreach (Piso p in listaPisos)
+            {
+                if (p.Id == id)
+                {
+                    piso = p;
+                    break;
+                }
+            }
+
+            return piso;
+        }
+
     }
 }
