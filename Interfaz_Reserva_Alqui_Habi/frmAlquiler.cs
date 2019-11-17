@@ -15,7 +15,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 {
     public partial class frmAlquiler : Form
     {
-        string accion;
+       public string accion;
 
         public frmAlquiler()
         {
@@ -24,54 +24,37 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            accion = "AGREGAR";
+            accion = "I";
             LimpiarFormulario();
             DesbloquearFormulario();
-            txtCodigo.Focus();
         }
         private void LimpiarFormulario()
         {
+
             txtCodigo.Text = "";
-            cboHabitacion.SelectedItem = null;
-            cboCliente.SelectedItem = null;
-            cboTipoReserva.SelectedItem = null;
-            nudCosto.Value = 0;
-            cboEstadoReserva.SelectedItem = null;
+            dtpFechaDesde.Value = System.DateTime.Now;
+            dtpFechaHasta.Value = System.DateTime.Now;
+            cboTipoAlquiler.SelectedItem = null;
+            
         }
 
         private void DesbloquearFormulario()
         {
-            txtCodigo.Enabled = true;
-            cboHabitacion.Enabled = true;
-            cboCliente.Enabled = true;
-            cboTipoReserva.Enabled = true;
-            nudCosto.Enabled = true;
-            cboEstadoReserva.Enabled = true;
-
-            btnGuardar.Enabled = true;
-            btnCancelar.Enabled = true;
-            btnLimpiar.Enabled = true;
-
-           
-            btnAgregar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnEliminar.Enabled = false;
+            dtpFechaDesde.Enabled = true;
+            dtpFechaHasta.Enabled = true;
+            cboTipoAlquiler.Enabled = true;
 
         }
 
         private void frmAlquiler_Load(object sender, EventArgs e)
         {
+
             ActualizarListaAlquileres();
 
-            cboCliente.DataSource = Cliente.ObtenerClientes();
-            cboHabitacion.DataSource = Habitacion.ObtenerHabitacion();
-            cboTipoReserva.DataSource = Enum.GetValues(typeof(TipoReserva));
-            cboEstadoReserva.DataSource = Enum.GetValues(typeof(EstadoReserva));
+            cboTipoAlquiler.DataSource = Enum.GetValues(typeof(TipoAlquiler));
 
-            cboCliente.SelectedItem = null;
-            cboHabitacion.SelectedItem = null;
-            cboTipoReserva.SelectedItem = null;
-            cboEstadoReserva.SelectedItem = null;
+            cboTipoAlquiler.SelectedItem = null;
+
 
             BloquearFormulario();
 
@@ -79,21 +62,10 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void BloquearFormulario()
         {
-            txtCodigo.Enabled = false;
-            cboHabitacion.Enabled = false;
-            cboCliente.Enabled = false;
-            cboTipoReserva.Enabled = false;
-            nudCosto.Enabled = false;
-            cboEstadoReserva.Enabled = false;
 
-            btnGuardar.Enabled = false;
-            btnCancelar.Enabled = false;
-            btnLimpiar.Enabled = false;
-
-
-            btnAgregar.Enabled = true;
-            btnEditar.Enabled = true;
-            btnEliminar.Enabled = true;
+            dtpFechaDesde.Enabled = false;
+            dtpFechaHasta.Enabled = false;
+            cboTipoAlquiler.Enabled = false;
 
         }
         private void ActualizarListaAlquileres()
@@ -105,17 +77,16 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (accion == "AGREGAR")
+            if (accion == "I")
             {
                 Alquiler alquiler = ObtenerDatosFormulario();
-
                 Alquiler.AgregarAlquiler(alquiler);
             }
-            else if (accion == "EDITAR")
+            else if (accion == "E")
             {
                 int index = lstAlquileres.SelectedIndex;
-
-                Alquiler.listaAlquileres[index] = ObtenerDatosFormulario();
+                Alquiler alquiler = ObtenerDatosFormulario();
+                Alquiler.EditarAlquiler(index, alquiler);
 
             }
             ActualizarListaAlquileres();
@@ -125,24 +96,22 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private Alquiler ObtenerDatosFormulario()
             {
-                Alquiler alqui = new Alquiler();
-
-            alqui.CodAlquiler = txtCodigo.Text;
-            alqui.Cliente = (Cliente)cboCliente.SelectedItem;
-            alqui.Habitacion = (Habitacion)cboHabitacion.SelectedItem;
-            alqui.Tipo_reserva = (TipoReserva)cboTipoReserva.SelectedItem;
-            alqui.Costo = (int)nudCosto.Value;
-            alqui.Estado_reserva = (EstadoReserva)cboEstadoReserva.SelectedItem;
-
-                return alqui;
+            Alquiler alqui = new Alquiler();
+            {
+                alqui.Id = Convert.ToInt32(txtCodigo.Text);
             }
+            alqui.FechaAlquilerDesde = dtpFechaDesde.Value.Date;
+            alqui.FechaAlquilerHasta = dtpFechaHasta.Value.Date;
+            alqui.TipoAlquiler = (TipoAlquiler)cboTipoAlquiler.SelectedItem;
+            return alqui;
+        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             accion = "EDITAR";
             DesbloquearFormulario();
             txtCodigo.Focus();
-           
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -163,17 +132,9 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void lstAlquileres_Click(object sender, EventArgs e)
         {
             Alquiler alqui = (Alquiler)lstAlquileres.SelectedItem;
-
-            if (alqui != null)
-            {
-                txtCodigo.Text = alqui.CodAlquiler;
-                cboCliente.SelectedItem = alqui.Cliente;
-                cboHabitacion.SelectedItem = alqui.Habitacion;
-                cboTipoReserva.SelectedItem = alqui.Tipo_reserva;
-                nudCosto.Value = (decimal)alqui.Costo;
-                cboEstadoReserva.SelectedItem = alqui.Estado_reserva;
-
-            }
+            txtCodigo.Text = Convert.ToString(alqui.Id);
+            dtpFechaDesde.Value = alqui.FechaAlquilerDesde;
+            dtpFechaHasta.Value = alqui.FechaAlquilerHasta;
         }
     }
     }
