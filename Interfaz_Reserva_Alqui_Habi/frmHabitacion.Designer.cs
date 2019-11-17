@@ -42,14 +42,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lblPiso = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.txtNroHabi = new System.Windows.Forms.TextBox();
             this.lblDetalle = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rdbNo
             // 
             this.rdbNo.AutoSize = true;
-            this.rdbNo.Location = new System.Drawing.Point(166, 184);
+            this.rdbNo.Location = new System.Drawing.Point(202, 210);
             this.rdbNo.Name = "rdbNo";
             this.rdbNo.Size = new System.Drawing.Size(39, 17);
             this.rdbNo.TabIndex = 49;
@@ -61,7 +62,7 @@
             // 
             this.rdbSi.AutoSize = true;
             this.rdbSi.Checked = true;
-            this.rdbSi.Location = new System.Drawing.Point(116, 183);
+            this.rdbSi.Location = new System.Drawing.Point(152, 209);
             this.rdbSi.Name = "rdbSi";
             this.rdbSi.Size = new System.Drawing.Size(34, 17);
             this.rdbSi.TabIndex = 48;
@@ -72,7 +73,7 @@
             // lblHabilitado
             // 
             this.lblHabilitado.AutoSize = true;
-            this.lblHabilitado.Location = new System.Drawing.Point(31, 183);
+            this.lblHabilitado.Location = new System.Drawing.Point(67, 209);
             this.lblHabilitado.Name = "lblHabilitado";
             this.lblHabilitado.Size = new System.Drawing.Size(54, 13);
             this.lblHabilitado.TabIndex = 47;
@@ -81,7 +82,7 @@
             // cmbPiso
             // 
             this.cmbPiso.FormattingEnabled = true;
-            this.cmbPiso.Location = new System.Drawing.Point(116, 112);
+            this.cmbPiso.Location = new System.Drawing.Point(152, 138);
             this.cmbPiso.Name = "cmbPiso";
             this.cmbPiso.Size = new System.Drawing.Size(121, 21);
             this.cmbPiso.TabIndex = 46;
@@ -89,7 +90,7 @@
             // cmbCategoria
             // 
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(116, 80);
+            this.cmbCategoria.Location = new System.Drawing.Point(152, 106);
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 45;
@@ -97,15 +98,16 @@
             // lstHabitacion
             // 
             this.lstHabitacion.FormattingEnabled = true;
-            this.lstHabitacion.Location = new System.Drawing.Point(257, 36);
+            this.lstHabitacion.Location = new System.Drawing.Point(325, 40);
             this.lstHabitacion.Name = "lstHabitacion";
-            this.lstHabitacion.Size = new System.Drawing.Size(177, 160);
+            this.lstHabitacion.Size = new System.Drawing.Size(273, 212);
             this.lstHabitacion.TabIndex = 44;
             this.lstHabitacion.Click += new System.EventHandler(this.lstHabitacion_Click);
+            this.lstHabitacion.SelectedIndexChanged += new System.EventHandler(this.lstHabitacion_SelectedIndexChanged);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(347, 242);
+            this.btnLimpiar.Location = new System.Drawing.Point(344, 295);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 34);
             this.btnLimpiar.TabIndex = 43;
@@ -115,7 +117,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(256, 242);
+            this.btnEditar.Location = new System.Drawing.Point(246, 295);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 34);
             this.btnEditar.TabIndex = 42;
@@ -125,7 +127,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(155, 242);
+            this.btnEliminar.Location = new System.Drawing.Point(148, 295);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 34);
             this.btnEliminar.TabIndex = 41;
@@ -135,7 +137,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(58, 242);
+            this.btnAgregar.Location = new System.Drawing.Point(47, 295);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 34);
             this.btnAgregar.TabIndex = 40;
@@ -145,7 +147,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(116, 145);
+            this.txtDescripcion.Location = new System.Drawing.Point(152, 171);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 39;
@@ -153,7 +155,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 148);
+            this.label4.Location = new System.Drawing.Point(67, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 38;
@@ -162,7 +164,7 @@
             // lblPiso
             // 
             this.lblPiso.AutoSize = true;
-            this.lblPiso.Location = new System.Drawing.Point(31, 115);
+            this.lblPiso.Location = new System.Drawing.Point(67, 141);
             this.lblPiso.Name = "lblPiso";
             this.lblPiso.Size = new System.Drawing.Size(27, 13);
             this.lblPiso.TabIndex = 37;
@@ -171,33 +173,45 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(31, 83);
+            this.lblCategoria.Location = new System.Drawing.Point(67, 109);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(54, 13);
             this.lblCategoria.TabIndex = 36;
             this.lblCategoria.Text = "Categoría";
             // 
-            // txtDetalle
+            // txtNroHabi
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(116, 51);
-            this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(82, 20);
-            this.txtDetalle.TabIndex = 35;
+            this.txtNroHabi.Location = new System.Drawing.Point(152, 77);
+            this.txtNroHabi.Name = "txtNroHabi";
+            this.txtNroHabi.ReadOnly = true;
+            this.txtNroHabi.Size = new System.Drawing.Size(82, 20);
+            this.txtNroHabi.TabIndex = 35;
             // 
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.Location = new System.Drawing.Point(31, 51);
+            this.lblDetalle.Location = new System.Drawing.Point(67, 77);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(40, 13);
+            this.lblDetalle.Size = new System.Drawing.Size(81, 13);
             this.lblDetalle.TabIndex = 34;
-            this.lblDetalle.Text = "Detalle";
+            this.lblDetalle.Text = "Nro. Habitación";
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(523, 295);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 34);
+            this.btnSalir.TabIndex = 50;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // frmHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 313);
+            this.ClientSize = new System.Drawing.Size(645, 397);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.rdbNo);
             this.Controls.Add(this.rdbSi);
             this.Controls.Add(this.lblHabilitado);
@@ -212,7 +226,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblPiso);
             this.Controls.Add(this.lblCategoria);
-            this.Controls.Add(this.txtDetalle);
+            this.Controls.Add(this.txtNroHabi);
             this.Controls.Add(this.lblDetalle);
             this.Name = "frmHabitacion";
             this.Text = "Habitación";
@@ -238,7 +252,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblPiso;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.TextBox txtNroHabi;
         private System.Windows.Forms.Label lblDetalle;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
