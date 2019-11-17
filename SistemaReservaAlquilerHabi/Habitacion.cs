@@ -150,7 +150,7 @@ namespace SistemaReservaAlquilerHabi
                     habi.descripcion = elLectorDeDatos.GetString(1);
                     habi.categoria = (CategoriaH)elLectorDeDatos.GetInt32(2);
                     habi.piso = Piso.ObtenerPiso(elLectorDeDatos.GetInt32(3));
-                    habi.habilitado = (EstadoHab)elLectorDeDatos.GetInt32(7);
+                    habi.habilitado = (EstadoHab)elLectorDeDatos.GetInt32(4);
                  
 
                     listaHabitaciones.Add(habi);
