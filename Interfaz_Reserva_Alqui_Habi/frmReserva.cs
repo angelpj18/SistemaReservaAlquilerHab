@@ -46,7 +46,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             reserva.fechaReserva = dtpFechaReserva.Value.Date;
             reserva.fechaInicio = dtpFechaInicio.Value.Date;
             reserva.fechaFin = dtpFechaFin.Value.Date;
-            reserva.cliente = (Cliente)cboCliente.SelectedItem;
+            reserva.cliente = (SistemaReservaAlquilerHabi.Cliente)cboCliente.SelectedItem;
 
             return reserva;
         }
@@ -58,7 +58,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             ActualizarReservas();
 
-            cboCliente.DataSource = Cliente.ObtenerClientes();
+            cboCliente.DataSource = SistemaReservaAlquilerHabi.Cliente.ObtenerCliente();
 
             cboCliente.SelectedItem = null;
 

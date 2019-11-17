@@ -43,11 +43,13 @@
             this.txtCi = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(255, 264);
+            this.btnEliminar.Location = new System.Drawing.Point(257, 313);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(85, 30);
             this.btnEliminar.TabIndex = 7;
@@ -57,7 +59,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(144, 264);
+            this.btnEditar.Location = new System.Drawing.Point(146, 313);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(85, 30);
             this.btnEditar.TabIndex = 6;
@@ -67,7 +69,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(44, 264);
+            this.btnAgregar.Location = new System.Drawing.Point(46, 313);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(85, 30);
             this.btnAgregar.TabIndex = 5;
@@ -80,13 +82,13 @@
             this.lstCliente.FormattingEnabled = true;
             this.lstCliente.Location = new System.Drawing.Point(281, 28);
             this.lstCliente.Name = "lstCliente";
-            this.lstCliente.Size = new System.Drawing.Size(194, 186);
+            this.lstCliente.Size = new System.Drawing.Size(194, 225);
             this.lstCliente.TabIndex = 9;
             this.lstCliente.SelectedIndexChanged += new System.EventHandler(this.lstCliente_SelectedIndexChanged);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(371, 264);
+            this.btnLimpiar.Location = new System.Drawing.Point(373, 313);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(85, 30);
             this.btnLimpiar.TabIndex = 8;
@@ -97,7 +99,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 184);
+            this.label4.Location = new System.Drawing.Point(15, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
             this.label4.TabIndex = 14;
@@ -106,7 +108,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 147);
+            this.label3.Location = new System.Drawing.Point(15, 199);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 13;
@@ -115,7 +117,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 111);
+            this.label2.Location = new System.Drawing.Point(12, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 12;
@@ -124,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Location = new System.Drawing.Point(13, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 11;
@@ -132,28 +134,28 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(120, 181);
+            this.txtEmail.Location = new System.Drawing.Point(123, 233);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 20);
             this.txtEmail.TabIndex = 4;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(120, 144);
+            this.txtTelefono.Location = new System.Drawing.Point(123, 196);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(148, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(86, 20);
             this.txtTelefono.TabIndex = 3;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(117, 108);
+            this.txtDireccion.Location = new System.Drawing.Point(120, 160);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(148, 20);
             this.txtDireccion.TabIndex = 2;
             // 
             // txtCi
             // 
-            this.txtCi.Location = new System.Drawing.Point(118, 41);
+            this.txtCi.Location = new System.Drawing.Point(121, 81);
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(148, 20);
             this.txtCi.TabIndex = 0;
@@ -161,7 +163,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 48);
+            this.label5.Location = new System.Drawing.Point(12, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 13);
             this.label5.TabIndex = 10;
@@ -169,16 +171,34 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(117, 73);
+            this.txtNombre.Location = new System.Drawing.Point(120, 120);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(148, 20);
+            this.txtNombre.Size = new System.Drawing.Size(89, 20);
             this.txtNombre.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 55);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Codigo";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(121, 48);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(27, 20);
+            this.txtId.TabIndex = 15;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 350);
+            this.ClientSize = new System.Drawing.Size(487, 382);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnEliminar);
@@ -195,7 +215,8 @@
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.txtCi);
             this.Name = "frmCliente";
-            this.Text = "frmCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -219,5 +240,7 @@
         private System.Windows.Forms.TextBox txtCi;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

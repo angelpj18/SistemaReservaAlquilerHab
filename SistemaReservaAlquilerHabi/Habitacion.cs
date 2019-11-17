@@ -76,9 +76,7 @@ namespace SistemaReservaAlquilerHabi
 
 
         }
-
-
-
+        
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
             SqlParameter p5 = new SqlParameter("@id", this.id);

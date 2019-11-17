@@ -13,6 +13,8 @@ namespace Interfaz_Reserva_Alqui_Habi
 {
     public partial class frmCliente : Form
     {
+        string modo;
+
         public frmCliente()
         {
             InitializeComponent();
@@ -27,21 +29,40 @@ namespace Interfaz_Reserva_Alqui_Habi
        private void actualizarListaCliente()
         {
             lstCliente.DataSource = null;
-            lstCliente.DataSource = Cliente.ObtenerClientes();
+            lstCliente.DataSource = Cliente.ObtenerCliente();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Cliente c = ObtenerClienteFormulario();
+            Cliente c = new Cliente();
+            c.ciCliente = txtCi.Text;
+            c.nombre = txtNombre.Text;
+            c.direccion = txtDireccion.Text;
+            c.telefono = txtTelefono.Text;
+            c.email = txtEmail.Text;
+
 
             Cliente.AgregarCliente(c);
-
-            actualizarListaCliente();
             LimpiarFormulario();
+            ActualizarListaCliente();
+            //Cliente c = ObtenerClienteFormulario();
+
+            //Cliente.AgregarCliente(c);
+
+            //actualizarListaCliente();
+            //LimpiarFormulario();
         }
+
+        private void ActualizarListaCliente()
+        {
+            lstCliente.DataSource = null;
+            lstCliente.DataSource = Cliente.ObtenerCliente();
+        }
+
         private Cliente ObtenerClienteFormulario()
         {
             Cliente c = new Cliente();
+            c.Id = Convert.ToInt16(txtId.Text);
             c.ciCliente = txtNombre.Text;
             c.nombre = txtCi.Text;
             c.direccion = txtDireccion.Text;
@@ -52,45 +73,38 @@ namespace Interfaz_Reserva_Alqui_Habi
         }
         private void LimpiarFormulario()
         {
+            txtId.Text = "";
             txtNombre.Text = "";
             txtCi.Text = "";
             txtDireccion.Text = "";
-            txtDireccion.Text = "";
             txtTelefono.Text = "";
             txtEmail.Text = "";
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            var c = ObtenerClienteFormulario();
-
-            if (this.lstCliente.SelectedItems.Count == 0)
-                {
-                    MessageBox.Show("Favor seleccione una fila");
-                }
-
-                else
-                {
-                    int indice = lstCliente.SelectedIndex;
-                    Cliente.EditarCliente(c, indice);
-                    actualizarListaCliente();
-                }
-            }
+            int index = lstCliente.SelectedIndex;
+            Cliente c = ObtenerClienteFormulario();
+            Cliente.EditarCliente(index, c);
+            
+            LimpiarFormulario();
+            actualizarListaCliente();
+        }
         
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstCliente.SelectedItems.Count > 0)
+            if (this.lstCliente.SelectedItems.Count == 0)
             {
-
-                Cliente cli = (Cliente)lstCliente.SelectedItem;
-                Cliente.listaClientes.Remove(cli);
-                actualizarListaCliente();
-                LimpiarFormulario();
+                MessageBox.Show("Favor seleccione una fila");
             }
             else
             {
-                MessageBox.Show("Para eliminar debe seleccionar una fila");
+                Cliente cli = (Cliente)lstCliente.SelectedItem;
+                Cliente.EliminarCliente(cli);
+                actualizarListaCliente();
+                LimpiarFormulario();
             }
         }
 
@@ -101,14 +115,15 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void lstCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cliente c = (Cliente)lstCliente.SelectedItem;
-            if (c != null)
+            Cliente cli = (Cliente)lstCliente.SelectedItem;
+            if (cli != null)
             {
-                txtCi.Text = c.nombre;
-                txtNombre.Text = c.ciCliente;
-                txtDireccion.Text = c.direccion;
-                txtTelefono.Text = c.telefono;
-                txtEmail.Text = c.email;
+                txtId.Text = Convert.ToString(cli.Id);
+                txtCi.Text = cli.nombre;
+                txtNombre.Text = cli.ciCliente;
+                txtDireccion.Text = cli.direccion;
+                txtTelefono.Text = cli.telefono;
+                txtEmail.Text = cli.email;
                 
             }
         }
