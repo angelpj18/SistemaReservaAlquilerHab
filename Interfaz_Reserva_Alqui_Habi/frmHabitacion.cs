@@ -154,7 +154,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             ActualizarListaHabitacion();
             cmbCategoria.DataSource = Enum.GetValues(typeof(CategoriaH));
-            cmbPiso.DataSource = Piso.ObtenerPiso();
+           // cmbPiso.DataSource = Piso.ObtenerPiso();
 
             cmbCategoria.SelectedItem = null;
             cmbPiso.SelectedItem = null;
