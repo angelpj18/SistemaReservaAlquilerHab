@@ -22,6 +22,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void LimpiarFormulario()
         {
+            txtId.Text = "";
             txtNroPiso.Text = ""; ;
             txtDescripcion.Text = ""; ;
         }
@@ -35,6 +36,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         private Piso ObtenerPisoFormulario()
         {
             Piso p = new Piso();
+            p.Id = Convert.ToInt16(txtId.Text);
             p.NroPiso = txtNroPiso.Text;
             p.Descripcion = txtDescripcion.Text;
 
@@ -48,11 +50,15 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Piso piso = ObtenerPisoFormulario();
-
-            Piso.AgregarPiso(piso);
-            ActualizarListaPiso();
+            Piso pis = new Piso();
+            pis.NroPiso = txtNroPiso.Text;
+            pis.Descripcion = txtDescripcion.Text;
+           
+            
+            
+            Piso.AgregarPiso(pis);
             LimpiarFormulario();
+            ActualizarListaPiso();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -74,21 +80,32 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            if (this.lstPiso.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Debe seleecionar una fila para modificar");
-            }
-            else
-            {
-                com = "EDITAR";
-                txtNroPiso.Focus();
-            }
+            int index = lstPiso.SelectedIndex;
+            Piso p = ObtenerPisoFormulario();
+            Piso.EditarPiso(index, p);
 
+
+            LimpiarFormulario();
+            ActualizarListaPiso();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarFormulario();
+        }
+
+        private void lstPiso_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Piso p = (Piso)lstPiso.SelectedItem;
+
+            if (p != null)
+            {
+                txtId.Text = Convert.ToString(p.Id);
+                txtNroPiso.Text = p.NroPiso;
+                txtDescripcion.Text = p.Descripcion;
+               
+            }
+
         }
     }
 }

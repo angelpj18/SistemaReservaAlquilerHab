@@ -37,6 +37,8 @@
             this.lblNroPiso = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNroPiso
@@ -93,11 +95,12 @@
             this.lstPiso.Name = "lstPiso";
             this.lstPiso.Size = new System.Drawing.Size(156, 134);
             this.lstPiso.TabIndex = 21;
+            this.lstPiso.SelectedIndexChanged += new System.EventHandler(this.lstPiso_SelectedIndexChanged);
             // 
             // lblNroPiso
             // 
             this.lblNroPiso.AutoSize = true;
-            this.lblNroPiso.Location = new System.Drawing.Point(64, 165);
+            this.lblNroPiso.Location = new System.Drawing.Point(64, 158);
             this.lblNroPiso.Name = "lblNroPiso";
             this.lblNroPiso.Size = new System.Drawing.Size(47, 13);
             this.lblNroPiso.TabIndex = 11;
@@ -119,11 +122,29 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Descripción";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 127);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(16, 13);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Id";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(149, 127);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(95, 20);
+            this.txtId.TabIndex = 23;
+            // 
             // frmPiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 450);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNroPiso);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEditar);
@@ -152,5 +173,7 @@
         private System.Windows.Forms.Label lblNroPiso;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

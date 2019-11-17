@@ -7,9 +7,8 @@ using System.Configuration;
 
 namespace SistemaReservaAlquilerHabi
 {
-    public class SqlServer
+    class SqlServer
     {
         public static string CADENA_CONEXION = ConfigurationManager.ConnectionStrings["SqlServer"].ConnectionString;
-
     }
 }
