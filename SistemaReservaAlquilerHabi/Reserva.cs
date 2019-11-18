@@ -24,6 +24,10 @@ namespace SistemaReservaAlquilerHabi
 
         public static List<Reserva> listaReservas = new List<Reserva>();
 
+        //Cambio de prueba
+        public static List<ReservaDetalle> detalle_reserva = new List<ReservaDetalle>();
+
+
         public static List<Reserva> ObtenerReserva()
         {
             return listaReservas;
