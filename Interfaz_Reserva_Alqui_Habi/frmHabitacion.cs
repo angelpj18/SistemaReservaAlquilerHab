@@ -71,6 +71,10 @@ namespace Interfaz_Reserva_Alqui_Habi
         private Habitacion ObtenerHabitacionFormulario()
         {
             Habitacion h = new Habitacion();
+            if (!string.IsNullOrEmpty(txtNroHabi.Text))
+            {
+                h.id = Convert.ToInt32(txtNroHabi.Text);
+            }
             h.descripcion = txtDescripcion.Text;
             h.categoria = (CategoriaH)cmbCategoria.SelectedItem;
             h.piso = (Piso)cmbPiso.SelectedItem;
@@ -89,31 +93,45 @@ namespace Interfaz_Reserva_Alqui_Habi
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (lstHabitacion.SelectedItems.Count > 0)
-            {
+        //{
+        //    if (lstHabitacion.SelectedItems.Count > 0)
+        //    {
 
-                Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
-                Habitacion.listaHabitaciones.Remove(habi);
-                ActualizarListaHabitacion();
-                LimpiarFormulario();
+        //        Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
+        //        Habitacion.listaHabitaciones.Remove(habi);
+        //        ActualizarListaHabitacion();
+        //        LimpiarFormulario();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Para eliminar debe seleccionar una fila");
+        //    }
+
+        //}
+
+        {
+            if (this.lstHabitacion.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Favor seleccione una fila");
             }
             else
             {
-                MessageBox.Show("Para eliminar debe seleccionar una fila");
+                Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
+                Habitacion.EliminaHabitacion(habi);
+                ActualizarListaHabitacion();
+                LimpiarFormulario();
             }
-
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            /*Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
-            if (habi != null)
-            {
-                int index = lstHabitacion.SelectedIndex;
-                Habitacion.listaHabitaciones[index] = ObtenerHabitacionFormulario();
-                ActualizarListaHabitacion();
-            }*/
+            //Habitacion habi = (Habitacion)lstHabitacion.SelectedItem;
+            //if (habi != null)
+            //{
+            //    int index = lstHabitacion.SelectedIndex;
+            //    Habitacion.listaHabitaciones[index] = ObtenerHabitacionFormulario();
+            //    ActualizarListaHabitacion();
+            //}
 
             int index = lstHabitacion.SelectedIndex;
             Habitacion habi = ObtenerHabitacionFormulario();
@@ -154,7 +172,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             ActualizarListaHabitacion();
             cmbCategoria.DataSource = Enum.GetValues(typeof(CategoriaH));
-           // cmbPiso.DataSource = Piso.ObtenerPiso();
+           cmbPiso.DataSource = Piso.ObtenerPisos();
 
             cmbCategoria.SelectedItem = null;
             cmbPiso.SelectedItem = null;

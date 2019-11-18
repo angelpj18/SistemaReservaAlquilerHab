@@ -30,7 +30,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void ActualizarListaPiso()
         {
             lstPiso.DataSource = null;
-           // lstPiso.DataSource = Piso.ObtenerPiso();
+           lstPiso.DataSource = Piso.ObtenerPisos();
         }
 
         private Piso ObtenerPisoFormulario()

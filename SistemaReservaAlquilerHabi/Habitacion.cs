@@ -55,7 +55,7 @@ namespace SistemaReservaAlquilerHabi
         {
             SqlParameter p1 = new SqlParameter("@descripcion", this.descripcion);
             SqlParameter p2 = new SqlParameter("@categoria", this.categoria);
-            SqlParameter p3 = new SqlParameter("@piso", this.piso.NroPiso);
+            SqlParameter p3 = new SqlParameter("@piso", this.piso.Id);
             SqlParameter p4 = new SqlParameter("@habilitado", this.habilitado);
 
             p1.SqlDbType = SqlDbType.VarChar;
@@ -73,8 +73,7 @@ namespace SistemaReservaAlquilerHabi
                 cmd = ObtenerParametrosId(cmd);
             }
             return cmd;
-
-
+            
         }
         
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)

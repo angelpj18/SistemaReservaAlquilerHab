@@ -116,7 +116,6 @@ namespace SistemaReservaAlquilerHabi
 
         public static void EditarCliente(int indice, Cliente c)
         {
-            //Habitacion.listaHabitaciones[indice] = h;
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
             {
                 con.Open();
