@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SistemaReservaAlquilerHabi;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -30,7 +31,7 @@ namespace SistemaReservaAlquilerHabi
 
             {
                 con.Open();
-                string textoCmd = "INSERT INTO Alquiler (FechaAlquilerDesde, FechaAlquilerHasta, TipoAlquiler)VALUES (@FechaAlquilerDesde, @FechaAlquilerHasta,@TipoAlquiler)";
+                string textoCmd = "insert into Alquiler (FechaAlquilerDesde, FechaAlquilerHasta, TipoAlquiler)VALUES (@FechaAlquilerDesde, @FechaAlquilerHasta,@TipoAlquiler)";
 
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
                 cmd = a.ObtenerParametros(cmd);
@@ -70,6 +71,7 @@ namespace SistemaReservaAlquilerHabi
                 cmd.Parameters.Add(p1);
 
                 cmd.ExecuteNonQuery();
+                
                 con.Close();
             }
         }

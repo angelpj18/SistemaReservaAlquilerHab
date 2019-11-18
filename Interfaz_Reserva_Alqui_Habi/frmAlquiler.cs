@@ -97,6 +97,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         private Alquiler ObtenerDatosFormulario()
             {
             Alquiler alqui = new Alquiler();
+            if (!string.IsNullOrEmpty(txtCodigo.Text))
             {
                 alqui.Id = Convert.ToInt32(txtCodigo.Text);
             }
@@ -108,24 +109,44 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            accion = "EDITAR";
-            DesbloquearFormulario();
-            txtCodigo.Focus();
+            ;
+            Alquiler alquiler = (Alquiler)lstAlquileres.SelectedItem;
+            if (alquiler != null)
+            {
+                accion = "EDITAR";
+                DesbloquearFormulario();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un Item");
+            }
 
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstAlquileres.SelectedItems.Count > 0)
+            //if (lstAlquileres.SelectedItems.Count > 0)
+            //{
+            //    Alquiler alqui = (Alquiler)lstAlquileres.SelectedItem;
+            //    Alquiler.listaAlquileres.Remove(alqui);
+            //    ActualizarListaAlquileres();
+            //    LimpiarFormulario();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Selecione una lista para eliminar");
+            //}
+
+            Alquiler alquiler = (Alquiler)lstAlquileres.SelectedItem;
+            if (alquiler != null)
             {
-                Alquiler alqui = (Alquiler)lstAlquileres.SelectedItem;
-                Alquiler.listaAlquileres.Remove(alqui);
+                Alquiler.EliminarAlquiler(alquiler);
                 ActualizarListaAlquileres();
                 LimpiarFormulario();
             }
             else
             {
-                MessageBox.Show("Selecione una lista para eliminar");
+                MessageBox.Show("Favor seleccionar una lista para eliminar");
             }
         }
 
@@ -133,8 +154,19 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             Alquiler alqui = (Alquiler)lstAlquileres.SelectedItem;
             txtCodigo.Text = Convert.ToString(alqui.Id);
+            cboTipoAlquiler.SelectedItem = alqui.TipoAlquiler;
             dtpFechaDesde.Value = alqui.FechaAlquilerDesde;
             dtpFechaHasta.Value = alqui.FechaAlquilerHasta;
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
