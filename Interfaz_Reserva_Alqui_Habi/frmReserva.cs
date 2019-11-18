@@ -13,6 +13,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 {
     public partial class frmReserva : Form
     {
+        Reserva reserva;
         string boton;
         public frmReserva()
         {
@@ -32,6 +33,13 @@ namespace Interfaz_Reserva_Alqui_Habi
             dtpFechaFin.Value = DateTime.Now;
             txtSuc.Text = "";
             txtTipoReserva.Text = "";
+
+            //Para el detalle
+            cmbHabitacion.SelectedItem = null;
+            txtCantidad.Text = "";
+            txtCantPersonas.Text = "";
+            txtPrecio.Text = "";
+
         }
     
 
@@ -56,59 +64,76 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void frmReserva_Load(object sender, EventArgs e)
         {
-            ActualizarReservas();
+            dtgDetalleReserva.AutoGenerateColumns = true;
 
-            cboCliente.DataSource = SistemaReservaAlquilerHabi.Cliente.ObtenerCliente();
+            cboCliente.DataSource = Cliente.ObtenerCliente();
+            cmbHabitacion.DataSource = Habitacion.ObtenerHabitacion();
 
             cboCliente.SelectedItem = null;
+            cmbHabitacion.SelectedItem = null;
+            reserva = new Reserva();
 
         }
 
-        private void ActualizarReservas()
+        private void ActualizarDataGrid()
         {
-            lstReserva.DataSource = null;
-            lstReserva.DataSource = Reserva.ObtenerReserva();
+            dtgDetalleReserva.DataSource = null;
+            dtgDetalleReserva.DataSource = reserva.detalle_reserva;
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Reserva re = ObtenerFormularioReserva();
+            ReservaDetalle rd = new ReservaDetalle();
+            rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
+            rd.cantPersonas = Convert.ToDouble(txtCantPersonas.Text);
+            rd.precioTotal = Convert.ToDouble(txtCantidad.Text);
+            rd.habitacion = (Habitacion)cmbHabitacion.SelectedItem;
+            reserva.detalle_reserva.Add(rd);
+            ActualizarDataGrid();
 
-            Reserva.AgregarReserva(re);
-            ActualizarReservas();
             LimpiarFormulario();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (lstReserva.SelectedItems.Count > 0)
-            {
-                Reserva re = (Reserva)lstReserva.SelectedItem;
-                Reserva.listaReservas.Remove(re);
-                ActualizarReservas();
-                LimpiarFormulario();
-            }
-            else
-            {
-                MessageBox.Show("Favor seleccionar de la lista para eliminar");
-            }
+            ReservaDetalle rd = (ReservaDetalle)dtgDetalleReserva.CurrentRow.DataBoundItem;
+            reserva.detalle_reserva.Remove(rd);
+            ActualizarDataGrid();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Reserva re = (Reserva)lstReserva.SelectedItem;
-            if (re != null)
-            {
-                int index = lstReserva.SelectedIndex;
-                Reserva.listaReservas[index] = ObtenerFormularioReserva();
-                ActualizarReservas();
-            }
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
             LimpiarFormulario();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            reserva.detalle = txtDetalle.Text;
+            reserva.estado = txtEstado.Text;
+            reserva.cliente = (Cliente)cboCliente.SelectedItem;
+            reserva.fechaFin = dtpFechaFin.Value.Date;
+            reserva.fechaInicio = dtpFechaFin.Value.Date;
+            reserva.fechaReserva = dtpFechaFin.Value.Date;
+            reserva.sucursal= txtSuc.Text;
+            reserva.tipoReserva = txtTipoReserva.Text;
+
+
+            Reserva.AgregarReserva(reserva);
+            MessageBox.Show("El pedido ha sido guardado con éxito");
+            LimpiarFormulario();
+            dtgDetalleReserva.DataSource = null;
+            dtpFechaReserva.Value = System.DateTime.Now;
+            dtpFechaInicio.Value = System.DateTime.Now;
+            dtpFechaFin.Value = System.DateTime.Now;
+            cboCliente.SelectedItem = null;
+            cmbHabitacion.SelectedItem = null;
+            reserva = new Reserva();
         }
     }
 }

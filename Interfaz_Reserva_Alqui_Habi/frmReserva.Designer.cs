@@ -50,17 +50,18 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.dtgDetallePedido = new System.Windows.Forms.DataGridView();
+            this.dtgDetalleReserva = new System.Windows.Forms.DataGridView();
             this.lblHabitacion = new System.Windows.Forms.Label();
             this.cmbHabitacion = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.txtCantPersonas = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblCantHabi = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetallePedido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
@@ -196,7 +197,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(93, 396);
+            this.btnLimpiar.Location = new System.Drawing.Point(651, 29);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 58;
@@ -206,7 +207,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(215, 396);
+            this.btnEliminar.Location = new System.Drawing.Point(193, 359);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 55;
@@ -216,7 +217,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(215, 342);
+            this.btnEditar.Location = new System.Drawing.Point(96, 359);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 54;
@@ -226,7 +227,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(93, 342);
+            this.btnAgregar.Location = new System.Drawing.Point(11, 359);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 53;
@@ -252,13 +253,13 @@
             this.lblCodigo.TabIndex = 50;
             this.lblCodigo.Text = "Codigo Reserva";
             // 
-            // dtgDetallePedido
+            // dtgDetalleReserva
             // 
-            this.dtgDetallePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetallePedido.Location = new System.Drawing.Point(313, 221);
-            this.dtgDetallePedido.Name = "dtgDetallePedido";
-            this.dtgDetallePedido.Size = new System.Drawing.Size(451, 198);
-            this.dtgDetallePedido.TabIndex = 75;
+            this.dtgDetalleReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDetalleReserva.Location = new System.Drawing.Point(313, 221);
+            this.dtgDetalleReserva.Name = "dtgDetalleReserva";
+            this.dtgDetalleReserva.Size = new System.Drawing.Size(451, 198);
+            this.dtgDetalleReserva.TabIndex = 75;
             // 
             // lblHabitacion
             // 
@@ -289,12 +290,12 @@
             this.label3.TabIndex = 78;
             this.label3.Text = "Cantidad Personas";
             // 
-            // txtCantidad
+            // txtCantPersonas
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(643, 156);
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(83, 20);
-            this.txtCantidad.TabIndex = 77;
+            this.txtCantPersonas.Location = new System.Drawing.Point(643, 156);
+            this.txtCantPersonas.Name = "txtCantPersonas";
+            this.txtCantPersonas.Size = new System.Drawing.Size(83, 20);
+            this.txtCantPersonas.TabIndex = 77;
             // 
             // lblPrecio
             // 
@@ -322,27 +323,39 @@
             this.lblCantHabi.TabIndex = 83;
             this.lblCantHabi.Text = "Cantidad de Habitaciones";
             // 
-            // textBox2
+            // txtCantidad
             // 
-            this.textBox2.Location = new System.Drawing.Point(445, 189);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 20);
-            this.textBox2.TabIndex = 82;
+            this.txtCantidad.Location = new System.Drawing.Point(445, 189);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(50, 20);
+            this.txtCantidad.TabIndex = 82;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(117, 407);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(66, 27);
+            this.btnGuardar.TabIndex = 84;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 445);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblCantHabi);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblHabitacion);
             this.Controls.Add(this.cmbHabitacion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.dtgDetallePedido);
+            this.Controls.Add(this.txtCantPersonas);
+            this.Controls.Add(this.dtgDetalleReserva);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtTipoReserva);
@@ -368,7 +381,7 @@
             this.Name = "frmReserva";
             this.Text = "RESERVA";
             ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetallePedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,14 +411,15 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.DataGridView dtgDetallePedido;
+        private System.Windows.Forms.DataGridView dtgDetalleReserva;
         private System.Windows.Forms.Label lblHabitacion;
         private System.Windows.Forms.ComboBox cmbHabitacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.TextBox txtCantPersonas;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblCantHabi;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
