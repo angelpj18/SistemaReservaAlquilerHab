@@ -13,6 +13,6 @@ namespace SistemaReservaAlquilerHabi
         public int Cantidad { get; set; }
 
         public double precioTotal { get; set; }
-        public double cantPersonas { get; set; }
+        public int cantPersonas { get; set; }
     }
 }

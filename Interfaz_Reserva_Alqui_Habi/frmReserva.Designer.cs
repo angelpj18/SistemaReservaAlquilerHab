@@ -48,16 +48,25 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.lstReserva = new System.Windows.Forms.ListBox();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
+            this.dtgDetallePedido = new System.Windows.Forms.DataGridView();
+            this.lblHabitacion = new System.Windows.Forms.Label();
+            this.cmbHabitacion = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblCantHabi = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetallePedido)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
             // 
             this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Location = new System.Drawing.Point(162, 141);
+            this.cboCliente.Location = new System.Drawing.Point(358, 31);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(108, 21);
             this.cboCliente.TabIndex = 74;
@@ -65,7 +74,7 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(43, 144);
+            this.lblCliente.Location = new System.Drawing.Point(310, 39);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(42, 13);
             this.lblCliente.TabIndex = 73;
@@ -73,7 +82,7 @@
             // 
             // txtTipoReserva
             // 
-            this.txtTipoReserva.Location = new System.Drawing.Point(164, 335);
+            this.txtTipoReserva.Location = new System.Drawing.Point(162, 141);
             this.txtTipoReserva.Name = "txtTipoReserva";
             this.txtTipoReserva.Size = new System.Drawing.Size(106, 20);
             this.txtTipoReserva.TabIndex = 72;
@@ -81,7 +90,7 @@
             // lblTipoReserva
             // 
             this.lblTipoReserva.AutoSize = true;
-            this.lblTipoReserva.Location = new System.Drawing.Point(43, 338);
+            this.lblTipoReserva.Location = new System.Drawing.Point(43, 141);
             this.lblTipoReserva.Name = "lblTipoReserva";
             this.lblTipoReserva.Size = new System.Drawing.Size(74, 13);
             this.lblTipoReserva.TabIndex = 71;
@@ -105,7 +114,7 @@
             // 
             // txtSuc
             // 
-            this.txtSuc.Location = new System.Drawing.Point(162, 295);
+            this.txtSuc.Location = new System.Drawing.Point(358, 71);
             this.txtSuc.Name = "txtSuc";
             this.txtSuc.Size = new System.Drawing.Size(108, 20);
             this.txtSuc.TabIndex = 68;
@@ -113,7 +122,7 @@
             // lblFechaFin
             // 
             this.lblFechaFin.AutoSize = true;
-            this.lblFechaFin.Location = new System.Drawing.Point(43, 258);
+            this.lblFechaFin.Location = new System.Drawing.Point(43, 259);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(69, 13);
             this.lblFechaFin.TabIndex = 67;
@@ -122,7 +131,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFin.Location = new System.Drawing.Point(162, 252);
+            this.dtpFechaFin.Location = new System.Drawing.Point(156, 252);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaFin.TabIndex = 66;
@@ -130,7 +139,7 @@
             // blFechaInicio
             // 
             this.blFechaInicio.AutoSize = true;
-            this.blFechaInicio.Location = new System.Drawing.Point(43, 222);
+            this.blFechaInicio.Location = new System.Drawing.Point(43, 227);
             this.blFechaInicio.Name = "blFechaInicio";
             this.blFechaInicio.Size = new System.Drawing.Size(80, 13);
             this.blFechaInicio.TabIndex = 65;
@@ -139,7 +148,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(162, 216);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(156, 221);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaInicio.TabIndex = 64;
@@ -147,7 +156,7 @@
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(43, 298);
+            this.lblCategoria.Location = new System.Drawing.Point(310, 78);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(48, 13);
             this.lblCategoria.TabIndex = 63;
@@ -156,7 +165,7 @@
             // lblFechaReserva
             // 
             this.lblFechaReserva.AutoSize = true;
-            this.lblFechaReserva.Location = new System.Drawing.Point(43, 181);
+            this.lblFechaReserva.Location = new System.Drawing.Point(43, 199);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(95, 13);
             this.lblFechaReserva.TabIndex = 62;
@@ -165,7 +174,7 @@
             // dtpFechaReserva
             // 
             this.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaReserva.Location = new System.Drawing.Point(162, 175);
+            this.dtpFechaReserva.Location = new System.Drawing.Point(155, 192);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
             this.dtpFechaReserva.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaReserva.TabIndex = 61;
@@ -187,7 +196,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(502, 396);
+            this.btnLimpiar.Location = new System.Drawing.Point(93, 396);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 58;
@@ -197,7 +206,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(390, 396);
+            this.btnEliminar.Location = new System.Drawing.Point(215, 396);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 55;
@@ -207,7 +216,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(502, 351);
+            this.btnEditar.Location = new System.Drawing.Point(215, 342);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 54;
@@ -217,21 +226,13 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(390, 351);
+            this.btnAgregar.Location = new System.Drawing.Point(93, 342);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 53;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // lstReserva
-            // 
-            this.lstReserva.FormattingEnabled = true;
-            this.lstReserva.Location = new System.Drawing.Point(360, 27);
-            this.lstReserva.Name = "lstReserva";
-            this.lstReserva.Size = new System.Drawing.Size(237, 303);
-            this.lstReserva.TabIndex = 52;
             // 
             // lblDetalle
             // 
@@ -251,11 +252,97 @@
             this.lblCodigo.TabIndex = 50;
             this.lblCodigo.Text = "Codigo Reserva";
             // 
+            // dtgDetallePedido
+            // 
+            this.dtgDetallePedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDetallePedido.Location = new System.Drawing.Point(313, 221);
+            this.dtgDetallePedido.Name = "dtgDetallePedido";
+            this.dtgDetallePedido.Size = new System.Drawing.Size(451, 198);
+            this.dtgDetallePedido.TabIndex = 75;
+            // 
+            // lblHabitacion
+            // 
+            this.lblHabitacion.AutoSize = true;
+            this.lblHabitacion.Location = new System.Drawing.Point(310, 159);
+            this.lblHabitacion.Name = "lblHabitacion";
+            this.lblHabitacion.Size = new System.Drawing.Size(58, 13);
+            this.lblHabitacion.TabIndex = 79;
+            this.lblHabitacion.Text = "Habitacion";
+            // 
+            // cmbHabitacion
+            // 
+            this.cmbHabitacion.FormattingEnabled = true;
+            this.cmbHabitacion.Items.AddRange(new object[] {
+            "Vacuna",
+            "Porcina"});
+            this.cmbHabitacion.Location = new System.Drawing.Point(374, 156);
+            this.cmbHabitacion.Name = "cmbHabitacion";
+            this.cmbHabitacion.Size = new System.Drawing.Size(121, 21);
+            this.cmbHabitacion.TabIndex = 76;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(541, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "Cantidad Personas";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(643, 156);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(83, 20);
+            this.txtCantidad.TabIndex = 77;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(550, 192);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.TabIndex = 81;
+            this.lblPrecio.Text = "Precio";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(643, 189);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(82, 20);
+            this.txtPrecio.TabIndex = 80;
+            this.txtPrecio.Text = " ";
+            // 
+            // lblCantHabi
+            // 
+            this.lblCantHabi.AutoSize = true;
+            this.lblCantHabi.Location = new System.Drawing.Point(310, 192);
+            this.lblCantHabi.Name = "lblCantHabi";
+            this.lblCantHabi.Size = new System.Drawing.Size(129, 13);
+            this.lblCantHabi.TabIndex = 83;
+            this.lblCantHabi.Text = "Cantidad de Habitaciones";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(445, 189);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(50, 20);
+            this.textBox2.TabIndex = 82;
+            // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 445);
+            this.Controls.Add(this.lblCantHabi);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.lblHabitacion);
+            this.Controls.Add(this.cmbHabitacion);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtCantidad);
+            this.Controls.Add(this.dtgDetallePedido);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtTipoReserva);
@@ -276,12 +363,12 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.lstReserva);
             this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmReserva";
-            this.Text = "frmReserva";
+            this.Text = "RESERVA";
             ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetallePedido)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,8 +396,16 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ListBox lstReserva;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.DataGridView dtgDetallePedido;
+        private System.Windows.Forms.Label lblHabitacion;
+        private System.Windows.Forms.ComboBox cmbHabitacion;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCantidad;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Label lblCantHabi;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

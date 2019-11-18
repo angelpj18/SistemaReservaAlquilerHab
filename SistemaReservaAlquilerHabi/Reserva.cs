@@ -26,11 +26,6 @@ namespace SistemaReservaAlquilerHabi
 
         public static List<Reserva> listaReservas = new List<Reserva>();
 
-   
-        public static List<Reserva> ObtenerReserva()
-        {
-            return listaReservas;
-        }
 
         public static void AgregarReserva(Reserva r)
         {
