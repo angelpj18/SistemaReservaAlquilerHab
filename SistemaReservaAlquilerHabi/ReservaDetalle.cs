@@ -10,7 +10,9 @@ namespace SistemaReservaAlquilerHabi
 
         public Habitacion habitacion { get; set; }
 
-        public double Cantidad { get; set; }
+        //public double Cantidad { get; set; }
+
+        public string Cantidad { get; set; }
 
         public double precioTotal { get; set; }
         public double cantPersonas { get; set; }

@@ -4,15 +4,15 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SistemaReservaAlquilerHabi;
 
 namespace SistemaReservaAlquilerHabi
 {
     public class Reserva
     {
-
-
         //Tipo Reserva va a ser Enum
-        public int codReserva { get; set; }        //detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva
+        public int codReserva { get; set; }        
+        //detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva
         public string detalle { get; set; }
         public string estado { get; set; }
         public Cliente cliente { get; set; }
@@ -32,14 +32,15 @@ namespace SistemaReservaAlquilerHabi
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
             {
                 con.Open();
-              
-                string textoCMD = "INSERT INTO Reserva (detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva) output INSERTED.id VALUES (@detalle, @estado, @cliente, @fechaInicio, @fechaReserva, @fechaFin, @sucursal, @tipoReserva)";
+                
+                //Cabecera del Pedido
+                string textoCMD = "INSERT INTO Reserva (detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva) output INSERTED.codReserva VALUES (@detalle, @estado, @cliente, @fechaInicio, @fechaReserva, @fechaFin, @sucursal, @tipoReserva)";
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
                
                 SqlParameter p1 = new SqlParameter("@detalle", r.detalle);
                 SqlParameter p2 = new SqlParameter("@estado", r.estado);
-                SqlParameter p3 = new SqlParameter("@cliente", r.cliente.ciCliente);
+                SqlParameter p3 = new SqlParameter("@cliente",Cliente.ObtenerCliente() );
                 SqlParameter p4 = new SqlParameter("@fechaInicio", r.fechaInicio);
                 SqlParameter p5 = new SqlParameter("@fechaReserva", r.fechaReserva);
                 SqlParameter p6 = new SqlParameter("@fechaFin", r.fechaFin);
@@ -67,22 +68,22 @@ namespace SistemaReservaAlquilerHabi
 
 
 
-                int id_reserva = (int)cmd.ExecuteScalar();
+                //int id_reserva = (int)cmd.ExecuteScalar();
 
+                //Detalle de la Reserva
                 foreach (ReservaDetalle rd in r.detalle_reserva)
                 {
-                    string textoCMD2 = "INSERT INTO ReservaDetalle(reserva_id, Cantidad, precioTotal, cantPersonas) VALUES (@Id, @Cantidad, @precioTotal, @cantPersonas)";
+                    string textoCMD2 = "INSERT INTO ReservaDetalle(Cantidad, precioTotal, cantPersonas) VALUES (@Cantidad, @precioTotal, @cantPersonas)";
                     SqlCommand cmd2 = new SqlCommand(textoCMD2, con);
 
-                    SqlParameter p9 = new SqlParameter("@id", id_reserva);
-                    SqlParameter p10 = new SqlParameter("@Cantidad", rd.Cantidad);
-                    SqlParameter p11 = new SqlParameter("@precioTotal", rd.precioTotal);
-                    SqlParameter p12 = new SqlParameter("@cantPersonas", rd.precioTotal);
+                    //SqlParameter p9 = new SqlParameter("@Id", id_reserva);
+                    SqlParameter p9 = new SqlParameter("@Cantidad", rd.Cantidad);
+                    SqlParameter p10 = new SqlParameter("@precioTotal", rd.precioTotal);
+                    SqlParameter p11 = new SqlParameter("@cantPersonas", rd.precioTotal);
 
                     cmd2.Parameters.Add(p9);
                     cmd2.Parameters.Add(p10);
                     cmd2.Parameters.Add(p11);
-                    cmd2.Parameters.Add(p12);
 
 
                     cmd2.ExecuteNonQuery();

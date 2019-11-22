@@ -273,9 +273,6 @@
             // cmbHabitacion
             // 
             this.cmbHabitacion.FormattingEnabled = true;
-            this.cmbHabitacion.Items.AddRange(new object[] {
-            "Vacuna",
-            "Porcina"});
             this.cmbHabitacion.Location = new System.Drawing.Point(374, 156);
             this.cmbHabitacion.Name = "cmbHabitacion";
             this.cmbHabitacion.Size = new System.Drawing.Size(121, 21);
@@ -380,6 +377,7 @@
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmReserva";
             this.Text = "RESERVA";
+            this.Load += new System.EventHandler(this.frmReserva_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
             this.ResumeLayout(false);

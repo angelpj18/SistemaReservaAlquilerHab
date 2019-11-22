@@ -119,8 +119,8 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (cli != null)
             {
                 txtId.Text = Convert.ToString(cli.Id);
-                txtCi.Text = cli.nombre;
-                txtNombre.Text = cli.ciCliente;
+                txtCi.Text = cli.ciCliente;
+                txtNombre.Text = cli.nombre;
                 txtDireccion.Text = cli.direccion;
                 txtTelefono.Text = cli.telefono;
                 txtEmail.Text = cli.email;

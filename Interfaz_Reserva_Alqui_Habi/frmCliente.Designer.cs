@@ -126,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 88);
+            this.label1.Location = new System.Drawing.Point(12, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 11;
@@ -143,7 +143,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(123, 196);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(86, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(70, 20);
             this.txtTelefono.TabIndex = 3;
             // 
             // txtDireccion
@@ -155,15 +155,15 @@
             // 
             // txtCi
             // 
-            this.txtCi.Location = new System.Drawing.Point(121, 81);
+            this.txtCi.Location = new System.Drawing.Point(120, 89);
             this.txtCi.Name = "txtCi";
-            this.txtCi.Size = new System.Drawing.Size(148, 20);
+            this.txtCi.Size = new System.Drawing.Size(73, 20);
             this.txtCi.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 127);
+            this.label5.Location = new System.Drawing.Point(12, 92);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 13);
             this.label5.TabIndex = 10;
@@ -171,9 +171,9 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(120, 120);
+            this.txtNombre.Location = new System.Drawing.Point(119, 123);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(89, 20);
+            this.txtNombre.Size = new System.Drawing.Size(148, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // label6
@@ -187,6 +187,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(121, 48);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(27, 20);

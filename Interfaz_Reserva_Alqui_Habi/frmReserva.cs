@@ -14,14 +14,12 @@ namespace Interfaz_Reserva_Alqui_Habi
     public partial class frmReserva : Form
     {
         Reserva reserva;
-        string boton;
+
         public frmReserva()
         {
             InitializeComponent();
         }
-
-      
-
+        
         private void LimpiarFormulario()
         {
             nudReserva.Value = 0;
@@ -59,22 +57,6 @@ namespace Interfaz_Reserva_Alqui_Habi
             return reserva;
         }
       
-
-      
-
-        private void frmReserva_Load(object sender, EventArgs e)
-        {
-            dtgDetalleReserva.AutoGenerateColumns = true;
-
-            cboCliente.DataSource = Cliente.ObtenerCliente();
-            cmbHabitacion.DataSource = Habitacion.ObtenerHabitacion();
-
-            cboCliente.SelectedItem = null;
-            cmbHabitacion.SelectedItem = null;
-            reserva = new Reserva();
-
-        }
-
         private void ActualizarDataGrid()
         {
             dtgDetalleReserva.DataSource = null;
@@ -85,7 +67,10 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ReservaDetalle rd = new ReservaDetalle();
-            rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
+            //rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
+            rd.Cantidad = txtCantidad.Text;
+           // rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
+
             rd.cantPersonas = Convert.ToDouble(txtCantPersonas.Text);
             rd.precioTotal = Convert.ToDouble(txtCantidad.Text);
             rd.habitacion = (Habitacion)cmbHabitacion.SelectedItem;
@@ -104,7 +89,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -117,20 +102,34 @@ namespace Interfaz_Reserva_Alqui_Habi
             reserva.detalle = txtDetalle.Text;
             reserva.estado = txtEstado.Text;
             reserva.cliente = (Cliente)cboCliente.SelectedItem;
-            reserva.fechaFin = dtpFechaFin.Value.Date;
             reserva.fechaInicio = dtpFechaFin.Value.Date;
             reserva.fechaReserva = dtpFechaFin.Value.Date;
+            reserva.fechaFin = dtpFechaFin.Value.Date;
+
             reserva.sucursal= txtSuc.Text;
             reserva.tipoReserva = txtTipoReserva.Text;
 
 
             Reserva.AgregarReserva(reserva);
-            MessageBox.Show("El pedido ha sido guardado con éxito");
+            MessageBox.Show("La Reserva ha sido guardado con éxito");
             LimpiarFormulario();
+
             dtgDetalleReserva.DataSource = null;
             dtpFechaReserva.Value = System.DateTime.Now;
             dtpFechaInicio.Value = System.DateTime.Now;
             dtpFechaFin.Value = System.DateTime.Now;
+            cboCliente.SelectedItem = null;
+            cmbHabitacion.SelectedItem = null;
+            reserva = new Reserva();
+        }
+
+        private void frmReserva_Load_1(object sender, EventArgs e)
+        {
+            dtgDetalleReserva.AutoGenerateColumns = true;
+
+            cboCliente.DataSource = Cliente.ObtenerCliente();
+            cmbHabitacion.DataSource = Habitacion.ObtenerHabitacion();
+
             cboCliente.SelectedItem = null;
             cmbHabitacion.SelectedItem = null;
             reserva = new Reserva();
