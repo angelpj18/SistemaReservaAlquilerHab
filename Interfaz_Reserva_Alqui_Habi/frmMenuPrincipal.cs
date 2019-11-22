@@ -53,5 +53,10 @@ namespace Interfaz_Reserva_Alqui_Habi
             frmReserva frmRe = new frmReserva();
             frmRe.Show();
         }
+
+        private void frmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -72,7 +72,7 @@ namespace Interfaz_Reserva_Alqui_Habi
            // rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
 
             rd.cantPersonas = Convert.ToDouble(txtCantPersonas.Text);
-            rd.precioTotal = Convert.ToDouble(txtCantidad.Text);
+            rd.precioTotal = Convert.ToDouble(txtPrecio.Text);
             rd.habitacion = (Habitacion)cmbHabitacion.SelectedItem;
             reserva.detalle_reserva.Add(rd);
             ActualizarDataGrid();
