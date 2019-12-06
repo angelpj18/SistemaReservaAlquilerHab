@@ -49,7 +49,7 @@
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(447, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(681, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,28 +67,28 @@
             // habitacionToolStripMenuItem
             // 
             this.habitacionToolStripMenuItem.Name = "habitacionToolStripMenuItem";
-            this.habitacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.habitacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.habitacionToolStripMenuItem.Text = "Habitacion";
             this.habitacionToolStripMenuItem.Click += new System.EventHandler(this.habitacionToolStripMenuItem_Click);
             // 
             // alquilerToolStripMenuItem1
             // 
             this.alquilerToolStripMenuItem1.Name = "alquilerToolStripMenuItem1";
-            this.alquilerToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.alquilerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.alquilerToolStripMenuItem1.Text = "Alquiler";
             this.alquilerToolStripMenuItem1.Click += new System.EventHandler(this.alquilerToolStripMenuItem1_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // pisoToolStripMenuItem
             // 
             this.pisoToolStripMenuItem.Name = "pisoToolStripMenuItem";
-            this.pisoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pisoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pisoToolStripMenuItem.Text = "Piso";
             this.pisoToolStripMenuItem.Click += new System.EventHandler(this.pisoToolStripMenuItem_Click);
             // 
@@ -103,7 +103,7 @@
             // reservaToolStripMenuItem1
             // 
             this.reservaToolStripMenuItem1.Name = "reservaToolStripMenuItem1";
-            this.reservaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.reservaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.reservaToolStripMenuItem1.Text = "Reserva";
             this.reservaToolStripMenuItem1.Click += new System.EventHandler(this.reservaToolStripMenuItem1_Click);
             // 
@@ -121,12 +121,12 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(447, 280);
+            this.ClientSize = new System.Drawing.Size(681, 407);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "*** Reserva & Alquiler ***";
+            this.Text = "GREEN HOTEL ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
