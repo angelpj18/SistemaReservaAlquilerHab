@@ -29,25 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin2));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSingIn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(82, 463);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 1);
-            this.panel2.TabIndex = 14;
             // 
             // txtContrasena
             // 
@@ -56,28 +42,12 @@
             this.txtContrasena.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.ForeColor = System.Drawing.Color.Black;
             this.txtContrasena.HideSelection = false;
-            this.txtContrasena.Location = new System.Drawing.Point(166, 240);
+            this.txtContrasena.Location = new System.Drawing.Point(177, 242);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(192, 18);
+            this.txtContrasena.Size = new System.Drawing.Size(183, 18);
             this.txtContrasena.TabIndex = 13;
             this.txtContrasena.TabStop = false;
             this.txtContrasena.Text = "Contraseña";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(82, 437);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 20);
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(82, 412);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 1);
-            this.panel1.TabIndex = 11;
             // 
             // txtUsuario
             // 
@@ -92,15 +62,6 @@
             this.txtUsuario.TabIndex = 10;
             this.txtUsuario.TabStop = false;
             this.txtUsuario.Text = "Usuario";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(82, 386);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 20);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
             // 
             // btnSingIn
             // 
@@ -124,7 +85,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Location = new System.Drawing.Point(377, 447);
+            this.button1.Location = new System.Drawing.Point(319, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 30);
             this.button1.TabIndex = 16;
@@ -140,12 +101,8 @@
             this.ClientSize = new System.Drawing.Size(504, 489);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSingIn);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin2";
@@ -153,21 +110,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin2";
             this.Load += new System.EventHandler(this.frmLogin2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnSingIn;
         private System.Windows.Forms.Button button1;
     }
