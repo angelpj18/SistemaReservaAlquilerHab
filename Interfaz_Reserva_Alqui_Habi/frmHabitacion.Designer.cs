@@ -229,6 +229,7 @@
             this.Controls.Add(this.txtNroHabi);
             this.Controls.Add(this.lblDetalle);
             this.Name = "frmHabitacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Habitación";
             this.Load += new System.EventHandler(this.frmHabitacion_Load);
             this.ResumeLayout(false);

@@ -352,6 +352,7 @@
             this.Controls.Add(this.lblDetalle);
             this.Controls.Add(this.lblCodigo);
             this.Name = "frmReserva";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RESERVA";
             this.Load += new System.EventHandler(this.frmReserva_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).EndInit();

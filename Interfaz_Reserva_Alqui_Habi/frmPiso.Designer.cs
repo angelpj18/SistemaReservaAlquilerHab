@@ -43,14 +43,14 @@
             // 
             // txtNroPiso
             // 
-            this.txtNroPiso.Location = new System.Drawing.Point(149, 158);
+            this.txtNroPiso.Location = new System.Drawing.Point(137, 89);
             this.txtNroPiso.Name = "txtNroPiso";
             this.txtNroPiso.Size = new System.Drawing.Size(95, 20);
             this.txtNroPiso.TabIndex = 12;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(352, 290);
+            this.btnLimpiar.Location = new System.Drawing.Point(341, 269);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 34);
             this.btnLimpiar.TabIndex = 20;
@@ -60,7 +60,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(249, 290);
+            this.btnEditar.Location = new System.Drawing.Point(238, 269);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 34);
             this.btnEditar.TabIndex = 19;
@@ -70,7 +70,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(148, 290);
+            this.btnEliminar.Location = new System.Drawing.Point(137, 269);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 34);
             this.btnEliminar.TabIndex = 18;
@@ -80,7 +80,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(51, 290);
+            this.btnAgregar.Location = new System.Drawing.Point(40, 269);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 34);
             this.btnAgregar.TabIndex = 17;
@@ -91,7 +91,7 @@
             // lstPiso
             // 
             this.lstPiso.FormattingEnabled = true;
-            this.lstPiso.Location = new System.Drawing.Point(289, 127);
+            this.lstPiso.Location = new System.Drawing.Point(277, 58);
             this.lstPiso.Name = "lstPiso";
             this.lstPiso.Size = new System.Drawing.Size(156, 134);
             this.lstPiso.TabIndex = 21;
@@ -100,7 +100,7 @@
             // lblNroPiso
             // 
             this.lblNroPiso.AutoSize = true;
-            this.lblNroPiso.Location = new System.Drawing.Point(64, 158);
+            this.lblNroPiso.Location = new System.Drawing.Point(52, 89);
             this.lblNroPiso.Name = "lblNroPiso";
             this.lblNroPiso.Size = new System.Drawing.Size(47, 13);
             this.lblNroPiso.TabIndex = 11;
@@ -108,7 +108,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(149, 184);
+            this.txtDescripcion.Location = new System.Drawing.Point(137, 115);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 14;
@@ -116,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 191);
+            this.label4.Location = new System.Drawing.Point(52, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 13;
@@ -125,7 +125,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 127);
+            this.label1.Location = new System.Drawing.Point(52, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 22;
@@ -133,7 +133,7 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(149, 127);
+            this.txtId.Location = new System.Drawing.Point(137, 58);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(95, 20);
             this.txtId.TabIndex = 23;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 450);
+            this.ClientSize = new System.Drawing.Size(459, 346);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNroPiso);
@@ -155,6 +155,7 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label4);
             this.Name = "frmPiso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPiso";
             this.Load += new System.EventHandler(this.frmPiso_Load);
             this.ResumeLayout(false);

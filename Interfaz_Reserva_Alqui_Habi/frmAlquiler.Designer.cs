@@ -204,6 +204,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lstAlquileres);
             this.Name = "frmAlquiler";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlquiler";
             this.Load += new System.EventHandler(this.frmAlquiler_Load);
             this.ResumeLayout(false);

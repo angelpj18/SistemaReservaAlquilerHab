@@ -79,7 +79,7 @@ namespace SistemaReservaAlquilerHabi
                     //SqlParameter p9 = new SqlParameter("@Id", id_reserva);
                     SqlParameter p9 = new SqlParameter("@Cantidad", rd.Cantidad);
                     SqlParameter p10 = new SqlParameter("@precioTotal", rd.precioTotal);
-                    SqlParameter p11 = new SqlParameter("@cantPersonas", rd.precioTotal);
+                    SqlParameter p11 = new SqlParameter("@cantPersonas", rd.cantPersonas);
 
                     cmd2.Parameters.Add(p9);
                     cmd2.Parameters.Add(p10);
