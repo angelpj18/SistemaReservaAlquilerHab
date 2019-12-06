@@ -73,9 +73,10 @@
             // lblHabilitado
             // 
             this.lblHabilitado.AutoSize = true;
-            this.lblHabilitado.Location = new System.Drawing.Point(67, 209);
+            this.lblHabilitado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabilitado.Location = new System.Drawing.Point(37, 209);
             this.lblHabilitado.Name = "lblHabilitado";
-            this.lblHabilitado.Size = new System.Drawing.Size(54, 13);
+            this.lblHabilitado.Size = new System.Drawing.Size(74, 15);
             this.lblHabilitado.TabIndex = 47;
             this.lblHabilitado.Text = "Habilitado";
             // 
@@ -155,27 +156,30 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 174);
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(37, 174);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 38;
             this.label4.Text = "Descripción";
             // 
             // lblPiso
             // 
             this.lblPiso.AutoSize = true;
-            this.lblPiso.Location = new System.Drawing.Point(67, 141);
+            this.lblPiso.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPiso.Location = new System.Drawing.Point(37, 141);
             this.lblPiso.Name = "lblPiso";
-            this.lblPiso.Size = new System.Drawing.Size(27, 13);
+            this.lblPiso.Size = new System.Drawing.Size(35, 15);
             this.lblPiso.TabIndex = 37;
             this.lblPiso.Text = "Piso";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Location = new System.Drawing.Point(67, 109);
+            this.lblCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(37, 109);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(54, 13);
+            this.lblCategoria.Size = new System.Drawing.Size(72, 15);
             this.lblCategoria.TabIndex = 36;
             this.lblCategoria.Text = "Categoría";
             // 
@@ -190,9 +194,10 @@
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.Location = new System.Drawing.Point(67, 77);
+            this.lblDetalle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetalle.Location = new System.Drawing.Point(37, 77);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(81, 13);
+            this.lblDetalle.Size = new System.Drawing.Size(109, 15);
             this.lblDetalle.TabIndex = 34;
             this.lblDetalle.Text = "Nro. Habitación";
             // 
@@ -210,6 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(645, 397);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.rdbNo);
@@ -228,6 +234,7 @@
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.txtNroHabi);
             this.Controls.Add(this.lblDetalle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHabitacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Habitación";

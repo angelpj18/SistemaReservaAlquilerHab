@@ -34,6 +34,8 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            ValidarCampos();
+
             Cliente c = new Cliente();
             c.ciCliente = txtCi.Text;
             c.nombre = txtNombre.Text;
@@ -53,6 +55,41 @@ namespace Interfaz_Reserva_Alqui_Habi
             //LimpiarFormulario();
         }
 
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrWhiteSpace(txtCi.Text))
+            {
+                MessageBox.Show("El número de CI no puede estar vacío", "Error");
+                txtCi.Focus();
+                return false;
+            }
+            if (String.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("El nombre no puede estar vacío", "Error");
+                txtNombre.Focus();
+                return false;
+            }
+            if (String.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                MessageBox.Show("La Direccion no puede estar vacía", "Error");
+                txtDireccion.Focus();
+                return false;
+            }
+            if (String.IsNullOrWhiteSpace(txtTelefono.Text))
+            {
+                MessageBox.Show("El número de telefono no puede estar vacío", "Error");
+                txtTelefono.Focus();
+                return false;
+            }
+            if (String.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                MessageBox.Show("El email no puede estar vacío", "Error");
+                txtEmail.Focus();
+                return false;
+            }
+
+            return true;
+        }
         private void ActualizarListaCliente()
         {
             lstCliente.DataSource = null;

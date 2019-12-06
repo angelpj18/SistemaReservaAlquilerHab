@@ -51,6 +51,7 @@
     <Compile Include="Reserva.cs" />
     <Compile Include="ReservaDetalle.cs" />
     <Compile Include="SqlServer.cs" />
+    <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
