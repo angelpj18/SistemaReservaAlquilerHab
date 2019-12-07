@@ -40,7 +40,7 @@ namespace Interfaz_Reserva_Alqui_Habi
                             MessageBox.Show("¡¡Bienvenido '" + nombre + "'!!.");
                             frmLogin2 form2 = new frmLogin2();
                             form2.Close();
-                            frmMenuPrincipal form = new frmMenuPrincipal();
+                            frmMenu form = new frmMenu();
                             form.Show();
                         }
                         else

@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnPiso = new System.Windows.Forms.Button();
             this.SubMenu = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,18 +49,15 @@
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnPiso = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SubMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             this.BarraTitulo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -78,6 +78,41 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 611);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 111);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel4.Location = new System.Drawing.Point(2, 259);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(5, 32);
+            this.panel4.TabIndex = 5;
+            // 
+            // btnPiso
+            // 
+            this.btnPiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnPiso.FlatAppearance.BorderSize = 0;
+            this.btnPiso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnPiso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPiso.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPiso.ForeColor = System.Drawing.Color.White;
+            this.btnPiso.Image = ((System.Drawing.Image)(resources.GetObject("btnPiso.Image")));
+            this.btnPiso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPiso.Location = new System.Drawing.Point(12, 259);
+            this.btnPiso.Name = "btnPiso";
+            this.btnPiso.Size = new System.Drawing.Size(202, 32);
+            this.btnPiso.TabIndex = 6;
+            this.btnPiso.Text = "Piso";
+            this.btnPiso.UseVisualStyleBackColor = false;
             // 
             // SubMenu
             // 
@@ -282,41 +317,6 @@
             this.BarraTitulo.TabIndex = 0;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel4.Location = new System.Drawing.Point(2, 259);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(5, 32);
-            this.panel4.TabIndex = 5;
-            // 
-            // btnPiso
-            // 
-            this.btnPiso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.btnPiso.FlatAppearance.BorderSize = 0;
-            this.btnPiso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.btnPiso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPiso.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPiso.ForeColor = System.Drawing.Color.White;
-            this.btnPiso.Image = ((System.Drawing.Image)(resources.GetObject("btnPiso.Image")));
-            this.btnPiso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPiso.Location = new System.Drawing.Point(12, 259);
-            this.btnPiso.Name = "btnPiso";
-            this.btnPiso.Size = new System.Drawing.Size(202, 32);
-            this.btnPiso.TabIndex = 6;
-            this.btnPiso.Text = "Piso";
-            this.btnPiso.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(212, 111);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // PanelContenedor
             // 
             this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
@@ -328,7 +328,7 @@
             this.PanelContenedor.Size = new System.Drawing.Size(880, 611);
             this.PanelContenedor.TabIndex = 4;
             // 
-            // frmMenuNuevo
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -337,17 +337,19 @@
             this.Controls.Add(this.MenuVertical);
             this.Controls.Add(this.BarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMenuNuevo";
+            this.Name = "frmMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMenuNuevo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuNuevo_Load);
             this.MenuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.BarraTitulo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
