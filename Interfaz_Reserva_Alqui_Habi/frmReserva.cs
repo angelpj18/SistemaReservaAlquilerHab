@@ -29,7 +29,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             dtpFechaReserva.Value = DateTime.Now;
             dtpFechaInicio.Value = DateTime.Now;
             dtpFechaFin.Value = DateTime.Now;
-            txtSuc.Text = "";
+            cboSucursal.SelectedItem = null;
             txtTipoReserva.Text = "";
 
             //Para el detalle
@@ -47,12 +47,12 @@ namespace Interfaz_Reserva_Alqui_Habi
             Reserva reserva = new Reserva();
             reserva.codReserva = (int)nudReserva.Value;
             reserva.detalle = txtDescripcion.Text;
-            reserva.sucursal = txtDescripcion.Text;
             reserva.tipoReserva = txtTipoReserva.Text;
             reserva.fechaReserva = dtpFechaReserva.Value.Date;
             reserva.fechaInicio = dtpFechaInicio.Value.Date;
             reserva.fechaFin = dtpFechaFin.Value.Date;
             reserva.cliente = (SistemaReservaAlquilerHabi.Cliente)cboCliente.SelectedItem;
+            reserva.sucursal = (Sucursal)cboSucursal.SelectedItem;
 
             return reserva;
         }
@@ -108,7 +108,7 @@ namespace Interfaz_Reserva_Alqui_Habi
                 reserva.fechaReserva = dtpFechaFin.Value.Date;
                 reserva.fechaFin = dtpFechaFin.Value.Date;
 
-                reserva.sucursal = txtSuc.Text;
+                reserva.sucursal = (Sucursal)cboSucursal.SelectedItem;
                 reserva.tipoReserva = txtTipoReserva.Text;
 
 
@@ -186,10 +186,10 @@ namespace Interfaz_Reserva_Alqui_Habi
             }
 
 
-            if (String.IsNullOrWhiteSpace(txtSuc.Text))
+            if (cboSucursal.SelectedItem == null)
             {
-                MessageBox.Show("La Sucursal no puede estar vacía", "Error");
-                txtSuc.Focus();
+                MessageBox.Show("Por favor seleccione una Sucursal", "Error");
+                cboCliente.Focus();
                 return false;
             }
 
@@ -233,9 +233,12 @@ namespace Interfaz_Reserva_Alqui_Habi
 
             cboCliente.DataSource = Cliente.ObtenerCliente();
             cmbHabitacion.DataSource = Habitacion.ObtenerHabitacion();
+            cboSucursal.DataSource = Sucursal.ObtenerSucursal();
 
             cboCliente.SelectedItem = null;
             cmbHabitacion.SelectedItem = null;
+            cboSucursal.SelectedItem = null;
+
             reserva = new Reserva();
         }
     }

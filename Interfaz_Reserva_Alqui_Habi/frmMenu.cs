@@ -77,6 +77,9 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void btnProceso2_Click(object sender, EventArgs e)
         {
             SubMenu.Visible = false;
+            frmAlquiler frmAl = new frmAlquiler();
+            frmAl.Show();
+
         }
 
         private void SubMenu_Paint(object sender, PaintEventArgs e)
@@ -88,6 +91,18 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             frmHabitacion frmHabi = new frmHabitacion();
             frmHabi.Show();
+        }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            frmCliente frmCli = new frmCliente();
+            frmCli.Show();
+        }
+
+        private void btnPiso_Click(object sender, EventArgs e)
+        {
+            frmPiso frmPi = new frmPiso();
+            frmPi.Show();
         }
     }
 }

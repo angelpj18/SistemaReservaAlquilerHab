@@ -113,6 +113,7 @@
             this.btnPiso.TabIndex = 6;
             this.btnPiso.Text = "Piso";
             this.btnPiso.UseVisualStyleBackColor = false;
+            this.btnPiso.Click += new System.EventHandler(this.btnPiso_Click);
             // 
             // SubMenu
             // 
@@ -223,6 +224,7 @@
             this.btnCliente.TabIndex = 2;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = false;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // panel1
             // 

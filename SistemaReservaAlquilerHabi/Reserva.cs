@@ -19,7 +19,7 @@ namespace SistemaReservaAlquilerHabi
         public DateTime fechaInicio { get; set; }
         public DateTime fechaReserva { get; set; }
         public DateTime fechaFin { get; set; }
-        public string sucursal { get; set; }
+        public Sucursal sucursal { get; set; }
         public string tipoReserva { get; set; }
 
         public List<ReservaDetalle> detalle_reserva = new List<ReservaDetalle>();
