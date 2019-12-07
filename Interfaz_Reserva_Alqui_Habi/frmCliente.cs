@@ -63,12 +63,15 @@ namespace Interfaz_Reserva_Alqui_Habi
                 txtCi.Focus();
                 return false;
             }
-            if (String.IsNullOrWhiteSpace(txtNombre.Text))
+
+            if (txtNombre.Text.Length < 3 || txtNombre.Text.Length > 30)
             {
-                MessageBox.Show("El nombre no puede estar vacío", "Error");
+                MessageBox.Show("La longitud de caracteres es incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
                 return false;
             }
+
+
             if (String.IsNullOrWhiteSpace(txtDireccion.Text))
             {
                 MessageBox.Show("La Direccion no puede estar vacía", "Error");

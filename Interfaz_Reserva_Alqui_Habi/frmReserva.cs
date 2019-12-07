@@ -23,7 +23,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void LimpiarFormulario()
         {
             nudReserva.Value = 0;
-            txtDetalle.Text = "";
+            txtDescripcion.Text = "";
             txtEstado.Text = "";
             cboCliente.SelectedItem = null;
             dtpFechaReserva.Value = DateTime.Now;
@@ -46,8 +46,8 @@ namespace Interfaz_Reserva_Alqui_Habi
 
             Reserva reserva = new Reserva();
             reserva.codReserva = (int)nudReserva.Value;
-            reserva.detalle = txtDetalle.Text;
-            reserva.sucursal = txtDetalle.Text;
+            reserva.detalle = txtDescripcion.Text;
+            reserva.sucursal = txtDescripcion.Text;
             reserva.tipoReserva = txtTipoReserva.Text;
             reserva.fechaReserva = dtpFechaReserva.Value.Date;
             reserva.fechaInicio = dtpFechaInicio.Value.Date;
@@ -99,29 +99,133 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            reserva.detalle = txtDetalle.Text;
-            reserva.estado = txtEstado.Text;
-            reserva.cliente = (Cliente)cboCliente.SelectedItem;
-            reserva.fechaInicio = dtpFechaFin.Value.Date;
-            reserva.fechaReserva = dtpFechaFin.Value.Date;
-            reserva.fechaFin = dtpFechaFin.Value.Date;
+            if (ValidarCampos())
+            {
+                reserva.detalle = txtDescripcion.Text;
+                reserva.estado = txtEstado.Text;
+                reserva.cliente = (Cliente)cboCliente.SelectedItem;
+                reserva.fechaInicio = dtpFechaFin.Value.Date;
+                reserva.fechaReserva = dtpFechaFin.Value.Date;
+                reserva.fechaFin = dtpFechaFin.Value.Date;
 
-            reserva.sucursal= txtSuc.Text;
-            reserva.tipoReserva = txtTipoReserva.Text;
+                reserva.sucursal = txtSuc.Text;
+                reserva.tipoReserva = txtTipoReserva.Text;
 
 
-            Reserva.AgregarReserva(reserva);
-            MessageBox.Show("La Reserva ha sido guardado con éxito");
-            LimpiarFormulario();
+                Reserva.AgregarReserva(reserva);
+                MessageBox.Show("La Reserva ha sido guardado con éxito");
+                LimpiarFormulario();
 
-            dtgDetalleReserva.DataSource = null;
-            dtpFechaReserva.Value = System.DateTime.Now;
-            dtpFechaInicio.Value = System.DateTime.Now;
-            dtpFechaFin.Value = System.DateTime.Now;
-            cboCliente.SelectedItem = null;
-            cmbHabitacion.SelectedItem = null;
-            reserva = new Reserva();
+                dtgDetalleReserva.DataSource = null;
+                dtpFechaReserva.Value = System.DateTime.Now;
+                dtpFechaInicio.Value = System.DateTime.Now;
+                dtpFechaFin.Value = System.DateTime.Now;
+                cboCliente.SelectedItem = null;
+                cmbHabitacion.SelectedItem = null;
+                reserva = new Reserva();
+            }
         }
+
+
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("La descripción no puede estar vacía", "Error");
+                txtDescripcion.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtEstado.Text))
+            {
+                MessageBox.Show("El estado no puede estar vacía", "Error");
+                txtEstado.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtTipoReserva.Text))
+            {
+                MessageBox.Show("Debe describir el Tipo de Reseva", "Error");
+                txtTipoReserva.Focus();
+                return false;
+            }
+
+
+            var fechaIncorrecta = new DateTime(2100, 1, 1);
+
+            if (dtpFechaReserva.Value < DateTime.Now || dtpFechaReserva.Value > DateTime.Parse("01/01/2100") || dtpFechaReserva.Value > fechaIncorrecta)
+            {
+                MessageBox.Show("Por favor ingrese una fecha correcta", "Error");
+                dtpFechaReserva.Focus();
+                return false;
+            }
+
+            var fechaIncorrectaDos = new DateTime(2100, 1, 1);
+
+            if (dtpFechaInicio.Value < DateTime.Now || dtpFechaInicio.Value > DateTime.Parse("01/01/2100") || dtpFechaInicio.Value > fechaIncorrectaDos)
+            {
+                MessageBox.Show("Por favor ingrese una Fecha de Inicio correcta", "Error");
+                dtpFechaInicio.Focus();
+                return false;
+            }
+
+            var fechaIncorrectaTres = new DateTime(2100, 1, 1);
+
+            if (dtpFechaFin.Value < DateTime.Now || dtpFechaFin.Value > DateTime.Parse("01/01/2100") || dtpFechaFin.Value > fechaIncorrectaTres)
+            {
+                MessageBox.Show("Por favor ingrese una Fecha de Fin correcta", "Error");
+                dtpFechaFin.Focus();
+                return false;
+            }
+
+            if (cboCliente.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione un Cliente", "Error");
+                cboCliente.Focus();
+                return false;
+            }
+
+
+            if (String.IsNullOrWhiteSpace(txtSuc.Text))
+            {
+                MessageBox.Show("La Sucursal no puede estar vacía", "Error");
+                txtSuc.Focus();
+                return false;
+            }
+
+            if (cmbHabitacion.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione una Habitación", "Error");
+                cmbHabitacion.Focus();
+                return false;
+            }
+
+
+            if (String.IsNullOrWhiteSpace(txtCantidad.Text))
+            {
+                MessageBox.Show("La Cantidad no puede estar vacía", "Error");
+                txtCantidad.Focus();
+                return false;
+            }
+
+
+            if (String.IsNullOrWhiteSpace(txtCantPersonas.Text))
+            {
+                MessageBox.Show("La Cantidad de Personas no puede estar vacía", "Error");
+                txtCantPersonas.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtPrecio.Text))
+            {
+                MessageBox.Show("El Precio no puede estar vacío", "Error");
+                txtPrecio.Focus();
+                return false;
+            }            
+
+            return true;
+        }
+
 
         private void frmReserva_Load_1(object sender, EventArgs e)
         {

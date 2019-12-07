@@ -46,17 +46,50 @@ namespace Interfaz_Reserva_Alqui_Habi
             ActualizarListaHabitacion();
             LimpiarFormulario();*/
 
-            Habitacion habi = new Habitacion();
-            habi.descripcion = txtDescripcion.Text;
-            habi.categoria = (CategoriaH)cmbCategoria.SelectedItem;
-            habi.piso = (Piso)cmbPiso.SelectedItem;
-            habi.habilitado = (EstadoHab)cmbCategoria.SelectedItem;
+            if (ValidarCampos())
+            {
+                Habitacion habi = new Habitacion();
+                habi.descripcion = txtDescripcion.Text;
+                habi.categoria = (CategoriaH)cmbCategoria.SelectedItem;
+                habi.piso = (Piso)cmbPiso.SelectedItem;
+                habi.habilitado = (EstadoHab)cmbCategoria.SelectedItem;
 
 
-            Habitacion.AgregarHabitacion(habi);
-            LimpiarFormulario();
-            ActualizarListaHabitacion();
+                Habitacion.AgregarHabitacion(habi);
+                LimpiarFormulario();
+                ActualizarListaHabitacion();
 
+            }
+
+            
+
+        }
+
+        private bool ValidarCampos()
+        {
+            if (cmbCategoria.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione una Categoria", "Error");
+                cmbCategoria.Focus();
+                return false;
+            }
+
+            if (cmbPiso.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione un Piso", "Error");
+                cmbPiso.Focus();
+                return false;
+            }
+
+            if (String.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("La descripcion no puede estar vacía", "Error");
+                txtDescripcion.Focus();
+                return false;
+            }
+
+
+            return true;
         }
 
         private void LimpiarFormulario()
@@ -185,6 +218,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            //cierra
             this.Close();
         }
 

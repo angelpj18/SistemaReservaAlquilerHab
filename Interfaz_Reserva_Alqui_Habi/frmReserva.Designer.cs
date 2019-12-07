@@ -43,7 +43,7 @@
             this.lblFechaReserva = new System.Windows.Forms.Label();
             this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
             this.nudReserva = new System.Windows.Forms.NumericUpDown();
-            this.txtDetalle = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblDetalle = new System.Windows.Forms.Label();
@@ -75,9 +75,9 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.Location = new System.Drawing.Point(310, 39);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(42, 13);
+            this.lblCliente.Size = new System.Drawing.Size(39, 13);
             this.lblCliente.TabIndex = 73;
-            this.lblCliente.Text = "Cliente:";
+            this.lblCliente.Text = "Cliente";
             // 
             // txtTipoReserva
             // 
@@ -91,9 +91,9 @@
             this.lblTipoReserva.AutoSize = true;
             this.lblTipoReserva.Location = new System.Drawing.Point(43, 141);
             this.lblTipoReserva.Name = "lblTipoReserva";
-            this.lblTipoReserva.Size = new System.Drawing.Size(74, 13);
+            this.lblTipoReserva.Size = new System.Drawing.Size(71, 13);
             this.lblTipoReserva.TabIndex = 71;
-            this.lblTipoReserva.Text = "Tipo Reserva:";
+            this.lblTipoReserva.Text = "Tipo Reserva";
             // 
             // txtEstado
             // 
@@ -107,9 +107,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(43, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 69;
-            this.label1.Text = "Estado:";
+            this.label1.Text = "Estado";
             // 
             // txtSuc
             // 
@@ -186,12 +186,12 @@
             this.nudReserva.Size = new System.Drawing.Size(100, 20);
             this.nudReserva.TabIndex = 60;
             // 
-            // txtDetalle
+            // txtDescripcion
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(164, 75);
-            this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(106, 20);
-            this.txtDetalle.TabIndex = 59;
+            this.txtDescripcion.Location = new System.Drawing.Point(164, 75);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(106, 20);
+            this.txtDescripcion.TabIndex = 59;
             // 
             // btnLimpiar
             // 
@@ -346,7 +346,7 @@
             this.Controls.Add(this.lblFechaReserva);
             this.Controls.Add(this.dtpFechaReserva);
             this.Controls.Add(this.nudReserva);
-            this.Controls.Add(this.txtDetalle);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblDetalle);
@@ -379,7 +379,7 @@
         private System.Windows.Forms.Label lblFechaReserva;
         private System.Windows.Forms.DateTimePicker dtpFechaReserva;
         private System.Windows.Forms.NumericUpDown nudReserva;
-        private System.Windows.Forms.TextBox txtDetalle;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblDetalle;

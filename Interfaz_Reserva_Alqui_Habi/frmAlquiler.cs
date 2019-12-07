@@ -77,22 +77,54 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (accion == "I")
+            if (ValidarCampos())
             {
-                Alquiler alquiler = ObtenerDatosFormulario();
-                Alquiler.AgregarAlquiler(alquiler);
-            }
-            else if (accion == "E")
-            {
-                int index = lstAlquileres.SelectedIndex;
-                Alquiler alquiler = ObtenerDatosFormulario();
-                Alquiler.EditarAlquiler(index, alquiler);
+                if (accion == "I")
+                {
+                    Alquiler alquiler = ObtenerDatosFormulario();
+                    Alquiler.AgregarAlquiler(alquiler);
+                }
+                else if (accion == "E")
+                {
+                    int index = lstAlquileres.SelectedIndex;
+                    Alquiler alquiler = ObtenerDatosFormulario();
+                    Alquiler.EditarAlquiler(index, alquiler);
 
+                }
+                ActualizarListaAlquileres();
+                LimpiarFormulario();
+                BloquearFormulario();
             }
-            ActualizarListaAlquileres();
-            LimpiarFormulario();
-            BloquearFormulario();
         }
+
+        private bool ValidarCampos()
+        {
+            if (cboTipoAlquiler.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione un Tipo de Alquiler", "Error");
+                cboTipoAlquiler.Focus();
+                return false;
+            }
+
+            var fechaIncorrecta = new DateTime(2100, 1, 1);
+            if (dtpFechaDesde.Value < DateTime.Now || dtpFechaDesde.Value > DateTime.Parse("01/01/2100") || dtpFechaDesde.Value > fechaIncorrecta)
+            {
+                MessageBox.Show("Por favor ingrese una fecha correcta", "Error");
+                dtpFechaDesde.Focus();
+                return false;
+            }
+
+            var fechaIncorrectaDos = new DateTime(2100, 1, 1);
+            if (dtpFechaHasta.Value < DateTime.Now || dtpFechaHasta.Value > DateTime.Parse("01/01/2100") || dtpFechaHasta.Value > fechaIncorrectaDos)
+            {
+                MessageBox.Show("Por favor ingrese una fecha correcta", "Error");
+                dtpFechaHasta.Focus();
+                return false;
+            }          
+
+            return true;
+        }
+
 
         private Alquiler ObtenerDatosFormulario()
             {

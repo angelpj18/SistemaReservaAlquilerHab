@@ -50,15 +50,36 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Piso pis = new Piso();
-            pis.NroPiso = txtNroPiso.Text;
-            pis.Descripcion = txtDescripcion.Text;
-           
-            
-            
-            Piso.AgregarPiso(pis);
-            LimpiarFormulario();
-            ActualizarListaPiso();
+            if (ValidarCampos())
+            {
+                Piso pis = new Piso();
+                pis.NroPiso = txtNroPiso.Text;
+                pis.Descripcion = txtDescripcion.Text;
+
+
+
+                Piso.AgregarPiso(pis);
+                LimpiarFormulario();
+                ActualizarListaPiso();
+
+            }
+        }
+
+        private bool ValidarCampos()
+        {
+            if (String.IsNullOrWhiteSpace(txtNroPiso.Text))
+            {
+                MessageBox.Show("El número de Piso no puede estar vacío", "Error");
+                txtNroPiso.Focus();
+                return false;
+            }
+            if (String.IsNullOrWhiteSpace(txtDescripcion.Text))
+            {
+                MessageBox.Show("La descripción no puede estar vacía", "Error");
+                txtDescripcion.Focus();
+                return false;
+            }
+            return true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
