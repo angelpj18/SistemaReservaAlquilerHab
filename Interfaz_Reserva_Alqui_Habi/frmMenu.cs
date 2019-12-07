@@ -62,11 +62,16 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void btnProcesos_Click(object sender, EventArgs e)
         {
             SubMenu.Visible = true;
+
+
         }
 
         private void btnProceso1_Click(object sender, EventArgs e)
         {
             SubMenu.Visible = false;
+            frmReserva frmRe = new frmReserva();
+            frmRe.Show();
+
         }
 
         private void btnProceso2_Click(object sender, EventArgs e)

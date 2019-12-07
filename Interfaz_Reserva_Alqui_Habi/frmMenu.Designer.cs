@@ -155,7 +155,7 @@
             this.btnProceso2.Name = "btnProceso2";
             this.btnProceso2.Size = new System.Drawing.Size(169, 32);
             this.btnProceso2.TabIndex = 6;
-            this.btnProceso2.Text = "Procesos";
+            this.btnProceso2.Text = "Alquiler";
             this.btnProceso2.UseVisualStyleBackColor = false;
             this.btnProceso2.Click += new System.EventHandler(this.btnProceso2_Click);
             // 
@@ -171,7 +171,7 @@
             this.btnProceso1.Name = "btnProceso1";
             this.btnProceso1.Size = new System.Drawing.Size(169, 32);
             this.btnProceso1.TabIndex = 4;
-            this.btnProceso1.Text = "Procesos";
+            this.btnProceso1.Text = "Reserva";
             this.btnProceso1.UseVisualStyleBackColor = false;
             this.btnProceso1.Click += new System.EventHandler(this.btnProceso1_Click);
             // 
