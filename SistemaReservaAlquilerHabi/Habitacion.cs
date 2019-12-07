@@ -110,7 +110,7 @@ namespace SistemaReservaAlquilerHabi
 
         public static void EditarHabitacion(int indice, Habitacion h)
         {
-            //Habitacion.listaHabitaciones[indice] = h;
+            //Habitacion.listaHabitaciones[indice] = h; antes
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
             {
                 con.Open();
