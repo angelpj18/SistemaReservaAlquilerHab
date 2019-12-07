@@ -35,6 +35,7 @@
             this.alquilerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pisoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,7 +60,8 @@
             this.habitacionToolStripMenuItem,
             this.alquilerToolStripMenuItem1,
             this.clienteToolStripMenuItem,
-            this.pisoToolStripMenuItem});
+            this.pisoToolStripMenuItem,
+            this.loginPToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -67,30 +69,37 @@
             // habitacionToolStripMenuItem
             // 
             this.habitacionToolStripMenuItem.Name = "habitacionToolStripMenuItem";
-            this.habitacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.habitacionToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.habitacionToolStripMenuItem.Text = "Habitacion";
             this.habitacionToolStripMenuItem.Click += new System.EventHandler(this.habitacionToolStripMenuItem_Click);
             // 
             // alquilerToolStripMenuItem1
             // 
             this.alquilerToolStripMenuItem1.Name = "alquilerToolStripMenuItem1";
-            this.alquilerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.alquilerToolStripMenuItem1.Size = new System.Drawing.Size(132, 22);
             this.alquilerToolStripMenuItem1.Text = "Alquiler";
             this.alquilerToolStripMenuItem1.Click += new System.EventHandler(this.alquilerToolStripMenuItem1_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // pisoToolStripMenuItem
             // 
             this.pisoToolStripMenuItem.Name = "pisoToolStripMenuItem";
-            this.pisoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pisoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.pisoToolStripMenuItem.Text = "Piso";
             this.pisoToolStripMenuItem.Click += new System.EventHandler(this.pisoToolStripMenuItem_Click);
+            // 
+            // loginPToolStripMenuItem
+            // 
+            this.loginPToolStripMenuItem.Name = "loginPToolStripMenuItem";
+            this.loginPToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.loginPToolStripMenuItem.Text = "LoginP";
+            this.loginPToolStripMenuItem.Click += new System.EventHandler(this.loginPToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -103,7 +112,7 @@
             // reservaToolStripMenuItem1
             // 
             this.reservaToolStripMenuItem1.Name = "reservaToolStripMenuItem1";
-            this.reservaToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.reservaToolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
             this.reservaToolStripMenuItem1.Text = "Reserva";
             this.reservaToolStripMenuItem1.Click += new System.EventHandler(this.reservaToolStripMenuItem1_Click);
             // 
@@ -121,7 +130,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(681, 407);
+            this.ClientSize = new System.Drawing.Size(681, 454);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenuPrincipal";
@@ -147,5 +156,6 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem procesosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reservaToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem loginPToolStripMenuItem;
     }
 }

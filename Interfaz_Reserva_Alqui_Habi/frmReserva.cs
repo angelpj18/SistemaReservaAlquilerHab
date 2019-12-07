@@ -69,7 +69,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             ReservaDetalle rd = new ReservaDetalle();
             //rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
             rd.Cantidad = txtCantidad.Text;
-           // rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
+           //rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
 
             rd.cantPersonas = Convert.ToDouble(txtCantPersonas.Text);
             rd.precioTotal = Convert.ToDouble(txtPrecio.Text);

@@ -58,5 +58,11 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
 
         }
+
+        private void loginPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLogin2 frmLo = new frmLogin2();
+            frmLo.Show();
+        }
     }
 }
