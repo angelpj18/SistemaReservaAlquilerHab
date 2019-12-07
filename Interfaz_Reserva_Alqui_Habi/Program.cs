@@ -16,7 +16,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin2());
+            Application.Run(new frmMenu());
         }
     }
 }
