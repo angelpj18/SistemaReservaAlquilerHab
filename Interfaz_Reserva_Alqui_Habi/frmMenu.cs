@@ -122,7 +122,8 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            frmCategoria frmCat = new frmCategoria();
+            frmCat.Show();
         }
 
         private void lblAcercaDe_Click(object sender, EventArgs e)
@@ -133,7 +134,8 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void btnTipoHabitacion_Click(object sender, EventArgs e)
         {
-
+            frmTipoHabi frmTipoH = new frmTipoHabi();
+            frmTipoH.Show();
         }
     }
 }
