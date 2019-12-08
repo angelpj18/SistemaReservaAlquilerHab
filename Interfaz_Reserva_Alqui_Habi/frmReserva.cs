@@ -22,7 +22,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         
         private void LimpiarFormulario()
         {
-            nudReserva.Value = 0;
+          //  nudReserva.Value = 0;
             txtDescripcion.Text = "";
             txtEstado.Text = "";
             cboCliente.SelectedItem = null;
@@ -45,8 +45,8 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
 
             Reserva reserva = new Reserva();
-            reserva.codReserva = (int)nudReserva.Value;
-            reserva.detalle = txtDescripcion.Text;
+     //       reserva.codReserva = (int)nudReserva.Value;
+            reserva.descripcion = txtDescripcion.Text;
             reserva.tipoReserva = txtTipoReserva.Text;
             reserva.fechaReserva = dtpFechaReserva.Value.Date;
             reserva.fechaInicio = dtpFechaInicio.Value.Date;
@@ -101,7 +101,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             if (ValidarCampos())
             {
-                reserva.detalle = txtDescripcion.Text;
+                reserva.descripcion = txtDescripcion.Text;
                 reserva.estado = txtEstado.Text;
                 reserva.cliente = (Cliente)cboCliente.SelectedItem;
                 reserva.fechaInicio = dtpFechaFin.Value.Date;
