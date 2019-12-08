@@ -14,7 +14,7 @@ namespace Interfaz_Reserva_Alqui_Habi
     
     public partial class frmPiso : Form
     {
-        string com;
+       
         public frmPiso()
         {
             InitializeComponent();

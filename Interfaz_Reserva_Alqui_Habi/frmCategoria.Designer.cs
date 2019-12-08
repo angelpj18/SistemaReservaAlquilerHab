@@ -62,7 +62,7 @@
             // 
             this.txtPrecioC.Location = new System.Drawing.Point(95, 99);
             this.txtPrecioC.Name = "txtPrecioC";
-            this.txtPrecioC.Size = new System.Drawing.Size(95, 20);
+            this.txtPrecioC.Size = new System.Drawing.Size(121, 20);
             this.txtPrecioC.TabIndex = 25;
             // 
             // btnLimpiar

@@ -13,7 +13,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 {
     public partial class frmCliente : Form
     {
-        string modo;
+    
 
         public frmCliente()
         {

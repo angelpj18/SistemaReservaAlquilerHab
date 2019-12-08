@@ -11,12 +11,12 @@ namespace SistemaReservaAlquilerHabi
     public class Categoria
     {
         public int Id { get; set; }
-        public string Descripcion { get; set; }
-        public double precioC { get; set; }
+        public string descripcion { get; set; }
+        public string precioCategoria { get; set; }
 
         public override string ToString()
         {
-            return Descripcion;
+            return descripcion;
         }
 
 
@@ -31,12 +31,12 @@ namespace SistemaReservaAlquilerHabi
 
             {
                 con.Open(); //Abrimos la conex con la BD
-                string textoCmd = "insert into Categoria (Descripcion, precioC) VALUES (@Descripcion, @precioCategoria)";
+                string textoCmd = "insert into Categoria (descripcion, precioCategoria) VALUES (@descripcion, @precioCategoria)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
 
                 //PARAMETROS
-                SqlParameter p1 = new SqlParameter("@Descripcion", c.Descripcion);
-                SqlParameter p2 = new SqlParameter("@precioCategoria", c.precioC);
+                SqlParameter p1 = new SqlParameter("@descripcion", c.descripcion);
+                SqlParameter p2 = new SqlParameter("@precioCategoria", c.precioCategoria);
 
 
                 //Le decimos a los parametros de que tipo de datos son
@@ -79,13 +79,13 @@ namespace SistemaReservaAlquilerHabi
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Categoria SET Descripcion = @Descripcion, precioC = @precioCategoria where Id = @Id";
+                string textoCMD = "UPDATE Categoria SET descripcion = @descripcion, precioCategoria = @precioCategoria where Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
                 //DEFINICION DE PARAMETROS
-                SqlParameter p1 = new SqlParameter("@Descripcion", c.Descripcion);
-                SqlParameter p2 = new SqlParameter("@precioCategoria", c.precioC);
+                SqlParameter p1 = new SqlParameter("@descripcion", c.descripcion);
+                SqlParameter p2 = new SqlParameter("@precioCategoria", c.precioCategoria);
                 SqlParameter p3 = new SqlParameter("@Id", c.Id);
 
                 //Le decimos a los parametros de que tipo de datos son
@@ -121,8 +121,8 @@ namespace SistemaReservaAlquilerHabi
                 {
                     categoria = new Categoria();
                     categoria.Id = elLectorDeDatos.GetInt32(0);
-                    categoria.Descripcion = elLectorDeDatos.GetString(1);
-                    categoria.precioC = elLectorDeDatos.GetDouble(2);
+                    categoria.descripcion = elLectorDeDatos.GetString(1);
+                    categoria.precioCategoria = elLectorDeDatos.GetString(2);
 
                     listaCategoria.Add(categoria);
                 }

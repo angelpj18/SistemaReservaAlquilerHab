@@ -28,13 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.lstAlquileres = new System.Windows.Forms.ListBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.cboTipoAlquiler = new System.Windows.Forms.ComboBox();
@@ -43,81 +36,22 @@
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.lblFechaAlquiDesde = new System.Windows.Forms.Label();
+            this.dtgDetalleReserva = new System.Windows.Forms.DataGridView();
+            this.lblHabitacion = new System.Windows.Forms.Label();
+            this.cmbHabitacion = new System.Windows.Forms.ComboBox();
+            this.lblPrecio1 = new System.Windows.Forms.Label();
+            this.txtPrecioCat = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtPrecioTipo = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(432, 287);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 61;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(522, 287);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 60;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(342, 287);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 59;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(203, 287);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 58;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(111, 287);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 57;
-            this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(18, 287);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 56;
-            this.btnAgregar.Text = "AGREGAR";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // lstAlquileres
-            // 
-            this.lstAlquileres.FormattingEnabled = true;
-            this.lstAlquileres.Location = new System.Drawing.Point(342, 39);
-            this.lstAlquileres.Name = "lstAlquileres";
-            this.lstAlquileres.Size = new System.Drawing.Size(237, 212);
-            this.lstAlquileres.TabIndex = 55;
-            this.lstAlquileres.Click += new System.EventHandler(this.lstAlquileres_Click);
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(27, 53);
+            this.lblCodigo.Location = new System.Drawing.Point(12, 23);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(77, 13);
             this.lblCodigo.TabIndex = 64;
@@ -126,7 +60,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(131, 46);
+            this.txtCodigo.Location = new System.Drawing.Point(111, 20);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(112, 20);
             this.txtCodigo.TabIndex = 65;
@@ -134,7 +68,7 @@
             // cboTipoAlquiler
             // 
             this.cboTipoAlquiler.FormattingEnabled = true;
-            this.cboTipoAlquiler.Location = new System.Drawing.Point(131, 92);
+            this.cboTipoAlquiler.Location = new System.Drawing.Point(111, 66);
             this.cboTipoAlquiler.Name = "cboTipoAlquiler";
             this.cboTipoAlquiler.Size = new System.Drawing.Size(112, 21);
             this.cboTipoAlquiler.TabIndex = 67;
@@ -142,7 +76,7 @@
             // lblTipoReserva
             // 
             this.lblTipoReserva.AutoSize = true;
-            this.lblTipoReserva.Location = new System.Drawing.Point(27, 100);
+            this.lblTipoReserva.Location = new System.Drawing.Point(12, 69);
             this.lblTipoReserva.Name = "lblTipoReserva";
             this.lblTipoReserva.Size = new System.Drawing.Size(65, 13);
             this.lblTipoReserva.TabIndex = 66;
@@ -151,7 +85,7 @@
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(131, 193);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(126, 149);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(112, 20);
             this.dtpFechaHasta.TabIndex = 73;
@@ -159,7 +93,7 @@
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(15, 199);
+            this.lblFechaHasta.Location = new System.Drawing.Point(12, 155);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(105, 13);
             this.lblFechaHasta.TabIndex = 72;
@@ -168,7 +102,7 @@
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(131, 142);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(126, 106);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(112, 20);
             this.dtpFechaDesde.TabIndex = 71;
@@ -176,18 +110,112 @@
             // lblFechaAlquiDesde
             // 
             this.lblFechaAlquiDesde.AutoSize = true;
-            this.lblFechaAlquiDesde.Location = new System.Drawing.Point(15, 148);
+            this.lblFechaAlquiDesde.Location = new System.Drawing.Point(12, 112);
             this.lblFechaAlquiDesde.Name = "lblFechaAlquiDesde";
             this.lblFechaAlquiDesde.Size = new System.Drawing.Size(108, 13);
             this.lblFechaAlquiDesde.TabIndex = 70;
             this.lblFechaAlquiDesde.Text = "Fecha Alquiler Desde";
+            // 
+            // dtgDetalleReserva
+            // 
+            this.dtgDetalleReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDetalleReserva.Location = new System.Drawing.Point(276, 145);
+            this.dtgDetalleReserva.Name = "dtgDetalleReserva";
+            this.dtgDetalleReserva.Size = new System.Drawing.Size(452, 198);
+            this.dtgDetalleReserva.TabIndex = 76;
+            // 
+            // lblHabitacion
+            // 
+            this.lblHabitacion.AutoSize = true;
+            this.lblHabitacion.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitacion.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblHabitacion.Location = new System.Drawing.Point(303, 24);
+            this.lblHabitacion.Name = "lblHabitacion";
+            this.lblHabitacion.Size = new System.Drawing.Size(83, 16);
+            this.lblHabitacion.TabIndex = 81;
+            this.lblHabitacion.Text = "Habitacion";
+            // 
+            // cmbHabitacion
+            // 
+            this.cmbHabitacion.FormattingEnabled = true;
+            this.cmbHabitacion.Location = new System.Drawing.Point(392, 23);
+            this.cmbHabitacion.Name = "cmbHabitacion";
+            this.cmbHabitacion.Size = new System.Drawing.Size(121, 21);
+            this.cmbHabitacion.TabIndex = 80;
+            // 
+            // lblPrecio1
+            // 
+            this.lblPrecio1.AutoSize = true;
+            this.lblPrecio1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblPrecio1.Location = new System.Drawing.Point(303, 67);
+            this.lblPrecio1.Name = "lblPrecio1";
+            this.lblPrecio1.Size = new System.Drawing.Size(125, 16);
+            this.lblPrecio1.TabIndex = 83;
+            this.lblPrecio1.Text = "Precio Categoria";
+            // 
+            // txtPrecioCat
+            // 
+            this.txtPrecioCat.Location = new System.Drawing.Point(443, 62);
+            this.txtPrecioCat.Name = "txtPrecioCat";
+            this.txtPrecioCat.Size = new System.Drawing.Size(126, 20);
+            this.txtPrecioCat.TabIndex = 82;
+            this.txtPrecioCat.Text = " ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(303, 106);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 16);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "Precio Tipo de Hab.";
+            // 
+            // txtPrecioTipo
+            // 
+            this.txtPrecioTipo.Location = new System.Drawing.Point(468, 102);
+            this.txtPrecioTipo.Name = "txtPrecioTipo";
+            this.txtPrecioTipo.Size = new System.Drawing.Size(126, 20);
+            this.txtPrecioTipo.TabIndex = 84;
+            this.txtPrecioTipo.Text = " ";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(79, 295);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(86, 27);
+            this.btnGuardar.TabIndex = 87;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(80, 230);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(85, 28);
+            this.btnAgregar.TabIndex = 86;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // frmAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(650, 355);
+            this.ClientSize = new System.Drawing.Size(743, 355);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPrecioTipo);
+            this.Controls.Add(this.lblPrecio1);
+            this.Controls.Add(this.txtPrecioCat);
+            this.Controls.Add(this.lblHabitacion);
+            this.Controls.Add(this.cmbHabitacion);
+            this.Controls.Add(this.dtgDetalleReserva);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.lblFechaHasta);
             this.Controls.Add(this.dtpFechaDesde);
@@ -196,31 +224,16 @@
             this.Controls.Add(this.lblTipoReserva);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.lstAlquileres);
             this.Name = "frmAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlquiler";
-            this.Load += new System.EventHandler(this.frmAlquiler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.ListBox lstAlquileres;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.ComboBox cboTipoAlquiler;
@@ -229,6 +242,15 @@
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Label lblFechaAlquiDesde;
+        private System.Windows.Forms.DataGridView dtgDetalleReserva;
+        private System.Windows.Forms.Label lblHabitacion;
+        private System.Windows.Forms.ComboBox cmbHabitacion;
+        private System.Windows.Forms.Label lblPrecio1;
+        private System.Windows.Forms.TextBox txtPrecioCat;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPrecioTipo;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }
 

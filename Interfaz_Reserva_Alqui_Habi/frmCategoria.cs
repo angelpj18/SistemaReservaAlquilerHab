@@ -23,9 +23,8 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (ValidarCampos())
             {
                 Categoria cat = new Categoria();
-               
-                cat.Descripcion = txtDescripcion.Text;
-                cat.precioC = Convert.ToDouble(txtPrecioC.Text);
+                cat.descripcion = txtDescripcion.Text;
+                cat.precioCategoria= txtPrecioC.Text;
 
 
 
@@ -38,10 +37,10 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void LimpiarFormulario()
         {
-            txtId.Text = "";
+            txtId.Text = " ";
            
-            txtDescripcion.Text = ""; 
-            txtPrecioC.Text = ""; 
+            txtDescripcion.Text = " "; 
+            txtPrecioC.Text = " "; 
         }
 
         private bool ValidarCampos()
@@ -107,14 +106,14 @@ namespace Interfaz_Reserva_Alqui_Habi
             Categoria c = new Categoria();
             c.Id = Convert.ToInt16(txtId.Text);
          
-            c.Descripcion = txtDescripcion.Text;
-            c.precioC = Convert.ToDouble(txtPrecioC.Text);
+            c.descripcion = txtDescripcion.Text;
+            c.precioCategoria = txtPrecioC.Text;
 
             return c;
         }
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-
+            LimpiarFormulario();
         }
 
         private void lstCategoria_SelectedIndexChanged(object sender, EventArgs e)
@@ -124,8 +123,8 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (c != null)
             {
                 txtId.Text = Convert.ToString(c.Id);
-                txtPrecioC.Text = Convert.ToString(c.precioC);
-                txtDescripcion.Text = c.Descripcion;
+                txtPrecioC.Text = c.precioCategoria;
+                txtDescripcion.Text = c.descripcion;
 
             }
         }

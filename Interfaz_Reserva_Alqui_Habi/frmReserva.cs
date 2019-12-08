@@ -36,7 +36,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             cmbHabitacion.SelectedItem = null;
             txtCantidad.Text = "";
             txtCantPersonas.Text = "";
-            txtPrecio.Text = "";
+           
 
         }
     
@@ -72,7 +72,7 @@ namespace Interfaz_Reserva_Alqui_Habi
            //rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
 
             rd.cantPersonas = Convert.ToDouble(txtCantPersonas.Text);
-            rd.precioTotal = Convert.ToDouble(txtPrecio.Text);
+         
             rd.habitacion = (Habitacion)cmbHabitacion.SelectedItem;
             reserva.detalle_reserva.Add(rd);
             ActualizarDataGrid();
@@ -216,12 +216,7 @@ namespace Interfaz_Reserva_Alqui_Habi
                 return false;
             }
 
-            if (String.IsNullOrWhiteSpace(txtPrecio.Text))
-            {
-                MessageBox.Show("El Precio no puede estar vacío", "Error");
-                txtPrecio.Focus();
-                return false;
-            }            
+          
 
             return true;
         }

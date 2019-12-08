@@ -50,19 +50,19 @@
             this.cmbHabitacion = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCantPersonas = new System.Windows.Forms.TextBox();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.lblCantHabi = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cboSucursal = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
             // 
             this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Location = new System.Drawing.Point(384, 36);
+            this.cboCliente.Location = new System.Drawing.Point(100, 139);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(189, 21);
             this.cboCliente.TabIndex = 74;
@@ -72,7 +72,7 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCliente.Location = new System.Drawing.Point(310, 39);
+            this.lblCliente.Location = new System.Drawing.Point(26, 142);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(56, 16);
             this.lblCliente.TabIndex = 73;
@@ -80,7 +80,7 @@
             // 
             // txtTipoReserva
             // 
-            this.txtTipoReserva.Location = new System.Drawing.Point(123, 136);
+            this.txtTipoReserva.Location = new System.Drawing.Point(126, 99);
             this.txtTipoReserva.Name = "txtTipoReserva";
             this.txtTipoReserva.Size = new System.Drawing.Size(159, 20);
             this.txtTipoReserva.TabIndex = 72;
@@ -90,7 +90,7 @@
             this.lblTipoReserva.AutoSize = true;
             this.lblTipoReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoReserva.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblTipoReserva.Location = new System.Drawing.Point(12, 136);
+            this.lblTipoReserva.Location = new System.Drawing.Point(15, 99);
             this.lblTipoReserva.Name = "lblTipoReserva";
             this.lblTipoReserva.Size = new System.Drawing.Size(103, 16);
             this.lblTipoReserva.TabIndex = 71;
@@ -98,7 +98,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(123, 104);
+            this.txtEstado.Location = new System.Drawing.Point(126, 67);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(159, 20);
             this.txtEstado.TabIndex = 70;
@@ -108,7 +108,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(12, 108);
+            this.label1.Location = new System.Drawing.Point(15, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 69;
@@ -119,7 +119,7 @@
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaFin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblFechaFin.Location = new System.Drawing.Point(12, 254);
+            this.lblFechaFin.Location = new System.Drawing.Point(12, 281);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(98, 16);
             this.lblFechaFin.TabIndex = 67;
@@ -128,7 +128,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFin.Location = new System.Drawing.Point(156, 252);
+            this.dtpFechaFin.Location = new System.Drawing.Point(156, 279);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaFin.TabIndex = 66;
@@ -138,7 +138,7 @@
             this.blFechaInicio.AutoSize = true;
             this.blFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.blFechaInicio.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.blFechaInicio.Location = new System.Drawing.Point(12, 222);
+            this.blFechaInicio.Location = new System.Drawing.Point(12, 249);
             this.blFechaInicio.Name = "blFechaInicio";
             this.blFechaInicio.Size = new System.Drawing.Size(114, 16);
             this.blFechaInicio.TabIndex = 65;
@@ -147,7 +147,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(156, 221);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(156, 248);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaInicio.TabIndex = 64;
@@ -157,7 +157,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCategoria.Location = new System.Drawing.Point(310, 78);
+            this.lblCategoria.Location = new System.Drawing.Point(26, 181);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(68, 16);
             this.lblCategoria.TabIndex = 63;
@@ -168,7 +168,7 @@
             this.lblFechaReserva.AutoSize = true;
             this.lblFechaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaReserva.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblFechaReserva.Location = new System.Drawing.Point(12, 194);
+            this.lblFechaReserva.Location = new System.Drawing.Point(12, 221);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(136, 16);
             this.lblFechaReserva.TabIndex = 62;
@@ -177,21 +177,21 @@
             // dtpFechaReserva
             // 
             this.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaReserva.Location = new System.Drawing.Point(155, 192);
+            this.dtpFechaReserva.Location = new System.Drawing.Point(155, 219);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
             this.dtpFechaReserva.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaReserva.TabIndex = 61;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(123, 69);
+            this.txtDescripcion.Location = new System.Drawing.Point(126, 32);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(159, 20);
             this.txtDescripcion.TabIndex = 59;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(651, 29);
+            this.btnLimpiar.Location = new System.Drawing.Point(210, 363);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 58;
@@ -214,7 +214,7 @@
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDetalle.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDetalle.Location = new System.Drawing.Point(12, 73);
+            this.lblDetalle.Location = new System.Drawing.Point(15, 36);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(95, 16);
             this.lblDetalle.TabIndex = 51;
@@ -233,7 +233,7 @@
             this.lblHabitacion.AutoSize = true;
             this.lblHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHabitacion.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHabitacion.Location = new System.Drawing.Point(310, 159);
+            this.lblHabitacion.Location = new System.Drawing.Point(323, 99);
             this.lblHabitacion.Name = "lblHabitacion";
             this.lblHabitacion.Size = new System.Drawing.Size(83, 16);
             this.lblHabitacion.TabIndex = 79;
@@ -242,7 +242,7 @@
             // cmbHabitacion
             // 
             this.cmbHabitacion.FormattingEnabled = true;
-            this.cmbHabitacion.Location = new System.Drawing.Point(399, 155);
+            this.cmbHabitacion.Location = new System.Drawing.Point(412, 95);
             this.cmbHabitacion.Name = "cmbHabitacion";
             this.cmbHabitacion.Size = new System.Drawing.Size(121, 21);
             this.cmbHabitacion.TabIndex = 76;
@@ -252,44 +252,25 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(526, 159);
+            this.label3.Location = new System.Drawing.Point(323, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 16);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 78;
-            this.label3.Text = "Cantidad Personas";
+            this.label3.Text = "Nº Detalle";
             // 
             // txtCantPersonas
             // 
-            this.txtCantPersonas.Location = new System.Drawing.Point(672, 155);
+            this.txtCantPersonas.Location = new System.Drawing.Point(469, 63);
             this.txtCantPersonas.Name = "txtCantPersonas";
-            this.txtCantPersonas.Size = new System.Drawing.Size(49, 20);
+            this.txtCantPersonas.Size = new System.Drawing.Size(64, 20);
             this.txtCantPersonas.TabIndex = 77;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblPrecio.Location = new System.Drawing.Point(526, 190);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(53, 16);
-            this.lblPrecio.TabIndex = 81;
-            this.lblPrecio.Text = "Precio";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(643, 189);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(82, 20);
-            this.txtPrecio.TabIndex = 80;
-            this.txtPrecio.Text = " ";
             // 
             // lblCantHabi
             // 
             this.lblCantHabi.AutoSize = true;
             this.lblCantHabi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantHabi.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCantHabi.Location = new System.Drawing.Point(310, 192);
+            this.lblCantHabi.Location = new System.Drawing.Point(323, 175);
             this.lblCantHabi.Name = "lblCantHabi";
             this.lblCantHabi.Size = new System.Drawing.Size(121, 16);
             this.lblCantHabi.TabIndex = 83;
@@ -297,7 +278,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(437, 188);
+            this.txtCantidad.Location = new System.Drawing.Point(450, 171);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(50, 20);
             this.txtCantidad.TabIndex = 82;
@@ -316,10 +297,29 @@
             // cboSucursal
             // 
             this.cboSucursal.FormattingEnabled = true;
-            this.cboSucursal.Location = new System.Drawing.Point(384, 75);
+            this.cboSucursal.Location = new System.Drawing.Point(100, 178);
             this.cboSucursal.Name = "cboSucursal";
             this.cboSucursal.Size = new System.Drawing.Size(189, 21);
             this.cboSucursal.TabIndex = 85;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.Location = new System.Drawing.Point(323, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "Habitacion";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(412, 130);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 86;
             // 
             // frmReserva
             // 
@@ -327,12 +327,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(776, 445);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cboSucursal);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblCantHabi);
             this.Controls.Add(this.txtCantidad);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblHabitacion);
             this.Controls.Add(this.cmbHabitacion);
             this.Controls.Add(this.label3);
@@ -390,11 +390,11 @@
         private System.Windows.Forms.ComboBox cmbHabitacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCantPersonas;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblCantHabi;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox cboSucursal;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
