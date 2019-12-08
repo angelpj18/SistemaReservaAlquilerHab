@@ -12,7 +12,7 @@ namespace SistemaReservaAlquilerHabi
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public float precioC { get; set; }
+        public double precioC { get; set; }
 
         public override string ToString()
         {
@@ -122,7 +122,7 @@ namespace SistemaReservaAlquilerHabi
                     categoria = new Categoria();
                     categoria.Id = elLectorDeDatos.GetInt32(0);
                     categoria.Descripcion = elLectorDeDatos.GetString(1);
-                    categoria.precioC = elLectorDeDatos.GetFloat(2);
+                    categoria.precioC = elLectorDeDatos.GetDouble(2);
 
                     listaCategoria.Add(categoria);
                 }

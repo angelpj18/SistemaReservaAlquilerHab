@@ -41,12 +41,10 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblFechaReserva = new System.Windows.Forms.Label();
             this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
-            this.nudReserva = new System.Windows.Forms.NumericUpDown();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.lblDetalle = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.dtgDetalleReserva = new System.Windows.Forms.DataGridView();
             this.lblHabitacion = new System.Windows.Forms.Label();
             this.cmbHabitacion = new System.Windows.Forms.ComboBox();
@@ -58,14 +56,13 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cboSucursal = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
             // 
             this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Location = new System.Drawing.Point(374, 31);
+            this.cboCliente.Location = new System.Drawing.Point(384, 36);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(189, 21);
             this.cboCliente.TabIndex = 74;
@@ -74,6 +71,7 @@
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblCliente.Location = new System.Drawing.Point(310, 39);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(56, 16);
@@ -82,15 +80,16 @@
             // 
             // txtTipoReserva
             // 
-            this.txtTipoReserva.Location = new System.Drawing.Point(162, 141);
+            this.txtTipoReserva.Location = new System.Drawing.Point(123, 136);
             this.txtTipoReserva.Name = "txtTipoReserva";
-            this.txtTipoReserva.Size = new System.Drawing.Size(106, 20);
+            this.txtTipoReserva.Size = new System.Drawing.Size(159, 20);
             this.txtTipoReserva.TabIndex = 72;
             // 
             // lblTipoReserva
             // 
             this.lblTipoReserva.AutoSize = true;
             this.lblTipoReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoReserva.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblTipoReserva.Location = new System.Drawing.Point(12, 136);
             this.lblTipoReserva.Name = "lblTipoReserva";
             this.lblTipoReserva.Size = new System.Drawing.Size(103, 16);
@@ -99,15 +98,16 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(162, 109);
+            this.txtEstado.Location = new System.Drawing.Point(123, 104);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(106, 20);
+            this.txtEstado.Size = new System.Drawing.Size(159, 20);
             this.txtEstado.TabIndex = 70;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label1.Location = new System.Drawing.Point(12, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 16);
@@ -118,6 +118,7 @@
             // 
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaFin.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblFechaFin.Location = new System.Drawing.Point(12, 254);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(98, 16);
@@ -136,6 +137,7 @@
             // 
             this.blFechaInicio.AutoSize = true;
             this.blFechaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.blFechaInicio.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.blFechaInicio.Location = new System.Drawing.Point(12, 222);
             this.blFechaInicio.Name = "blFechaInicio";
             this.blFechaInicio.Size = new System.Drawing.Size(114, 16);
@@ -154,6 +156,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblCategoria.Location = new System.Drawing.Point(310, 78);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(68, 16);
@@ -164,6 +167,7 @@
             // 
             this.lblFechaReserva.AutoSize = true;
             this.lblFechaReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaReserva.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblFechaReserva.Location = new System.Drawing.Point(12, 194);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(136, 16);
@@ -178,19 +182,11 @@
             this.dtpFechaReserva.Size = new System.Drawing.Size(108, 20);
             this.dtpFechaReserva.TabIndex = 61;
             // 
-            // nudReserva
-            // 
-            this.nudReserva.DecimalPlaces = 2;
-            this.nudReserva.Location = new System.Drawing.Point(164, 37);
-            this.nudReserva.Name = "nudReserva";
-            this.nudReserva.Size = new System.Drawing.Size(100, 20);
-            this.nudReserva.TabIndex = 60;
-            // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(164, 75);
+            this.txtDescripcion.Location = new System.Drawing.Point(123, 69);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(106, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(159, 20);
             this.txtDescripcion.TabIndex = 59;
             // 
             // btnLimpiar
@@ -217,21 +213,12 @@
             // 
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDetalle.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblDetalle.Location = new System.Drawing.Point(12, 73);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(95, 16);
             this.lblDetalle.TabIndex = 51;
             this.lblDetalle.Text = "Descripcion:";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(12, 39);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(121, 16);
-            this.lblCodigo.TabIndex = 50;
-            this.lblCodigo.Text = "Codigo Reserva";
             // 
             // dtgDetalleReserva
             // 
@@ -245,6 +232,7 @@
             // 
             this.lblHabitacion.AutoSize = true;
             this.lblHabitacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitacion.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblHabitacion.Location = new System.Drawing.Point(310, 159);
             this.lblHabitacion.Name = "lblHabitacion";
             this.lblHabitacion.Size = new System.Drawing.Size(83, 16);
@@ -263,6 +251,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label3.Location = new System.Drawing.Point(526, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 16);
@@ -280,6 +269,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblPrecio.Location = new System.Drawing.Point(526, 190);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(53, 16);
@@ -298,6 +288,7 @@
             // 
             this.lblCantHabi.AutoSize = true;
             this.lblCantHabi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantHabi.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblCantHabi.Location = new System.Drawing.Point(310, 192);
             this.lblCantHabi.Name = "lblCantHabi";
             this.lblCantHabi.Size = new System.Drawing.Size(121, 16);
@@ -325,7 +316,7 @@
             // cboSucursal
             // 
             this.cboSucursal.FormattingEnabled = true;
-            this.cboSucursal.Location = new System.Drawing.Point(374, 72);
+            this.cboSucursal.Location = new System.Drawing.Point(384, 75);
             this.cboSucursal.Name = "cboSucursal";
             this.cboSucursal.Size = new System.Drawing.Size(189, 21);
             this.cboSucursal.TabIndex = 85;
@@ -360,18 +351,15 @@
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblFechaReserva);
             this.Controls.Add(this.dtpFechaReserva);
-            this.Controls.Add(this.nudReserva);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lblDetalle);
-            this.Controls.Add(this.lblCodigo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RESERVA";
             this.Load += new System.EventHandler(this.frmReserva_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.nudReserva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -393,12 +381,10 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblFechaReserva;
         private System.Windows.Forms.DateTimePicker dtpFechaReserva;
-        private System.Windows.Forms.NumericUpDown nudReserva;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblDetalle;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.DataGridView dtgDetalleReserva;
         private System.Windows.Forms.Label lblHabitacion;
         private System.Windows.Forms.ComboBox cmbHabitacion;

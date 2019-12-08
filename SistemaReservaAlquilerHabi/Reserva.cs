@@ -11,9 +11,9 @@ namespace SistemaReservaAlquilerHabi
     public class Reserva
     {
         //Tipo Reserva va a ser Enum
-        public int codReserva { get; set; }        
+        public int Id { get; set; }        
         //detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva
-        public string detalle { get; set; }
+        public string descripcion { get; set; }
         public string estado { get; set; }
         public Cliente cliente { get; set; }
         public DateTime fechaInicio { get; set; }
@@ -34,11 +34,11 @@ namespace SistemaReservaAlquilerHabi
                 con.Open();
                 
                 //Cabecera del Pedido
-                string textoCMD = "INSERT INTO Reserva (detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva) output INSERTED.codReserva VALUES (@detalle, @estado, @cliente, @fechaInicio, @fechaReserva, @fechaFin, @sucursal, @tipoReserva)";
+                string textoCMD = "INSERT INTO Reserva (descripcion, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva) output INSERTED.codReserva VALUES (@descripcion, @estado, @cliente, @fechaInicio, @fechaReserva, @fechaFin, @sucursal, @tipoReserva)";
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
                
-                SqlParameter p1 = new SqlParameter("@detalle", r.detalle);
+                SqlParameter p1 = new SqlParameter("@descripcion", r.descripcion);
                 SqlParameter p2 = new SqlParameter("@estado", r.estado);
                 SqlParameter p3 = new SqlParameter("@cliente",Cliente.ObtenerCliente() );
                 SqlParameter p4 = new SqlParameter("@fechaInicio", r.fechaInicio);
@@ -54,8 +54,8 @@ namespace SistemaReservaAlquilerHabi
                 p4.SqlDbType = System.Data.SqlDbType.DateTime;
                 p5.SqlDbType = System.Data.SqlDbType.DateTime;
                 p6.SqlDbType = System.Data.SqlDbType.DateTime;
-                p1.SqlDbType = System.Data.SqlDbType.VarChar;
-                p1.SqlDbType = System.Data.SqlDbType.VarChar;
+                p7.SqlDbType = System.Data.SqlDbType.Int;
+                p8.SqlDbType = System.Data.SqlDbType.VarChar;
     
                 cmd.Parameters.Add(p1);
                 cmd.Parameters.Add(p2);
@@ -109,7 +109,7 @@ namespace SistemaReservaAlquilerHabi
 
         public override string ToString()
         {
-            return this.detalle;
+            return this.descripcion;
         }
 
 
