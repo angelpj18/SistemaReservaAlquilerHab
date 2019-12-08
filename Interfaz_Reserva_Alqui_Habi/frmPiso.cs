@@ -24,7 +24,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             txtId.Text = "";
             txtNroPiso.Text = ""; ;
-            txtDescripcion.Text = ""; ;
+            txtDescripcion.Text = ""; 
         }
 
         private void ActualizarListaPiso()

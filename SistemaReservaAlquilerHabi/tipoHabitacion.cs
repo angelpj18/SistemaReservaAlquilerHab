@@ -12,7 +12,7 @@ namespace SistemaReservaAlquilerHabi
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public float precioTipoHab { get; set; }
+        public double precioTipoHab { get; set; }
 
         public override string ToString()
         {
