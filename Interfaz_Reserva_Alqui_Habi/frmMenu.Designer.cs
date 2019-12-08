@@ -50,6 +50,8 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnSucursal = new System.Windows.Forms.Button();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SubMenu.SuspendLayout();
@@ -63,6 +65,8 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.MenuVertical.Controls.Add(this.panel7);
+            this.MenuVertical.Controls.Add(this.btnSucursal);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.panel4);
             this.MenuVertical.Controls.Add(this.btnPiso);
@@ -92,7 +96,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel4.Location = new System.Drawing.Point(2, 259);
+            this.panel4.Location = new System.Drawing.Point(2, 225);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 32);
             this.panel4.TabIndex = 5;
@@ -107,7 +111,7 @@
             this.btnPiso.ForeColor = System.Drawing.Color.White;
             this.btnPiso.Image = ((System.Drawing.Image)(resources.GetObject("btnPiso.Image")));
             this.btnPiso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPiso.Location = new System.Drawing.Point(12, 259);
+            this.btnPiso.Location = new System.Drawing.Point(12, 225);
             this.btnPiso.Name = "btnPiso";
             this.btnPiso.Size = new System.Drawing.Size(202, 32);
             this.btnPiso.TabIndex = 6;
@@ -121,7 +125,7 @@
             this.SubMenu.Controls.Add(this.panel5);
             this.SubMenu.Controls.Add(this.btnProceso2);
             this.SubMenu.Controls.Add(this.btnProceso1);
-            this.SubMenu.Location = new System.Drawing.Point(31, 356);
+            this.SubMenu.Location = new System.Drawing.Point(31, 390);
             this.SubMenu.Name = "SubMenu";
             this.SubMenu.Size = new System.Drawing.Size(186, 100);
             this.SubMenu.TabIndex = 0;
@@ -152,6 +156,8 @@
             this.btnProceso2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceso2.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProceso2.ForeColor = System.Drawing.Color.White;
+            this.btnProceso2.Image = ((System.Drawing.Image)(resources.GetObject("btnProceso2.Image")));
+            this.btnProceso2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProceso2.Location = new System.Drawing.Point(14, 54);
             this.btnProceso2.Name = "btnProceso2";
             this.btnProceso2.Size = new System.Drawing.Size(169, 32);
@@ -168,6 +174,8 @@
             this.btnProceso1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceso1.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProceso1.ForeColor = System.Drawing.Color.White;
+            this.btnProceso1.Image = ((System.Drawing.Image)(resources.GetObject("btnProceso1.Image")));
+            this.btnProceso1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProceso1.Location = new System.Drawing.Point(15, 3);
             this.btnProceso1.Name = "btnProceso1";
             this.btnProceso1.Size = new System.Drawing.Size(169, 32);
@@ -179,7 +187,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel3.Location = new System.Drawing.Point(2, 317);
+            this.panel3.Location = new System.Drawing.Point(2, 351);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 3;
@@ -192,7 +200,9 @@
             this.btnProcesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcesos.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcesos.ForeColor = System.Drawing.Color.White;
-            this.btnProcesos.Location = new System.Drawing.Point(12, 317);
+            this.btnProcesos.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesos.Image")));
+            this.btnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProcesos.Location = new System.Drawing.Point(12, 351);
             this.btnProcesos.Name = "btnProcesos";
             this.btnProcesos.Size = new System.Drawing.Size(202, 32);
             this.btnProcesos.TabIndex = 4;
@@ -203,7 +213,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel2.Location = new System.Drawing.Point(2, 199);
+            this.panel2.Location = new System.Drawing.Point(2, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 32);
             this.panel2.TabIndex = 1;
@@ -218,7 +228,7 @@
             this.btnCliente.ForeColor = System.Drawing.Color.White;
             this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(13, 199);
+            this.btnCliente.Location = new System.Drawing.Point(13, 175);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(202, 32);
             this.btnCliente.TabIndex = 2;
@@ -229,7 +239,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel1.Location = new System.Drawing.Point(2, 139);
+            this.panel1.Location = new System.Drawing.Point(2, 124);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 32);
             this.panel1.TabIndex = 0;
@@ -244,7 +254,7 @@
             this.btnHabitacion.ForeColor = System.Drawing.Color.White;
             this.btnHabitacion.Image = ((System.Drawing.Image)(resources.GetObject("btnHabitacion.Image")));
             this.btnHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHabitacion.Location = new System.Drawing.Point(12, 139);
+            this.btnHabitacion.Location = new System.Drawing.Point(12, 124);
             this.btnHabitacion.Name = "btnHabitacion";
             this.btnHabitacion.Size = new System.Drawing.Size(202, 32);
             this.btnHabitacion.TabIndex = 0;
@@ -330,6 +340,32 @@
             this.PanelContenedor.Size = new System.Drawing.Size(880, 611);
             this.PanelContenedor.TabIndex = 4;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel7.Location = new System.Drawing.Point(4, 289);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 32);
+            this.panel7.TabIndex = 7;
+            // 
+            // btnSucursal
+            // 
+            this.btnSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnSucursal.FlatAppearance.BorderSize = 0;
+            this.btnSucursal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSucursal.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucursal.ForeColor = System.Drawing.Color.White;
+            this.btnSucursal.Image = ((System.Drawing.Image)(resources.GetObject("btnSucursal.Image")));
+            this.btnSucursal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSucursal.Location = new System.Drawing.Point(14, 289);
+            this.btnSucursal.Name = "btnSucursal";
+            this.btnSucursal.Size = new System.Drawing.Size(202, 32);
+            this.btnSucursal.TabIndex = 8;
+            this.btnSucursal.Text = "Sucursal";
+            this.btnSucursal.UseVisualStyleBackColor = false;
+            this.btnSucursal.Click += new System.EventHandler(this.btnSucursal_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -378,5 +414,7 @@
         private System.Windows.Forms.Button btnPiso;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel PanelContenedor;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnSucursal;
     }
 }

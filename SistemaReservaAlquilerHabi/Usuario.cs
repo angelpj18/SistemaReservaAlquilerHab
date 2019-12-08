@@ -4,12 +4,16 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Drawing;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace SistemaReservaAlquilerHabi
 {
-    public class Usuario
+     class Usuario
     {
+
         public int Id { get; set; }
         public string nombreUsu { get; set; }
         public string contrasena { get; set; }
@@ -137,6 +141,7 @@ namespace SistemaReservaAlquilerHabi
             }
         }
 
+       
 
     }
 }

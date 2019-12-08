@@ -108,6 +108,7 @@
     <Compile Include="frmSucursal.Designer.cs">
       <DependentUpon>frmSucursal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personalizacion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAlquiler.resx">
