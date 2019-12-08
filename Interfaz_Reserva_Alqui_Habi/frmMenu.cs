@@ -51,6 +51,8 @@ namespace Interfaz_Reserva_Alqui_Habi
             Personalizacion.BorderRedondoButton(btnProcesos);
             Personalizacion.BorderRedondoButton(btnProceso1);
             Personalizacion.BorderRedondoButton(btnProceso2);
+            Personalizacion.BorderRedondoButton(btnTipoHabitacion);
+            Personalizacion.BorderRedondoButton(btnCategoria);
 
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -116,6 +118,22 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             frmSucursal frmSu = new frmSucursal();
             frmSu.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblAcercaDe_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe frmAcer = new frmAcercaDe();
+            frmAcer.Show();
+        }
+
+        private void btnTipoHabitacion_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

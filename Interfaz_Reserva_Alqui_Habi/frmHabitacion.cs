@@ -208,6 +208,14 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private void frmHabitacion_Load(object sender, EventArgs e)
         {
+            Personalizacion.BorderRedondoButton(btnAgregar);
+            Personalizacion.BorderRedondoButton(btnEliminar);
+            Personalizacion.BorderRedondoButton(btnEditar);
+            Personalizacion.BorderRedondoButton(btnLimpiar);
+            Personalizacion.BorderRedondoButton(btnSalir);
+
+
+
             ActualizarListaHabitacion();
             cmbCategoria.DataSource = Enum.GetValues(typeof(CategoriaH));
            cmbPiso.DataSource = Piso.ObtenerPisos();

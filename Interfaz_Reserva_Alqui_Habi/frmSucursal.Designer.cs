@@ -156,6 +156,7 @@
             this.Controls.Add(this.label4);
             this.Name = "frmSucursal";
             this.Text = "frmSucursal";
+         
             this.ResumeLayout(false);
             this.PerformLayout();
 

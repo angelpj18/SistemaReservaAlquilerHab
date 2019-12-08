@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnSucursal = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnPiso = new System.Windows.Forms.Button();
@@ -50,8 +52,11 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnSucursal = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnTipoHabitacion = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCategoria = new System.Windows.Forms.Button();
+            this.lblAcercaDe = new System.Windows.Forms.Label();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SubMenu.SuspendLayout();
@@ -65,6 +70,11 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.MenuVertical.Controls.Add(this.lblAcercaDe);
+            this.MenuVertical.Controls.Add(this.panel8);
+            this.MenuVertical.Controls.Add(this.btnTipoHabitacion);
+            this.MenuVertical.Controls.Add(this.panel9);
+            this.MenuVertical.Controls.Add(this.btnCategoria);
             this.MenuVertical.Controls.Add(this.panel7);
             this.MenuVertical.Controls.Add(this.btnSucursal);
             this.MenuVertical.Controls.Add(this.pictureBox1);
@@ -82,6 +92,32 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 611);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel7.Location = new System.Drawing.Point(2, 276);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 32);
+            this.panel7.TabIndex = 7;
+            // 
+            // btnSucursal
+            // 
+            this.btnSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnSucursal.FlatAppearance.BorderSize = 0;
+            this.btnSucursal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSucursal.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucursal.ForeColor = System.Drawing.Color.White;
+            this.btnSucursal.Image = ((System.Drawing.Image)(resources.GetObject("btnSucursal.Image")));
+            this.btnSucursal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSucursal.Location = new System.Drawing.Point(12, 276);
+            this.btnSucursal.Name = "btnSucursal";
+            this.btnSucursal.Size = new System.Drawing.Size(202, 32);
+            this.btnSucursal.TabIndex = 8;
+            this.btnSucursal.Text = "Sucursal";
+            this.btnSucursal.UseVisualStyleBackColor = false;
+            this.btnSucursal.Click += new System.EventHandler(this.btnSucursal_Click);
             // 
             // pictureBox1
             // 
@@ -125,7 +161,7 @@
             this.SubMenu.Controls.Add(this.panel5);
             this.SubMenu.Controls.Add(this.btnProceso2);
             this.SubMenu.Controls.Add(this.btnProceso1);
-            this.SubMenu.Location = new System.Drawing.Point(31, 390);
+            this.SubMenu.Location = new System.Drawing.Point(31, 468);
             this.SubMenu.Name = "SubMenu";
             this.SubMenu.Size = new System.Drawing.Size(186, 100);
             this.SubMenu.TabIndex = 0;
@@ -187,7 +223,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel3.Location = new System.Drawing.Point(2, 351);
+            this.panel3.Location = new System.Drawing.Point(2, 433);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(5, 32);
             this.panel3.TabIndex = 3;
@@ -202,7 +238,7 @@
             this.btnProcesos.ForeColor = System.Drawing.Color.White;
             this.btnProcesos.Image = ((System.Drawing.Image)(resources.GetObject("btnProcesos.Image")));
             this.btnProcesos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProcesos.Location = new System.Drawing.Point(12, 351);
+            this.btnProcesos.Location = new System.Drawing.Point(12, 433);
             this.btnProcesos.Name = "btnProcesos";
             this.btnProcesos.Size = new System.Drawing.Size(202, 32);
             this.btnProcesos.TabIndex = 4;
@@ -239,7 +275,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel1.Location = new System.Drawing.Point(2, 124);
+            this.panel1.Location = new System.Drawing.Point(2, 123);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 32);
             this.panel1.TabIndex = 0;
@@ -254,7 +290,7 @@
             this.btnHabitacion.ForeColor = System.Drawing.Color.White;
             this.btnHabitacion.Image = ((System.Drawing.Image)(resources.GetObject("btnHabitacion.Image")));
             this.btnHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHabitacion.Location = new System.Drawing.Point(12, 124);
+            this.btnHabitacion.Location = new System.Drawing.Point(12, 123);
             this.btnHabitacion.Name = "btnHabitacion";
             this.btnHabitacion.Size = new System.Drawing.Size(202, 32);
             this.btnHabitacion.TabIndex = 0;
@@ -340,31 +376,70 @@
             this.PanelContenedor.Size = new System.Drawing.Size(880, 611);
             this.PanelContenedor.TabIndex = 4;
             // 
-            // panel7
+            // panel8
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel7.Location = new System.Drawing.Point(4, 289);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(5, 32);
-            this.panel7.TabIndex = 7;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel8.Location = new System.Drawing.Point(3, 381);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 32);
+            this.panel8.TabIndex = 11;
             // 
-            // btnSucursal
+            // btnTipoHabitacion
             // 
-            this.btnSucursal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.btnSucursal.FlatAppearance.BorderSize = 0;
-            this.btnSucursal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.btnSucursal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSucursal.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSucursal.ForeColor = System.Drawing.Color.White;
-            this.btnSucursal.Image = ((System.Drawing.Image)(resources.GetObject("btnSucursal.Image")));
-            this.btnSucursal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSucursal.Location = new System.Drawing.Point(14, 289);
-            this.btnSucursal.Name = "btnSucursal";
-            this.btnSucursal.Size = new System.Drawing.Size(202, 32);
-            this.btnSucursal.TabIndex = 8;
-            this.btnSucursal.Text = "Sucursal";
-            this.btnSucursal.UseVisualStyleBackColor = false;
-            this.btnSucursal.Click += new System.EventHandler(this.btnSucursal_Click);
+            this.btnTipoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnTipoHabitacion.FlatAppearance.BorderSize = 0;
+            this.btnTipoHabitacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnTipoHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoHabitacion.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoHabitacion.ForeColor = System.Drawing.Color.White;
+            this.btnTipoHabitacion.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoHabitacion.Image")));
+            this.btnTipoHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoHabitacion.Location = new System.Drawing.Point(13, 381);
+            this.btnTipoHabitacion.Name = "btnTipoHabitacion";
+            this.btnTipoHabitacion.Size = new System.Drawing.Size(202, 32);
+            this.btnTipoHabitacion.TabIndex = 12;
+            this.btnTipoHabitacion.Text = "          Tipo Habitacion";
+            this.btnTipoHabitacion.UseVisualStyleBackColor = false;
+            this.btnTipoHabitacion.Click += new System.EventHandler(this.btnTipoHabitacion_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel9.Location = new System.Drawing.Point(3, 331);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(5, 32);
+            this.panel9.TabIndex = 9;
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnCategoria.FlatAppearance.BorderSize = 0;
+            this.btnCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoria.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
+            this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategoria.Location = new System.Drawing.Point(13, 331);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(202, 32);
+            this.btnCategoria.TabIndex = 10;
+            this.btnCategoria.Text = "Categoria";
+            this.btnCategoria.UseVisualStyleBackColor = false;
+            this.btnCategoria.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblAcercaDe
+            // 
+            this.lblAcercaDe.AutoSize = true;
+            this.lblAcercaDe.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcercaDe.ForeColor = System.Drawing.Color.White;
+            this.lblAcercaDe.Location = new System.Drawing.Point(0, 595);
+            this.lblAcercaDe.Name = "lblAcercaDe";
+            this.lblAcercaDe.Size = new System.Drawing.Size(61, 16);
+            this.lblAcercaDe.TabIndex = 0;
+            this.lblAcercaDe.Text = "Acerca de";
+            this.lblAcercaDe.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblAcercaDe.Click += new System.EventHandler(this.lblAcercaDe_Click);
             // 
             // frmMenu
             // 
@@ -381,6 +456,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMenuNuevo_Load);
             this.MenuVertical.ResumeLayout(false);
+            this.MenuVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.SubMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
@@ -416,5 +492,10 @@
         private System.Windows.Forms.Panel PanelContenedor;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnSucursal;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnTipoHabitacion;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Button btnCategoria;
+        private System.Windows.Forms.Label lblAcercaDe;
     }
 }

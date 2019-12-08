@@ -21,7 +21,14 @@ namespace Interfaz_Reserva_Alqui_Habi
         }
 
         private void frmCliente_Load(object sender, EventArgs e)
+        
         {
+            Personalizacion.BorderRedondoButton(btnAgregar);
+            Personalizacion.BorderRedondoButton(btnEliminar);
+            Personalizacion.BorderRedondoButton(btnEditar);
+            Personalizacion.BorderRedondoButton(btnLimpiar);
+    
+
             actualizarListaCliente();
             txtCi.Focus();
         }
