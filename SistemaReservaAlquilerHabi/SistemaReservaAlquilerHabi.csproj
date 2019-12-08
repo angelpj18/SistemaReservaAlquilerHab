@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alquiler.cs" />
+    <Compile Include="Categoria.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Habitacion.cs" />
     <Compile Include="Piso.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="ReservaDetalle.cs" />
     <Compile Include="SqlServer.cs" />
     <Compile Include="Sucursal.cs" />
+    <Compile Include="tipoHabitacion.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
