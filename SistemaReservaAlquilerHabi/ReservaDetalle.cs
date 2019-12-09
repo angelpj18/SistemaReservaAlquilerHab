@@ -8,13 +8,15 @@ namespace SistemaReservaAlquilerHabi
     public class ReservaDetalle
     {
 
-        public Habitacion habitacion { get; set; }
+        public int Id { get; set; }
 
-        //public double Cantidad { get; set; }
+      //  public Reserva id_reserva { get; set; }
+        public tipoHabitacion tipoHabitacion { get; set; }
+        public Categoria categoria { get; set; }
 
-        public string Cantidad { get; set; }
+        public string cantidad { get; set; }
 
-        public double precioTotal { get; set; }
-        public double cantPersonas { get; set; }
+        
+        
     }
 }

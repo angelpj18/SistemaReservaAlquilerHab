@@ -8,19 +8,29 @@ using SistemaReservaAlquilerHabi;
 
 namespace SistemaReservaAlquilerHabi
 {
+    public enum Estado
+    {
+        Activa,
+        Inactiva
+    }
+
+    public enum TipoReserva
+    {
+        PorAgencia,
+        PorRecepcion
+    }
     public class Reserva
     {
         //Tipo Reserva va a ser Enum
         public int Id { get; set; }        
-        //detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva
         public string descripcion { get; set; }
-        public string estado { get; set; }
-        public Cliente cliente { get; set; }
+        public Estado estado { get; set; }
         public DateTime fechaInicio { get; set; }
         public DateTime fechaReserva { get; set; }
         public DateTime fechaFin { get; set; }
+        public Cliente cliente { get; set; }
         public Sucursal sucursal { get; set; }
-        public string tipoReserva { get; set; }
+        public TipoReserva tipoReserva { get; set; }
 
         public List<ReservaDetalle> detalle_reserva = new List<ReservaDetalle>();
 
@@ -73,13 +83,13 @@ namespace SistemaReservaAlquilerHabi
                 //Detalle de la Reserva
                 foreach (ReservaDetalle rd in r.detalle_reserva)
                 {
-                    string textoCMD2 = "INSERT INTO ReservaDetalle(Cantidad, precioTotal, cantPersonas) VALUES (@Cantidad, @precioTotal, @cantPersonas)";
+                    string textoCMD2 = "INSERT INTO ReservaDetalle(tipoHabitacion, categoria, cantidad) VALUES (@tipoHabitacion, @categoria, @cantidad)";
                     SqlCommand cmd2 = new SqlCommand(textoCMD2, con);
 
                     //SqlParameter p9 = new SqlParameter("@Id", id_reserva);
-                    SqlParameter p9 = new SqlParameter("@Cantidad", rd.Cantidad);
-                    SqlParameter p10 = new SqlParameter("@precioTotal", rd.precioTotal);
-                    SqlParameter p11 = new SqlParameter("@cantPersonas", rd.cantPersonas);
+                    SqlParameter p9 = new SqlParameter("@tipoHabitacion", rd.tipoHabitacion);
+                    SqlParameter p10 = new SqlParameter("@categoria", rd.categoria);
+                    SqlParameter p11 = new SqlParameter("@cantidad", rd.cantidad);
 
                     cmd2.Parameters.Add(p9);
                     cmd2.Parameters.Add(p10);

@@ -24,18 +24,20 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
           //  nudReserva.Value = 0;
             txtDescripcion.Text = "";
-            txtEstado.Text = "";
+            cboEstado.SelectedItem = null;
             cboCliente.SelectedItem = null;
             dtpFechaReserva.Value = DateTime.Now;
             dtpFechaInicio.Value = DateTime.Now;
             dtpFechaFin.Value = DateTime.Now;
             cboSucursal.SelectedItem = null;
-            txtTipoReserva.Text = "";
+            cboTipoRe.SelectedItem = null;
 
             //Para el detalle
-            cmbHabitacion.SelectedItem = null;
+            
+            txtNroDetalle.Text = "";
+            cboTipoHabitacion.SelectedItem = null;
+            cboCategoria.SelectedItem = null;
             txtCantidad.Text = "";
-            txtCantPersonas.Text = "";
            
 
         }
@@ -45,13 +47,14 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
 
             Reserva reserva = new Reserva();
-     //       reserva.codReserva = (int)nudReserva.Value;
+     //     reserva.codReserva = (int)nudReserva.Value;
             reserva.descripcion = txtDescripcion.Text;
-            reserva.tipoReserva = txtTipoReserva.Text;
+            reserva.estado = (Estado)cboEstado.SelectedItem;
+            reserva.tipoReserva = (TipoReserva)cboTipoRe.SelectedItem;
             reserva.fechaReserva = dtpFechaReserva.Value.Date;
             reserva.fechaInicio = dtpFechaInicio.Value.Date;
             reserva.fechaFin = dtpFechaFin.Value.Date;
-            reserva.cliente = (SistemaReservaAlquilerHabi.Cliente)cboCliente.SelectedItem;
+            reserva.cliente = (Cliente)cboCliente.SelectedItem;
             reserva.sucursal = (Sucursal)cboSucursal.SelectedItem;
 
             return reserva;
@@ -67,13 +70,10 @@ namespace Interfaz_Reserva_Alqui_Habi
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ReservaDetalle rd = new ReservaDetalle();
-            //rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
-            rd.Cantidad = txtCantidad.Text;
-           //rd.Cantidad = Convert.ToDouble(txtCantidad.Text);
-
-            rd.cantPersonas = Convert.ToDouble(txtCantPersonas.Text);
-         
-            rd.habitacion = (Habitacion)cmbHabitacion.SelectedItem;
+            rd.Id = Convert.ToInt32(txtNroDetalle.Text);
+            rd.tipoHabitacion = (tipoHabitacion)cboTipoHabitacion.SelectedItem;
+            rd.categoria = (Categoria)cboCategoria.SelectedItem;
+            rd.cantidad = txtCantidad.Text;
             reserva.detalle_reserva.Add(rd);
             ActualizarDataGrid();
 
@@ -102,14 +102,14 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (ValidarCampos())
             {
                 reserva.descripcion = txtDescripcion.Text;
-                reserva.estado = txtEstado.Text;
+           //     reserva.estado = txtEstado.Text;
                 reserva.cliente = (Cliente)cboCliente.SelectedItem;
                 reserva.fechaInicio = dtpFechaFin.Value.Date;
                 reserva.fechaReserva = dtpFechaFin.Value.Date;
                 reserva.fechaFin = dtpFechaFin.Value.Date;
 
                 reserva.sucursal = (Sucursal)cboSucursal.SelectedItem;
-                reserva.tipoReserva = txtTipoReserva.Text;
+              //  reserva.tipoReserva = txtTipoReserva.Text;
 
 
                 Reserva.AgregarReserva(reserva);
@@ -121,7 +121,7 @@ namespace Interfaz_Reserva_Alqui_Habi
                 dtpFechaInicio.Value = System.DateTime.Now;
                 dtpFechaFin.Value = System.DateTime.Now;
                 cboCliente.SelectedItem = null;
-                cmbHabitacion.SelectedItem = null;
+                cboTipoHabitacion.SelectedItem = null;
                 reserva = new Reserva();
             }
         }
@@ -136,19 +136,19 @@ namespace Interfaz_Reserva_Alqui_Habi
                 return false;
             }
 
-            if (String.IsNullOrWhiteSpace(txtEstado.Text))
-            {
-                MessageBox.Show("El estado no puede estar vacía", "Error");
-                txtEstado.Focus();
-                return false;
-            }
+            //if (String.IsNullOrWhiteSpace(txtEstado.Text))
+            //{
+            //    MessageBox.Show("El estado no puede estar vacía", "Error");
+            //    txtEstado.Focus();
+            //    return false;
+            //}
 
-            if (String.IsNullOrWhiteSpace(txtTipoReserva.Text))
-            {
-                MessageBox.Show("Debe describir el Tipo de Reseva", "Error");
-                txtTipoReserva.Focus();
-                return false;
-            }
+            //if (String.IsNullOrWhiteSpace(txtTipoReserva.Text))
+            //{
+            //    MessageBox.Show("Debe describir el Tipo de Reseva", "Error");
+            //    txtTipoReserva.Focus();
+            //    return false;
+            //}
 
 
             var fechaIncorrecta = new DateTime(2100, 1, 1);
@@ -193,10 +193,10 @@ namespace Interfaz_Reserva_Alqui_Habi
                 return false;
             }
 
-            if (cmbHabitacion.SelectedItem == null)
+            if (cboTipoHabitacion.SelectedItem == null)
             {
                 MessageBox.Show("Por favor seleccione una Habitación", "Error");
-                cmbHabitacion.Focus();
+                cboTipoHabitacion.Focus();
                 return false;
             }
 
@@ -209,10 +209,10 @@ namespace Interfaz_Reserva_Alqui_Habi
             }
 
 
-            if (String.IsNullOrWhiteSpace(txtCantPersonas.Text))
+            if (String.IsNullOrWhiteSpace(txtNroDetalle.Text))
             {
                 MessageBox.Show("La Cantidad de Personas no puede estar vacía", "Error");
-                txtCantPersonas.Focus();
+                txtNroDetalle.Focus();
                 return false;
             }
 
@@ -227,14 +227,16 @@ namespace Interfaz_Reserva_Alqui_Habi
             dtgDetalleReserva.AutoGenerateColumns = true;
 
             cboCliente.DataSource = Cliente.ObtenerCliente();
-            cmbHabitacion.DataSource = Habitacion.ObtenerHabitacion();
+            cboTipoHabitacion.DataSource = Habitacion.ObtenerHabitacion();
             cboSucursal.DataSource = Sucursal.ObtenerSucursal();
 
             cboCliente.SelectedItem = null;
-            cmbHabitacion.SelectedItem = null;
+            cboTipoHabitacion.SelectedItem = null;
             cboSucursal.SelectedItem = null;
 
             reserva = new Reserva();
         }
+
+      
     }
 }

@@ -30,9 +30,7 @@
         {
             this.cboCliente = new System.Windows.Forms.ComboBox();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.txtTipoReserva = new System.Windows.Forms.TextBox();
             this.lblTipoReserva = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -47,15 +45,17 @@
             this.lblDetalle = new System.Windows.Forms.Label();
             this.dtgDetalleReserva = new System.Windows.Forms.DataGridView();
             this.lblHabitacion = new System.Windows.Forms.Label();
-            this.cmbHabitacion = new System.Windows.Forms.ComboBox();
+            this.cboTipoHabitacion = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCantPersonas = new System.Windows.Forms.TextBox();
+            this.txtNroDetalle = new System.Windows.Forms.TextBox();
             this.lblCantHabi = new System.Windows.Forms.Label();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cboSucursal = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.cboTipoRe = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,13 +78,6 @@
             this.lblCliente.TabIndex = 73;
             this.lblCliente.Text = "Cliente";
             // 
-            // txtTipoReserva
-            // 
-            this.txtTipoReserva.Location = new System.Drawing.Point(126, 99);
-            this.txtTipoReserva.Name = "txtTipoReserva";
-            this.txtTipoReserva.Size = new System.Drawing.Size(159, 20);
-            this.txtTipoReserva.TabIndex = 72;
-            // 
             // lblTipoReserva
             // 
             this.lblTipoReserva.AutoSize = true;
@@ -95,13 +88,6 @@
             this.lblTipoReserva.Size = new System.Drawing.Size(103, 16);
             this.lblTipoReserva.TabIndex = 71;
             this.lblTipoReserva.Text = "Tipo Reserva";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Location = new System.Drawing.Point(126, 67);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(159, 20);
-            this.txtEstado.TabIndex = 70;
             // 
             // label1
             // 
@@ -186,7 +172,7 @@
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(126, 32);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(159, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(163, 20);
             this.txtDescripcion.TabIndex = 59;
             // 
             // btnLimpiar
@@ -235,17 +221,17 @@
             this.lblHabitacion.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.lblHabitacion.Location = new System.Drawing.Point(323, 99);
             this.lblHabitacion.Name = "lblHabitacion";
-            this.lblHabitacion.Size = new System.Drawing.Size(83, 16);
+            this.lblHabitacion.Size = new System.Drawing.Size(119, 16);
             this.lblHabitacion.TabIndex = 79;
-            this.lblHabitacion.Text = "Habitacion";
+            this.lblHabitacion.Text = "Tipo Habitacion";
             // 
-            // cmbHabitacion
+            // cboTipoHabitacion
             // 
-            this.cmbHabitacion.FormattingEnabled = true;
-            this.cmbHabitacion.Location = new System.Drawing.Point(412, 95);
-            this.cmbHabitacion.Name = "cmbHabitacion";
-            this.cmbHabitacion.Size = new System.Drawing.Size(121, 21);
-            this.cmbHabitacion.TabIndex = 76;
+            this.cboTipoHabitacion.FormattingEnabled = true;
+            this.cboTipoHabitacion.Location = new System.Drawing.Point(469, 94);
+            this.cboTipoHabitacion.Name = "cboTipoHabitacion";
+            this.cboTipoHabitacion.Size = new System.Drawing.Size(121, 21);
+            this.cboTipoHabitacion.TabIndex = 76;
             // 
             // label3
             // 
@@ -258,12 +244,12 @@
             this.label3.TabIndex = 78;
             this.label3.Text = "Nº Detalle";
             // 
-            // txtCantPersonas
+            // txtNroDetalle
             // 
-            this.txtCantPersonas.Location = new System.Drawing.Point(469, 63);
-            this.txtCantPersonas.Name = "txtCantPersonas";
-            this.txtCantPersonas.Size = new System.Drawing.Size(64, 20);
-            this.txtCantPersonas.TabIndex = 77;
+            this.txtNroDetalle.Location = new System.Drawing.Point(469, 63);
+            this.txtNroDetalle.Name = "txtNroDetalle";
+            this.txtNroDetalle.Size = new System.Drawing.Size(64, 20);
+            this.txtNroDetalle.TabIndex = 77;
             // 
             // lblCantHabi
             // 
@@ -278,7 +264,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(450, 171);
+            this.txtCantidad.Location = new System.Drawing.Point(469, 171);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(50, 20);
             this.txtCantidad.TabIndex = 82;
@@ -309,17 +295,33 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Location = new System.Drawing.Point(323, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 16);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 87;
-            this.label2.Text = "Habitacion";
+            this.label2.Text = "Categoria";
             // 
-            // comboBox1
+            // cboCategoria
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(412, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 86;
+            this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Location = new System.Drawing.Point(469, 129);
+            this.cboCategoria.Name = "cboCategoria";
+            this.cboCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cboCategoria.TabIndex = 86;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(126, 67);
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(163, 21);
+            this.cboEstado.TabIndex = 88;
+            // 
+            // cboTipoRe
+            // 
+            this.cboTipoRe.FormattingEnabled = true;
+            this.cboTipoRe.Location = new System.Drawing.Point(126, 98);
+            this.cboTipoRe.Name = "cboTipoRe";
+            this.cboTipoRe.Size = new System.Drawing.Size(163, 21);
+            this.cboTipoRe.TabIndex = 89;
             // 
             // frmReserva
             // 
@@ -327,22 +329,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(776, 445);
+            this.Controls.Add(this.cboTipoRe);
+            this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.cboSucursal);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblCantHabi);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lblHabitacion);
-            this.Controls.Add(this.cmbHabitacion);
+            this.Controls.Add(this.cboTipoHabitacion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCantPersonas);
+            this.Controls.Add(this.txtNroDetalle);
             this.Controls.Add(this.dtgDetalleReserva);
             this.Controls.Add(this.cboCliente);
             this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.txtTipoReserva);
             this.Controls.Add(this.lblTipoReserva);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblFechaFin);
             this.Controls.Add(this.dtpFechaFin);
@@ -370,9 +372,7 @@
 
         private System.Windows.Forms.ComboBox cboCliente;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox txtTipoReserva;
         private System.Windows.Forms.Label lblTipoReserva;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFechaFin;
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
@@ -387,14 +387,16 @@
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.DataGridView dtgDetalleReserva;
         private System.Windows.Forms.Label lblHabitacion;
-        private System.Windows.Forms.ComboBox cmbHabitacion;
+        private System.Windows.Forms.ComboBox cboTipoHabitacion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCantPersonas;
+        private System.Windows.Forms.TextBox txtNroDetalle;
         private System.Windows.Forms.Label lblCantHabi;
         private System.Windows.Forms.TextBox txtCantidad;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox cboSucursal;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.ComboBox cboTipoRe;
     }
 }
