@@ -9,8 +9,6 @@ namespace SistemaReservaAlquilerHabi
     {
 
         public int Id { get; set; }
-
-      //  public Reserva id_reserva { get; set; }
         public tipoHabitacion tipoHabitacion { get; set; }
         public Categoria categoria { get; set; }
 

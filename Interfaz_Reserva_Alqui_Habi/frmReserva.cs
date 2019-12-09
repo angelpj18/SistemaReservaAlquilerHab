@@ -102,14 +102,13 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (ValidarCampos())
             {
                 reserva.descripcion = txtDescripcion.Text;
-           //     reserva.estado = txtEstado.Text;
-                reserva.cliente = (Cliente)cboCliente.SelectedItem;
+                reserva.estado = (Estado)cboEstado.SelectedItem;
                 reserva.fechaInicio = dtpFechaFin.Value.Date;
                 reserva.fechaReserva = dtpFechaFin.Value.Date;
                 reserva.fechaFin = dtpFechaFin.Value.Date;
-
+                reserva.cliente = (Cliente)cboCliente.SelectedItem;
                 reserva.sucursal = (Sucursal)cboSucursal.SelectedItem;
-              //  reserva.tipoReserva = txtTipoReserva.Text;
+                reserva.tipoReserva = (TipoReserva)cboTipoRe.SelectedItem;
 
 
                 Reserva.AgregarReserva(reserva);
@@ -120,7 +119,11 @@ namespace Interfaz_Reserva_Alqui_Habi
                 dtpFechaReserva.Value = System.DateTime.Now;
                 dtpFechaInicio.Value = System.DateTime.Now;
                 dtpFechaFin.Value = System.DateTime.Now;
+
+                cboEstado.SelectedItem = null;
+                cboTipoRe.SelectedItem = null;
                 cboCliente.SelectedItem = null;
+                cboSucursal.SelectedItem = null;
                 cboTipoHabitacion.SelectedItem = null;
                 reserva = new Reserva();
             }
@@ -136,19 +139,19 @@ namespace Interfaz_Reserva_Alqui_Habi
                 return false;
             }
 
-            //if (String.IsNullOrWhiteSpace(txtEstado.Text))
-            //{
-            //    MessageBox.Show("El estado no puede estar vacía", "Error");
-            //    txtEstado.Focus();
-            //    return false;
-            //}
+            if (cboEstado.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione un estado", "Error");
+                cboEstado.Focus();
+                return false;
+            }
 
-            //if (String.IsNullOrWhiteSpace(txtTipoReserva.Text))
-            //{
-            //    MessageBox.Show("Debe describir el Tipo de Reseva", "Error");
-            //    txtTipoReserva.Focus();
-            //    return false;
-            //}
+            if (cboTipoRe.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor seleccione un tipo de reserva", "Error");
+                cboTipoRe.Focus();
+                return false;
+            }
 
 
             var fechaIncorrecta = new DateTime(2100, 1, 1);
@@ -211,7 +214,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 
             if (String.IsNullOrWhiteSpace(txtNroDetalle.Text))
             {
-                MessageBox.Show("La Cantidad de Personas no puede estar vacía", "Error");
+                MessageBox.Show("El numero de detalle no puede estar vacío", "Error");
                 txtNroDetalle.Focus();
                 return false;
             }
