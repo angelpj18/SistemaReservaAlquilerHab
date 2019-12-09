@@ -39,13 +39,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.BarraTitulo = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // txtNroPiso
             // 
+            this.txtNroPiso.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtNroPiso.Location = new System.Drawing.Point(127, 92);
             this.txtNroPiso.Name = "txtNroPiso";
-            this.txtNroPiso.Size = new System.Drawing.Size(95, 20);
+            this.txtNroPiso.Size = new System.Drawing.Size(95, 26);
             this.txtNroPiso.TabIndex = 12;
             // 
             // btnLimpiar
@@ -100,54 +102,70 @@
             // lblNroPiso
             // 
             this.lblNroPiso.AutoSize = true;
-            this.lblNroPiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNroPiso.Font = new System.Drawing.Font("Century", 11.25F);
+            this.lblNroPiso.ForeColor = System.Drawing.Color.White;
             this.lblNroPiso.Location = new System.Drawing.Point(26, 92);
             this.lblNroPiso.Name = "lblNroPiso";
-            this.lblNroPiso.Size = new System.Drawing.Size(68, 16);
+            this.lblNroPiso.Size = new System.Drawing.Size(69, 18);
             this.lblNroPiso.TabIndex = 11;
             this.lblNroPiso.Text = "Nro Piso";
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtDescripcion.Location = new System.Drawing.Point(130, 124);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(121, 26);
             this.txtDescripcion.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Century", 11.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(26, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 13;
             this.label4.Text = "Descripción";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label1.Font = new System.Drawing.Font("Century", 11.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(35, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 16);
+            this.label1.Size = new System.Drawing.Size(23, 18);
             this.label1.TabIndex = 22;
             this.label1.Text = "Id";
             // 
             // txtId
             // 
+            this.txtId.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtId.Location = new System.Drawing.Point(127, 54);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(95, 20);
+            this.txtId.Size = new System.Drawing.Size(95, 26);
             this.txtId.TabIndex = 23;
+            // 
+            // BarraTitulo
+            // 
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.BarraTitulo.Name = "BarraTitulo";
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 281);
+            this.BarraTitulo.TabIndex = 25;
             // 
             // frmPiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(482, 281);
+            this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNroPiso);
@@ -182,5 +200,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Panel BarraTitulo;
     }
 }

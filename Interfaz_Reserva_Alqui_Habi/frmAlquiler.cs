@@ -42,9 +42,10 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         }
 
-     
+        private void lblTipoReserva_Click(object sender, EventArgs e)
+        {
 
-  
+        }
     }
 }
 
