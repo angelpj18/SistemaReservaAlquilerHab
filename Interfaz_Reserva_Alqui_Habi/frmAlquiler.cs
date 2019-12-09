@@ -20,17 +20,20 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             InitializeComponent();
         }
-
       
-        //private void LimpiarFormulario()
-        //{
+        private void LimpiarFormulario()
+        {
+         txtCodigo.Text = "";
+         cboTipoAlquiler.SelectedItem = null;
+         dtpFechaDesde.Value = System.DateTime.Now;
+         dtpFechaHasta.Value = System.DateTime.Now;
 
-        //    txtCodigo.Text = "";
-        //    dtpFechaDesde.Value = System.DateTime.Now;
-        //    dtpFechaHasta.Value = System.DateTime.Now;
-        //    cboTipoAlquiler.SelectedItem = null;
+            //Para el detalle
+         cmbHabitacion.SelectedItem = null;
+            txtPrecioCat.Text = "";
+            txtPrecioTipo.Text = "";
 
-        //}
+        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -42,10 +45,8 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         }
 
-        private void lblTipoReserva_Click(object sender, EventArgs e)
-        {
 
-        }
+      
     }
 }
 

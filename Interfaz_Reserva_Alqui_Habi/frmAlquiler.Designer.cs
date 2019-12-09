@@ -86,8 +86,7 @@
             this.lblTipoReserva.Size = new System.Drawing.Size(102, 18);
             this.lblTipoReserva.TabIndex = 66;
             this.lblTipoReserva.Text = "Tipo Alquiler";
-            this.lblTipoReserva.Click += new System.EventHandler(this.lblTipoReserva_Click);
-            // 
+             // 
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -223,7 +222,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = true;
-            // 
+              // 
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
