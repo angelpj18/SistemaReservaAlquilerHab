@@ -154,9 +154,9 @@
             this.Controls.Add(this.lblNroPiso);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSucursal";
             this.Text = "frmSucursal";
-         
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -34,10 +34,6 @@
             this.cmbPiso = new System.Windows.Forms.ComboBox();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
             this.lstHabitacion = new System.Windows.Forms.ListBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblPiso = new System.Windows.Forms.Label();
@@ -45,14 +41,20 @@
             this.txtNroHabi = new System.Windows.Forms.TextBox();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rdbNo
             // 
             this.rdbNo.AutoSize = true;
-            this.rdbNo.Location = new System.Drawing.Point(202, 210);
+            this.rdbNo.Font = new System.Drawing.Font("Century", 11.25F);
+            this.rdbNo.ForeColor = System.Drawing.Color.White;
+            this.rdbNo.Location = new System.Drawing.Point(231, 197);
             this.rdbNo.Name = "rdbNo";
-            this.rdbNo.Size = new System.Drawing.Size(39, 17);
+            this.rdbNo.Size = new System.Drawing.Size(46, 22);
             this.rdbNo.TabIndex = 49;
             this.rdbNo.TabStop = true;
             this.rdbNo.Text = "No";
@@ -62,9 +64,11 @@
             // 
             this.rdbSi.AutoSize = true;
             this.rdbSi.Checked = true;
-            this.rdbSi.Location = new System.Drawing.Point(152, 209);
+            this.rdbSi.Font = new System.Drawing.Font("Century", 11.25F);
+            this.rdbSi.ForeColor = System.Drawing.Color.White;
+            this.rdbSi.Location = new System.Drawing.Point(181, 196);
             this.rdbSi.Name = "rdbSi";
-            this.rdbSi.Size = new System.Drawing.Size(34, 17);
+            this.rdbSi.Size = new System.Drawing.Size(40, 22);
             this.rdbSi.TabIndex = 48;
             this.rdbSi.TabStop = true;
             this.rdbSi.Text = "Si";
@@ -73,150 +77,189 @@
             // lblHabilitado
             // 
             this.lblHabilitado.AutoSize = true;
-            this.lblHabilitado.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHabilitado.Location = new System.Drawing.Point(37, 209);
+            this.lblHabilitado.Font = new System.Drawing.Font("Century", 11.25F);
+            this.lblHabilitado.ForeColor = System.Drawing.Color.White;
+            this.lblHabilitado.Location = new System.Drawing.Point(48, 196);
             this.lblHabilitado.Name = "lblHabilitado";
-            this.lblHabilitado.Size = new System.Drawing.Size(74, 15);
+            this.lblHabilitado.Size = new System.Drawing.Size(83, 18);
             this.lblHabilitado.TabIndex = 47;
             this.lblHabilitado.Text = "Habilitado";
             // 
             // cmbPiso
             // 
+            this.cmbPiso.Font = new System.Drawing.Font("Century", 11.25F);
             this.cmbPiso.FormattingEnabled = true;
-            this.cmbPiso.Location = new System.Drawing.Point(152, 138);
+            this.cmbPiso.Location = new System.Drawing.Point(181, 148);
             this.cmbPiso.Name = "cmbPiso";
-            this.cmbPiso.Size = new System.Drawing.Size(121, 21);
+            this.cmbPiso.Size = new System.Drawing.Size(180, 26);
             this.cmbPiso.TabIndex = 46;
             // 
             // cmbCategoria
             // 
+            this.cmbCategoria.Font = new System.Drawing.Font("Century", 11.25F);
             this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(152, 106);
+            this.cmbCategoria.Location = new System.Drawing.Point(181, 116);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(180, 26);
             this.cmbCategoria.TabIndex = 45;
             // 
             // lstHabitacion
             // 
             this.lstHabitacion.FormattingEnabled = true;
-            this.lstHabitacion.Location = new System.Drawing.Point(325, 40);
+            this.lstHabitacion.Location = new System.Drawing.Point(378, 29);
             this.lstHabitacion.Name = "lstHabitacion";
             this.lstHabitacion.Size = new System.Drawing.Size(273, 212);
             this.lstHabitacion.TabIndex = 44;
             this.lstHabitacion.Click += new System.EventHandler(this.lstHabitacion_Click);
             this.lstHabitacion.SelectedIndexChanged += new System.EventHandler(this.lstHabitacion_SelectedIndexChanged);
             // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(344, 295);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 34);
-            this.btnLimpiar.TabIndex = 43;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(246, 295);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 34);
-            this.btnEditar.TabIndex = 42;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(148, 295);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 34);
-            this.btnEliminar.TabIndex = 41;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(47, 295);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 34);
-            this.btnAgregar.TabIndex = 40;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(152, 171);
+            this.txtDescripcion.Font = new System.Drawing.Font("Century", 11.25F);
+            this.txtDescripcion.Location = new System.Drawing.Point(181, 84);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
+            this.txtDescripcion.Size = new System.Drawing.Size(180, 26);
             this.txtDescripcion.TabIndex = 39;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 174);
+            this.label4.Font = new System.Drawing.Font("Century", 11.25F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(48, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 15);
+            this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 38;
             this.label4.Text = "Descripción";
             // 
             // lblPiso
             // 
             this.lblPiso.AutoSize = true;
-            this.lblPiso.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPiso.Location = new System.Drawing.Point(37, 141);
+            this.lblPiso.Font = new System.Drawing.Font("Century", 11.25F);
+            this.lblPiso.ForeColor = System.Drawing.Color.White;
+            this.lblPiso.Location = new System.Drawing.Point(67, 148);
             this.lblPiso.Name = "lblPiso";
-            this.lblPiso.Size = new System.Drawing.Size(35, 15);
+            this.lblPiso.Size = new System.Drawing.Size(38, 18);
             this.lblPiso.TabIndex = 37;
             this.lblPiso.Text = "Piso";
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(37, 109);
+            this.lblCategoria.Font = new System.Drawing.Font("Century", 11.25F);
+            this.lblCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblCategoria.Location = new System.Drawing.Point(48, 116);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(72, 15);
+            this.lblCategoria.Size = new System.Drawing.Size(77, 18);
             this.lblCategoria.TabIndex = 36;
             this.lblCategoria.Text = "Categoría";
             // 
             // txtNroHabi
             // 
-            this.txtNroHabi.Location = new System.Drawing.Point(152, 77);
+            this.txtNroHabi.Font = new System.Drawing.Font("Century", 11.25F);
+            this.txtNroHabi.Location = new System.Drawing.Point(181, 52);
             this.txtNroHabi.Name = "txtNroHabi";
             this.txtNroHabi.ReadOnly = true;
-            this.txtNroHabi.Size = new System.Drawing.Size(82, 20);
+            this.txtNroHabi.Size = new System.Drawing.Size(180, 26);
             this.txtNroHabi.TabIndex = 35;
             // 
             // lblDetalle
             // 
             this.lblDetalle.AutoSize = true;
-            this.lblDetalle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalle.Location = new System.Drawing.Point(37, 77);
+            this.lblDetalle.Font = new System.Drawing.Font("Century", 11.25F);
+            this.lblDetalle.ForeColor = System.Drawing.Color.White;
+            this.lblDetalle.Location = new System.Drawing.Point(37, 49);
             this.lblDetalle.Name = "lblDetalle";
-            this.lblDetalle.Size = new System.Drawing.Size(109, 15);
+            this.lblDetalle.Size = new System.Drawing.Size(120, 18);
             this.lblDetalle.TabIndex = 34;
             this.lblDetalle.Text = "Nro. Habitación";
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(523, 295);
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.SA;
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(657, 187);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 34);
+            this.btnSalir.Size = new System.Drawing.Size(107, 54);
             this.btnSalir.TabIndex = 50;
             this.btnSalir.Text = "Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(561, 265);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(136, 54);
+            this.btnLimpiar.TabIndex = 43;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._6;
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditar.Location = new System.Drawing.Point(429, 265);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(117, 54);
+            this.btnEditar.TabIndex = 42;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._7;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(282, 265);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(141, 54);
+            this.btnEliminar.TabIndex = 41;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAgregar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregar.Location = new System.Drawing.Point(135, 265);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(141, 54);
+            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmHabitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(645, 397);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.ClientSize = new System.Drawing.Size(763, 331);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.rdbNo);
             this.Controls.Add(this.rdbSi);

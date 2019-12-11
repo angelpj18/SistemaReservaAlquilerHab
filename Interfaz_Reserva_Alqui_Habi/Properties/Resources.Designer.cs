@@ -99,5 +99,25 @@ namespace Interfaz_Reserva_Alqui_Habi.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PicsArt_12_11_12_49_37 {
+            get {
+                object obj = ResourceManager.GetObject("PicsArt_12-11-12.49.37", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SA {
+            get {
+                object obj = ResourceManager.GetObject("SA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

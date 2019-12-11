@@ -86,7 +86,7 @@
             this.lblTipoReserva.Size = new System.Drawing.Size(102, 18);
             this.lblTipoReserva.TabIndex = 66;
             this.lblTipoReserva.Text = "Tipo Alquiler";
-             // 
+            // 
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -222,14 +222,14 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = true;
-              // 
+            // 
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 425);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 421);
             this.BarraTitulo.TabIndex = 88;
             // 
             // frmAlquiler
@@ -237,7 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(951, 425);
+            this.ClientSize = new System.Drawing.Size(951, 421);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAgregar);
