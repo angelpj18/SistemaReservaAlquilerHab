@@ -37,7 +37,7 @@
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
             this.lblFechaAlquiDesde = new System.Windows.Forms.Label();
-            this.dtgDetalleReserva = new System.Windows.Forms.DataGridView();
+            this.dtgDetalleAlquiler = new System.Windows.Forms.DataGridView();
             this.lblHabitacion = new System.Windows.Forms.Label();
             this.cmbHabitacion = new System.Windows.Forms.ComboBox();
             this.lblPrecio1 = new System.Windows.Forms.Label();
@@ -49,7 +49,10 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
+            this.cboReserva = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleAlquiler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,13 +132,13 @@
             this.lblFechaAlquiDesde.TabIndex = 70;
             this.lblFechaAlquiDesde.Text = "Fecha Alquiler Desde";
             // 
-            // dtgDetalleReserva
+            // dtgDetalleAlquiler
             // 
-            this.dtgDetalleReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetalleReserva.Location = new System.Drawing.Point(351, 211);
-            this.dtgDetalleReserva.Name = "dtgDetalleReserva";
-            this.dtgDetalleReserva.Size = new System.Drawing.Size(527, 228);
-            this.dtgDetalleReserva.TabIndex = 76;
+            this.dtgDetalleAlquiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgDetalleAlquiler.Location = new System.Drawing.Point(351, 211);
+            this.dtgDetalleAlquiler.Name = "dtgDetalleAlquiler";
+            this.dtgDetalleAlquiler.Size = new System.Drawing.Size(527, 228);
+            this.dtgDetalleAlquiler.TabIndex = 76;
             // 
             // lblHabitacion
             // 
@@ -258,12 +261,50 @@
             this.label2.TabIndex = 90;
             this.label2.Text = "ALQUILER";
             // 
+            // cboReserva
+            // 
+            this.cboReserva.FormattingEnabled = true;
+            this.cboReserva.Location = new System.Drawing.Point(214, 233);
+            this.cboReserva.Name = "cboReserva";
+            this.cboReserva.Size = new System.Drawing.Size(130, 23);
+            this.cboReserva.TabIndex = 92;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century", 11.25F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(44, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 18);
+            this.label3.TabIndex = 91;
+            this.label3.Text = "Reserva";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimpiar.Location = new System.Drawing.Point(35, 338);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(141, 54);
+            this.btnLimpiar.TabIndex = 93;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(907, 461);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.cboReserva);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
@@ -275,7 +316,7 @@
             this.Controls.Add(this.txtPrecioCat);
             this.Controls.Add(this.lblHabitacion);
             this.Controls.Add(this.cmbHabitacion);
-            this.Controls.Add(this.dtgDetalleReserva);
+            this.Controls.Add(this.dtgDetalleAlquiler);
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.lblFechaHasta);
             this.Controls.Add(this.dtpFechaDesde);
@@ -290,7 +331,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlquiler";
             this.Load += new System.EventHandler(this.frmAlquiler_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleAlquiler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -306,7 +347,7 @@
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Label lblFechaAlquiDesde;
-        private System.Windows.Forms.DataGridView dtgDetalleReserva;
+        private System.Windows.Forms.DataGridView dtgDetalleAlquiler;
         private System.Windows.Forms.Label lblHabitacion;
         private System.Windows.Forms.ComboBox cmbHabitacion;
         private System.Windows.Forms.Label lblPrecio1;
@@ -318,6 +359,9 @@
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cboReserva;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }
 

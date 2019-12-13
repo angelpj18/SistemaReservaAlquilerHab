@@ -14,5 +14,7 @@ namespace SistemaReservaAlquilerHabi
         public string precioCategoria { get; set; }
         public string precioTipoHabitacion { get; set; }
 
+        public Alquiler alquiler_id { get; set; }
+
     }
 }

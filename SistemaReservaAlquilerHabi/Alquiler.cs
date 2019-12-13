@@ -22,10 +22,10 @@ namespace SistemaReservaAlquilerHabi
         public DateTime FechaAlquilerDesde { get; set; }
         public DateTime FechaAlquilerHasta { get; set; }
         public TipoAlquiler TipoAlquiler { get; set; }
-
         public Reserva reserva_id { get; set; }
 
 
+        public List<AlquilerDetalle> detalle_alquiler = new List<AlquilerDetalle>();
 
         public static List<Alquiler> listaAlquileres = new List<Alquiler>();
 
@@ -40,58 +40,44 @@ namespace SistemaReservaAlquilerHabi
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
 
 
-                //SqlParameter p1 = new SqlParameter("@descripcion", r.descripcion);
-                //SqlParameter p2 = new SqlParameter("@estado", r.estado);
-                //SqlParameter p3 = new SqlParameter("@fechaInicio", r.fechaInicio);
-                //SqlParameter p4 = new SqlParameter("@fechaReserva", r.fechaReserva);
-                //SqlParameter p5 = new SqlParameter("@fechaFin", r.fechaFin);
-                //SqlParameter p6 = new SqlParameter("@cliente", Cliente.ObtenerCliente());
-                //SqlParameter p7 = new SqlParameter("@sucursal", Sucursal.ObtenerSucursal());
-                //SqlParameter p8 = new SqlParameter("@tipoReserva", r.tipoReserva);
+                SqlParameter p1 = new SqlParameter("@FechaAlquilerDesde", a.FechaAlquilerDesde);
+                SqlParameter p2 = new SqlParameter("@FechaAlquilerHasta", a.FechaAlquilerHasta);
+                SqlParameter p3 = new SqlParameter("@TipoAlquiler", a.TipoAlquiler);
+                SqlParameter p4 = new SqlParameter("@reserva_id", a.reserva_id);
+               
+                p1.SqlDbType = System.Data.SqlDbType.DateTime;
+                p2.SqlDbType = System.Data.SqlDbType.DateTime;
+                p3.SqlDbType = System.Data.SqlDbType.VarChar;
+                p4.SqlDbType = System.Data.SqlDbType.Int;
+               
+                cmd.Parameters.Add(p1);
+                cmd.Parameters.Add(p2);
+                cmd.Parameters.Add(p3);
+                cmd.Parameters.Add(p4);
+          
 
-                //detalle, estado, cliente, fechaInicio, fechaReserva, fechaFin, sucursal, tipoReserva
-                //p1.SqlDbType = System.Data.SqlDbType.VarChar;
-                //p2.SqlDbType = System.Data.SqlDbType.VarChar;
-                //p3.SqlDbType = System.Data.SqlDbType.DateTime;
-                //p4.SqlDbType = System.Data.SqlDbType.DateTime;
-                //p5.SqlDbType = System.Data.SqlDbType.DateTime;
-                //p6.SqlDbType = System.Data.SqlDbType.Int;
-                //p7.SqlDbType = System.Data.SqlDbType.Int;
-                //p8.SqlDbType = System.Data.SqlDbType.VarChar;
+              //  int reserva_id = (int)cmd.ExecuteScalar();
+         
+                foreach (AlquilerDetalle ad in a.detalle_alquiler)
+                {
+                   string textoCMD2 = "INSERT INTO AlquilerDetalle(id, habitacion ,precioCategoria , precioTipoHabitacion, precioTipoHabitacion, alquiler_id) VALUES (@id, @habitacion, @precioCategoria, @precioTipoHabitacion, @alquiler_id)";
+                  SqlCommand cmd2 = new SqlCommand(textoCMD2, con);
 
-                //cmd.Parameters.Add(p1);
-                //cmd.Parameters.Add(p2);
-                //cmd.Parameters.Add(p3);
-                //cmd.Parameters.Add(p4);
-                //cmd.Parameters.Add(p5);
-                //cmd.Parameters.Add(p6);
-                //cmd.Parameters.Add(p7);
-                //cmd.Parameters.Add(p8);
+               // SqlParameter p5 = new SqlParameter("@Id", id_reserva);
+                 SqlParameter p5 = new SqlParameter("@id", ad.Id);//Numero de detalle
+                 SqlParameter p6 = new SqlParameter("@habitacion", Habitacion.ObtenerHabitacion());
+                 SqlParameter p7 = new SqlParameter("@precioCategoria",ad.precioCategoria);
+                 SqlParameter p8 = new SqlParameter("@precioTipoHabitacion", ad.precioTipoHabitacion);
+                 SqlParameter p9 = new SqlParameter("@alquiler_id", ad.alquiler_id);
 
+                   cmd2.Parameters.Add(p5);
+                    cmd2.Parameters.Add(p6);
+                    cmd2.Parameters.Add(p7);
+                    cmd2.Parameters.Add(p8);
+                    cmd2.Parameters.Add(p9);
 
-
-                //int reserva_id = (int)cmd.ExecuteScalar();
-
-                //Detalle de la Reserva
-                //foreach (ReservaDetalle rd in r.detalle_reserva)
-                //{
-                //    string textoCMD2 = "INSERT INTO ReservaDetalle(tipoHabitacion, categoria, cantidad) VALUES (@tipoHabitacion, @categoria, @cantidad)";
-                //    SqlCommand cmd2 = new SqlCommand(textoCMD2, con);
-
-                //    //SqlParameter p9 = new SqlParameter("@Id", id_reserva);
-                //    SqlParameter p9 = new SqlParameter("@id", rd.Id);//Numero de detalle
-                //    SqlParameter p10 = new SqlParameter("@tipoHabitacion", tipoHabitacion.ObtenerTipos());
-                //    SqlParameter p11 = new SqlParameter("@categoria", Categoria.ObtenerCategorias());
-                //    SqlParameter p12 = new SqlParameter("@cantidad", rd.cantidad);
-
-                //    cmd2.Parameters.Add(p9);
-                //    cmd2.Parameters.Add(p10);
-                //    cmd2.Parameters.Add(p11);
-                //    cmd2.Parameters.Add(p12);
-
-
-                //    cmd2.ExecuteNonQuery();
-                //}
+                    cmd2.ExecuteNonQuery();
+                }
             }
         }
 
@@ -100,7 +86,7 @@ namespace SistemaReservaAlquilerHabi
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
             {
                 con.Open();
-                string textoCMD = "UPDATE Alquiler SET FechaAlquilerDesde = @FechaAlquilerDesde, FechaAlquilerHasta = @FechaAlquilerHasta, TipoAlquiler = @TipoAlquiler where Id = @Id";
+                string textoCMD = "UPDATE Alquiler SET FechaAlquilerDesde = @FechaAlquilerDesde, FechaAlquilerHasta = @FechaAlquilerHasta, TipoAlquiler = @TipoAlquiler, reserva_id = @reserva_id   where Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(textoCMD, con);
                 cmd = a.ObtenerParametros(cmd, true);
@@ -134,32 +120,7 @@ namespace SistemaReservaAlquilerHabi
 
         public static List<Alquiler> ObtenerAlquileres()
         {
-            Alquiler alquiler;
-
-            listaAlquileres.Clear();
-
-            using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
-            {
-                con.Open();
-                string tectoCMD = "select * from Alquiler";
-                SqlCommand cmd = new SqlCommand(tectoCMD, con);
-
-                SqlDataReader elLectorDeDatos = cmd.ExecuteReader();
-
-                while (elLectorDeDatos.Read())
-                {
-                    alquiler = new Alquiler();
-                    alquiler.Id = elLectorDeDatos.GetInt32(0);
-                    alquiler.FechaAlquilerDesde = elLectorDeDatos.GetDateTime(1);
-                    alquiler.FechaAlquilerHasta = elLectorDeDatos.GetDateTime(2);
-                    alquiler.TipoAlquiler = (TipoAlquiler)elLectorDeDatos.GetInt32(3);
-
-
-                    listaAlquileres.Add(alquiler);
-
-                }
-            }
-
+  
             return listaAlquileres;
         }
 
@@ -170,12 +131,13 @@ namespace SistemaReservaAlquilerHabi
             SqlParameter p1 = new SqlParameter("@FechaAlquilerDesde", this.FechaAlquilerDesde);
             SqlParameter p2 = new SqlParameter("@FechaAlquilerHasta", this.FechaAlquilerHasta);
             SqlParameter p3 = new SqlParameter("@TipoAlquiler", this.TipoAlquiler);
+            SqlParameter p4 = new SqlParameter("@reserva_id", this.reserva_id);
 
 
             p1.SqlDbType = SqlDbType.DateTime;
             p2.SqlDbType = SqlDbType.DateTime;
-            p3.SqlDbType = SqlDbType.Int;
-
+            p3.SqlDbType = SqlDbType.VarChar;
+            p4.SqlDbType = SqlDbType.Int;
 
             cmd.Parameters.Add(p1);
             cmd.Parameters.Add(p2);
@@ -192,9 +154,9 @@ namespace SistemaReservaAlquilerHabi
         private SqlCommand ObtenerParametrosId(SqlCommand cmd)
         {
 
-            SqlParameter p4 = new SqlParameter("@Id", this.Id);
-            p4.SqlDbType = SqlDbType.Int;
-            cmd.Parameters.Add(p4);
+            SqlParameter p5 = new SqlParameter("@Id", this.Id);
+            p5.SqlDbType = SqlDbType.Int;
+            cmd.Parameters.Add(p5);
             return cmd;
         }
     }
