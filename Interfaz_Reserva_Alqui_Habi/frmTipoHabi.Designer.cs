@@ -41,12 +41,13 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(140, 84);
+            this.txtId.Location = new System.Drawing.Point(145, 146);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(111, 26);
@@ -57,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 11.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(60, 87);
+            this.label1.Location = new System.Drawing.Point(65, 149);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 18);
@@ -66,7 +67,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(140, 137);
+            this.txtDescripcion.Location = new System.Drawing.Point(145, 189);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(145, 26);
@@ -76,7 +77,7 @@
             // 
             this.lstTipoHabitacion.FormattingEnabled = true;
             this.lstTipoHabitacion.ItemHeight = 18;
-            this.lstTipoHabitacion.Location = new System.Drawing.Point(310, 25);
+            this.lstTipoHabitacion.Location = new System.Drawing.Point(315, 87);
             this.lstTipoHabitacion.Margin = new System.Windows.Forms.Padding(4);
             this.lstTipoHabitacion.Name = "lstTipoHabitacion";
             this.lstTipoHabitacion.Size = new System.Drawing.Size(296, 238);
@@ -88,7 +89,7 @@
             this.lblNroPiso.AutoSize = true;
             this.lblNroPiso.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblNroPiso.ForeColor = System.Drawing.Color.White;
-            this.lblNroPiso.Location = new System.Drawing.Point(30, 145);
+            this.lblNroPiso.Location = new System.Drawing.Point(45, 197);
             this.lblNroPiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNroPiso.Name = "lblNroPiso";
             this.lblNroPiso.Size = new System.Drawing.Size(92, 18);
@@ -97,7 +98,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(142, 183);
+            this.txtPrecio.Location = new System.Drawing.Point(147, 235);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(143, 26);
@@ -108,7 +109,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century", 11.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(45, 191);
+            this.label4.Location = new System.Drawing.Point(65, 243);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 18);
@@ -121,7 +122,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 367);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 456);
             this.BarraTitulo.TabIndex = 91;
             // 
             // btnLimpiar
@@ -131,7 +132,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(499, 300);
+            this.btnLimpiar.Location = new System.Drawing.Point(504, 362);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(141, 54);
@@ -148,7 +149,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._6;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(344, 300);
+            this.btnEditar.Location = new System.Drawing.Point(349, 362);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(141, 54);
@@ -165,7 +166,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._7;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(205, 300);
+            this.btnEliminar.Location = new System.Drawing.Point(210, 362);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(141, 54);
@@ -182,7 +183,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(68, 300);
+            this.btnAgregar.Location = new System.Drawing.Point(73, 362);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 54);
@@ -203,12 +204,24 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(223, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(325, 33);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "TIPO DE HABITACION";
+            // 
             // frmTipoHabi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(695, 367);
+            this.ClientSize = new System.Drawing.Size(695, 456);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.txtId);
@@ -250,5 +263,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

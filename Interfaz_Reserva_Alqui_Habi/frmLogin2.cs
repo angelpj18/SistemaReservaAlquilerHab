@@ -19,11 +19,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             InitializeComponent();
         }
 
-        private void frmLogin2_Load(object sender, EventArgs e)
-        {
-
-        }
-
+       
         public void login()
         {
             try
