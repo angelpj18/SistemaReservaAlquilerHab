@@ -45,7 +45,7 @@
             this.txtContrasena.Location = new System.Drawing.Point(177, 242);
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.Size = new System.Drawing.Size(183, 18);
-            this.txtContrasena.TabIndex = 13;
+            this.txtContrasena.TabIndex = 1;
             this.txtContrasena.TabStop = false;
             this.txtContrasena.Text = "Contraseña";
             // 
@@ -59,7 +59,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(177, 191);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(166, 19);
-            this.txtUsuario.TabIndex = 10;
+            this.txtUsuario.TabIndex = 0;
             this.txtUsuario.TabStop = false;
             this.txtUsuario.Text = "Usuario";
             // 
@@ -74,7 +74,7 @@
             this.btnSingIn.Margin = new System.Windows.Forms.Padding(0);
             this.btnSingIn.Name = "btnSingIn";
             this.btnSingIn.Size = new System.Drawing.Size(115, 30);
-            this.btnSingIn.TabIndex = 15;
+            this.btnSingIn.TabIndex = 2;
             this.btnSingIn.Text = "Iniciar Sesión";
             this.btnSingIn.UseVisualStyleBackColor = false;
             this.btnSingIn.Click += new System.EventHandler(this.btnSingIn_Click);
@@ -88,7 +88,7 @@
             this.button1.Location = new System.Drawing.Point(319, 405);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 30);
-            this.button1.TabIndex = 16;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Registrarse";
             this.button1.UseVisualStyleBackColor = false;
             // 

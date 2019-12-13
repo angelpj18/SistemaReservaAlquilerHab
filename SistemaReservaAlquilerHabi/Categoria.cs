@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaReservaAlquilerHabi
 {
@@ -26,51 +27,70 @@ namespace SistemaReservaAlquilerHabi
 
         public static void AgregarCategoria(Categoria c)
         {
-            //listaProveedores.Add(p);
-            using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
-
+            try
             {
-                con.Open(); //Abrimos la conex con la BD
-                string textoCmd = "insert into Categoria (descripcion, precioCategoria) VALUES (@descripcion, @precioCategoria)";
-                SqlCommand cmd = new SqlCommand(textoCmd, con);
+                //listaProveedores.Add(p);
+                using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
 
-                //PARAMETROS
-                SqlParameter p1 = new SqlParameter("@descripcion", c.descripcion);
-                SqlParameter p2 = new SqlParameter("@precioCategoria", c.precioCategoria);
+                {
+                    con.Open(); //Abrimos la conex con la BD
+                    string textoCmd = "insert into Categoria (descripcion, precioCategoria) VALUES (@descripcion, @precioCategoria)";
+                    SqlCommand cmd = new SqlCommand(textoCmd, con);
 
-
-                //Le decimos a los parametros de que tipo de datos son
-                p1.SqlDbType = SqlDbType.VarChar;
-                p2.SqlDbType = SqlDbType.VarChar;
-
-
-                //Agragamos los parametros al command
-                cmd.Parameters.Add(p1);
-                cmd.Parameters.Add(p2);
+                    //PARAMETROS
+                    SqlParameter p1 = new SqlParameter("@descripcion", c.descripcion);
+                    SqlParameter p2 = new SqlParameter("@precioCategoria", c.precioCategoria);
 
 
-                cmd.ExecuteNonQuery();
+                    //Le decimos a los parametros de que tipo de datos son
+                    p1.SqlDbType = SqlDbType.VarChar;
+                    p2.SqlDbType = SqlDbType.VarChar;
+
+
+                    //Agragamos los parametros al command
+                    cmd.Parameters.Add(p1);
+                    cmd.Parameters.Add(p2);
+
+
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("No puede insertar; REVISE SU CONEXION", "Alerta", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
 
         }
 
 
         public static void EliminarCategoria(Categoria c)
         {
-
-            using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
-
+            try
             {
-                con.Open();
-                string SENTENCIA_SQL = "delete from Categoria where Id = @Id";
+                using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
 
-                SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p3 = new SqlParameter("@Id", c.Id);
-                p3.SqlDbType = SqlDbType.Int;
-                cmd.Parameters.Add(p3);
+                {
+                    con.Open();
+                    string SENTENCIA_SQL = "delete from Categoria where Id = @Id";
 
-                cmd.ExecuteNonQuery();
+                    SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
+                    SqlParameter p3 = new SqlParameter("@Id", c.Id);
+                    p3.SqlDbType = SqlDbType.Int;
+                    cmd.Parameters.Add(p3);
+
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("No puede eliminar; REVISE SU CONEXION", "Alerta",
+                                   MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            
         }
 
         public static void EditarCategoria(int index, Categoria c)
@@ -104,34 +124,42 @@ namespace SistemaReservaAlquilerHabi
         }
         public static List<Categoria> ObtenerCategorias()
         {
-
-            Categoria categoria;
-            listaCategoria.Clear();
-            using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
-
+            try
             {
-                con.Open();
-                string textoCMD = "Select * from Categoria";
+                Categoria categoria;
+                listaCategoria.Clear();
+                using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
 
-                SqlCommand cmd = new SqlCommand(textoCMD, con);
-
-                SqlDataReader elLectorDeDatos = cmd.ExecuteReader();
-
-                while (elLectorDeDatos.Read())
                 {
-                    categoria = new Categoria();
-                    categoria.Id = elLectorDeDatos.GetInt32(0);
-                    categoria.descripcion = elLectorDeDatos.GetString(1);
-                    categoria.precioCategoria = elLectorDeDatos.GetString(2);
+                    con.Open();
+                    string textoCMD = "Select * from Categoria";
 
-                    listaCategoria.Add(categoria);
+                    SqlCommand cmd = new SqlCommand(textoCMD, con);
+
+                    SqlDataReader elLectorDeDatos = cmd.ExecuteReader();
+
+                    while (elLectorDeDatos.Read())
+                    {
+                        categoria = new Categoria();
+                        categoria.Id = elLectorDeDatos.GetInt32(0);
+                        categoria.descripcion = elLectorDeDatos.GetString(1);
+                        categoria.precioCategoria = elLectorDeDatos.GetString(2);
+
+                        listaCategoria.Add(categoria);
+                    }
+                    
                 }
-
-
-                return listaCategoria;
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Hay problemas de conexion de la Categoria con la BD ", "Alerta",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            return listaCategoria;
         }
 
+      
+      
         public static Categoria ObtenerCategoria(int id)
         {
             Categoria categoria = null;

@@ -218,9 +218,7 @@ namespace Interfaz_Reserva_Alqui_Habi
                 txtNroDetalle.Focus();
                 return false;
             }
-
-          
-
+            
             return true;
         }
 

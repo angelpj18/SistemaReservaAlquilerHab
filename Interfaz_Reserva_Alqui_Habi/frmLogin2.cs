@@ -52,7 +52,8 @@ namespace Interfaz_Reserva_Alqui_Habi
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("No puede acceder a la BD; REVISE SU CONEXION", "Alerta",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
         }
