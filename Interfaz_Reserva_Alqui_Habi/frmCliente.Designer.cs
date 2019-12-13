@@ -171,7 +171,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(159, 237);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 26);
@@ -180,7 +180,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtTelefono.ForeColor = System.Drawing.Color.White;
+            this.txtTelefono.ForeColor = System.Drawing.Color.Black;
             this.txtTelefono.Location = new System.Drawing.Point(159, 200);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(148, 26);
@@ -189,7 +189,7 @@
             // txtDireccion
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtDireccion.ForeColor = System.Drawing.Color.White;
+            this.txtDireccion.ForeColor = System.Drawing.Color.Black;
             this.txtDireccion.Location = new System.Drawing.Point(160, 164);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(148, 26);
@@ -198,7 +198,7 @@
             // txtCi
             // 
             this.txtCi.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtCi.ForeColor = System.Drawing.Color.White;
+            this.txtCi.ForeColor = System.Drawing.Color.Black;
             this.txtCi.Location = new System.Drawing.Point(160, 93);
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(87, 26);
@@ -218,7 +218,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtNombre.ForeColor = System.Drawing.Color.White;
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
             this.txtNombre.Location = new System.Drawing.Point(159, 127);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 26);
@@ -294,7 +294,7 @@
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
-            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
