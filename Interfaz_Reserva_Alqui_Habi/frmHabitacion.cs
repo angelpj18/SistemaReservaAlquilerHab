@@ -18,11 +18,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             InitializeComponent();
         }
-
-        protected override void OnPaintBackground(PaintEventArgs e)
-        {
-            //empty implementation
-        }
+        
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {

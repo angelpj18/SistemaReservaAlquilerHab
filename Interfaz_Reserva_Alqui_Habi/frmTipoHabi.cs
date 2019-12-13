@@ -37,7 +37,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             tipoHabitacion  t = new tipoHabitacion();
             t.Id = Convert.ToInt16(txtId.Text);
             t.Descripcion = txtDescripcion.Text;
-            t.precioTipoHab = txtPrecio.Text;
+            t.precioTipoHab = Convert.ToDouble(txtPrecio.Text);
 
             return t;
         }
@@ -59,7 +59,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             {
                 tipoHabitacion tip = new tipoHabitacion();
                 tip.Id = Convert.ToInt32(txtId.Text);
-                tip.precioTipoHab = txtPrecio.Text;
+                tip.precioTipoHab = Convert.ToDouble(txtPrecio.Text);
                 tip.Descripcion = txtDescripcion.Text;
 
 
@@ -132,7 +132,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             {
                 txtId.Text = Convert.ToString(t.Id);
                 txtDescripcion.Text = t.Descripcion;
-                txtPrecio.Text = t.precioTipoHab;
+                txtPrecio.Text = Convert.ToString(txtPrecio.Text);
 
             }
 

@@ -12,7 +12,7 @@ namespace SistemaReservaAlquilerHabi
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public string precioTipoHab { get; set; }
+        public double precioTipoHab { get; set; }
 
         public override string ToString()
         {
@@ -44,7 +44,7 @@ namespace SistemaReservaAlquilerHabi
 
                 p1.SqlDbType = SqlDbType.Int;
                 p2.SqlDbType = SqlDbType.VarChar;
-                p3.SqlDbType = SqlDbType.VarChar;
+                p3.SqlDbType = SqlDbType.Float;
 
                 //Agragamos los parametros al command
                 cmd.Parameters.Add(p1);
@@ -93,7 +93,7 @@ namespace SistemaReservaAlquilerHabi
 
                 //Le decimos a los parametros de que tipo de datos son
                 p1.SqlDbType = SqlDbType.VarChar;
-                p2.SqlDbType = SqlDbType.VarChar;
+                p2.SqlDbType = SqlDbType.Float;
                 p3.SqlDbType = SqlDbType.Int;
 
                 cmd.Parameters.Add(p1);
@@ -125,7 +125,7 @@ namespace SistemaReservaAlquilerHabi
                     tipoH = new tipoHabitacion();
                     tipoH.Id = elLectorDeDatos.GetInt32(0);
                     tipoH.Descripcion = elLectorDeDatos.GetString(1);
-                    tipoH.precioTipoHab = elLectorDeDatos.GetString(2);
+                    tipoH.precioTipoHab = elLectorDeDatos.GetDouble(2);
 
                     listaTipoHab.Add(tipoH);
                 }
