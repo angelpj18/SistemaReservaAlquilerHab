@@ -12,7 +12,7 @@ namespace SistemaReservaAlquilerHabi
     {
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public double precioTipoHab { get; set; }
+        public string precioTipoHab { get; set; }
 
         public override string ToString()
         {
@@ -55,7 +55,7 @@ namespace SistemaReservaAlquilerHabi
         }
 
 
-        public static void EliminarTipoHabitacion(Categoria c)
+        public static void EliminarTipoHabitacion(tipoHabitacion t)
         {
 
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
@@ -65,7 +65,7 @@ namespace SistemaReservaAlquilerHabi
                 string SENTENCIA_SQL = "delete from TipoHabitacion where Id = @Id";
 
                 SqlCommand cmd = new SqlCommand(SENTENCIA_SQL, con);
-                SqlParameter p3 = new SqlParameter("@Id", c.Id);
+                SqlParameter p3 = new SqlParameter("@Id", t.Id);
                 p3.SqlDbType = SqlDbType.Int;
                 cmd.Parameters.Add(p3);
 
@@ -73,7 +73,7 @@ namespace SistemaReservaAlquilerHabi
             }
         }
 
-        public static void EditarCategoria(int index, tipoHabitacion th)
+        public static void EditarTipoHab(int index, tipoHabitacion th)
         {
             //listaProveedores[index] = p;
             using (SqlConnection con = new SqlConnection(SqlServer.CADENA_CONEXION))
@@ -122,7 +122,7 @@ namespace SistemaReservaAlquilerHabi
                     tipoH = new tipoHabitacion();
                     tipoH.Id = elLectorDeDatos.GetInt32(0);
                     tipoH.Descripcion = elLectorDeDatos.GetString(1);
-                    tipoH.precioTipoHab = elLectorDeDatos.GetFloat(2);
+                    tipoH.precioTipoHab = elLectorDeDatos.GetString(2);
 
                     listaTipoHab.Add(tipoH);
                 }

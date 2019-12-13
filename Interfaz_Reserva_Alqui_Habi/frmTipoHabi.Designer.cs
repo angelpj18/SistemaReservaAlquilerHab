@@ -30,10 +30,10 @@
         {
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNroPiso = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lstTipoHabitacion = new System.Windows.Forms.ListBox();
             this.lblNroPiso = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(161, 72);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(111, 26);
             this.txtId.TabIndex = 34;
@@ -62,23 +62,24 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Id";
             // 
-            // txtNroPiso
+            // txtDescripcion
             // 
-            this.txtNroPiso.Location = new System.Drawing.Point(161, 125);
-            this.txtNroPiso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNroPiso.Name = "txtNroPiso";
-            this.txtNroPiso.Size = new System.Drawing.Size(145, 26);
-            this.txtNroPiso.TabIndex = 25;
+            this.txtDescripcion.Location = new System.Drawing.Point(161, 125);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(145, 26);
+            this.txtDescripcion.TabIndex = 25;
             // 
             // lstTipoHabitacion
             // 
             this.lstTipoHabitacion.FormattingEnabled = true;
             this.lstTipoHabitacion.ItemHeight = 18;
             this.lstTipoHabitacion.Location = new System.Drawing.Point(331, 13);
-            this.lstTipoHabitacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstTipoHabitacion.Margin = new System.Windows.Forms.Padding(4);
             this.lstTipoHabitacion.Name = "lstTipoHabitacion";
             this.lstTipoHabitacion.Size = new System.Drawing.Size(296, 238);
             this.lstTipoHabitacion.TabIndex = 32;
+            this.lstTipoHabitacion.SelectedIndexChanged += new System.EventHandler(this.lstTipoHabitacion_SelectedIndexChanged);
             // 
             // lblNroPiso
             // 
@@ -92,13 +93,13 @@
             this.lblNroPiso.TabIndex = 24;
             this.lblNroPiso.Text = "Descripcion";
             // 
-            // txtDescripcion
+            // txtPrecio
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(163, 171);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(143, 26);
-            this.txtDescripcion.TabIndex = 27;
+            this.txtPrecio.Location = new System.Drawing.Point(163, 171);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(143, 26);
+            this.txtPrecio.TabIndex = 27;
             // 
             // label4
             // 
@@ -136,6 +137,7 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEditar
             // 
@@ -152,6 +154,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnEliminar
             // 
@@ -168,6 +171,7 @@
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -184,6 +188,7 @@
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmTipoHabi
             // 
@@ -194,18 +199,18 @@
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNroPiso);
+            this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.lstTipoHabitacion);
             this.Controls.Add(this.lblNroPiso);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label4);
             this.Font = new System.Drawing.Font("Century", 11.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTipoHabi";
             this.Text = "frmTipoHabi";
             this.Load += new System.EventHandler(this.frmTipoHabi_Load);
@@ -218,14 +223,14 @@
 
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNroPiso;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.ListBox lstTipoHabitacion;
         private System.Windows.Forms.Label lblNroPiso;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel BarraTitulo;
     }
