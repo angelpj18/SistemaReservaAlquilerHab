@@ -8,6 +8,7 @@ namespace SistemaReservaAlquilerHabi
 {
     public class AlquilerDetalle
     {
+        public int Id { get; set; }
         public Habitacion habitacion { get; set; }
 
         public string precioCategoria { get; set; }

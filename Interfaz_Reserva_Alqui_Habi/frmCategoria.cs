@@ -26,8 +26,6 @@ namespace Interfaz_Reserva_Alqui_Habi
                 cat.descripcion = txtDescripcion.Text;
                 cat.precioCategoria= txtPrecioC.Text;
 
-
-
                 Categoria.AgregarCategoria(cat);
                 LimpiarFormulario();
                 ActualizarListaCategoria();
@@ -125,7 +123,6 @@ namespace Interfaz_Reserva_Alqui_Habi
                 txtId.Text = Convert.ToString(c.Id);
                 txtPrecioC.Text = c.precioCategoria;
                 txtDescripcion.Text = c.descripcion;
-
             }
         }
     }
