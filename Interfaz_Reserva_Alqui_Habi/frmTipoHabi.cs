@@ -34,7 +34,7 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         private tipoHabitacion ObtenerTipHabFormulario()
         {
-            tipoHabitacion  t = new tipoHabitacion ();
+            tipoHabitacion  t = new tipoHabitacion();
             t.Id = Convert.ToInt16(txtId.Text);
             t.Descripcion = txtDescripcion.Text;
             t.precioTipoHab = txtPrecio.Text;
@@ -58,6 +58,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (ValidarCampos())
             {
                 tipoHabitacion tip = new tipoHabitacion();
+                tip.Id = Convert.ToInt32(txtId.Text);
                 tip.precioTipoHab = txtPrecio.Text;
                 tip.Descripcion = txtDescripcion.Text;
 
@@ -68,6 +69,7 @@ namespace Interfaz_Reserva_Alqui_Habi
                 ActualizarListaTipoHab();
 
             }
+
         }
 
         private bool ValidarCampos()

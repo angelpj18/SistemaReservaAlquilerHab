@@ -23,6 +23,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             if (ValidarCampos())
             {
                 Categoria cat = new Categoria();
+                cat.Id = Convert.ToInt32(txtId.Text);
                 cat.descripcion = txtDescripcion.Text;
                 cat.precioCategoria= txtPrecioC.Text;
 

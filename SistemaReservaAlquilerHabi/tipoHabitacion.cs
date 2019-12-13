@@ -31,22 +31,25 @@ namespace SistemaReservaAlquilerHabi
 
             {
                 con.Open(); //Abrimos la conex con la BD
-                string textoCmd = "insert into TipoHabitacion (Descripcion, precioTipoHab) VALUES (@Descripcion, @precioCategoria)";
+                string textoCmd = "insert into TipoHabitacion (Id, Descripcion, precioTipoHab) VALUES (@Id, @Descripcion, @precioTipoHab)";
                 SqlCommand cmd = new SqlCommand(textoCmd, con);
 
                 //PARAMETROS
-                SqlParameter p1 = new SqlParameter("@Descripcion", tH.Descripcion);
-                SqlParameter p2 = new SqlParameter("@precioTipoHab", tH.precioTipoHab);
+                SqlParameter p1 = new SqlParameter("@Id", tH.Id);
+                SqlParameter p2 = new SqlParameter("@Descripcion", tH.Descripcion);
+                SqlParameter p3 = new SqlParameter("@precioTipoHab", tH.precioTipoHab);
 
 
                 //Le decimos a los parametros de que tipo de datos son
-                p1.SqlDbType = SqlDbType.VarChar;
-                p2.SqlDbType = SqlDbType.VarChar;
 
+                p1.SqlDbType = SqlDbType.Int;
+                p2.SqlDbType = SqlDbType.VarChar;
+                p3.SqlDbType = SqlDbType.VarChar;
 
                 //Agragamos los parametros al command
                 cmd.Parameters.Add(p1);
                 cmd.Parameters.Add(p2);
+                cmd.Parameters.Add(p3);
 
 
                 cmd.ExecuteNonQuery();
