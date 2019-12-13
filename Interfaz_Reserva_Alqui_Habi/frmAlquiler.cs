@@ -49,6 +49,12 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //cierra
+            this.Close();
+        }
     }
 }
 

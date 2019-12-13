@@ -212,8 +212,7 @@ namespace Interfaz_Reserva_Alqui_Habi
             Personalizacion.BorderRedondoButton(btnEliminar);
             Personalizacion.BorderRedondoButton(btnEditar);
             Personalizacion.BorderRedondoButton(btnLimpiar);
-            Personalizacion.BorderRedondoButton(btnSalir);
-
+          
 
 
             ActualizarListaHabitacion();
@@ -252,6 +251,12 @@ namespace Interfaz_Reserva_Alqui_Habi
                 }
             }
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //cierra
+            this.Close();
         }
     }
 }

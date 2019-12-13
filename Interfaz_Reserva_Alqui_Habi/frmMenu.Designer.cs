@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.lblAcercaDe = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnTipoHabitacion = new System.Windows.Forms.Button();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btnCategoria = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnSucursal = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,11 +57,6 @@
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnTipoHabitacion = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnCategoria = new System.Windows.Forms.Button();
-            this.lblAcercaDe = new System.Windows.Forms.Label();
             this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SubMenu.SuspendLayout();
@@ -92,6 +92,71 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(220, 611);
             this.MenuVertical.TabIndex = 1;
+            // 
+            // lblAcercaDe
+            // 
+            this.lblAcercaDe.AutoSize = true;
+            this.lblAcercaDe.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcercaDe.ForeColor = System.Drawing.Color.White;
+            this.lblAcercaDe.Location = new System.Drawing.Point(0, 595);
+            this.lblAcercaDe.Name = "lblAcercaDe";
+            this.lblAcercaDe.Size = new System.Drawing.Size(61, 16);
+            this.lblAcercaDe.TabIndex = 0;
+            this.lblAcercaDe.Text = "Acerca de";
+            this.lblAcercaDe.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.lblAcercaDe.Click += new System.EventHandler(this.lblAcercaDe_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel8.Location = new System.Drawing.Point(3, 381);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 32);
+            this.panel8.TabIndex = 11;
+            // 
+            // btnTipoHabitacion
+            // 
+            this.btnTipoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnTipoHabitacion.FlatAppearance.BorderSize = 0;
+            this.btnTipoHabitacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnTipoHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipoHabitacion.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipoHabitacion.ForeColor = System.Drawing.Color.White;
+            this.btnTipoHabitacion.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoHabitacion.Image")));
+            this.btnTipoHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTipoHabitacion.Location = new System.Drawing.Point(13, 381);
+            this.btnTipoHabitacion.Name = "btnTipoHabitacion";
+            this.btnTipoHabitacion.Size = new System.Drawing.Size(202, 32);
+            this.btnTipoHabitacion.TabIndex = 12;
+            this.btnTipoHabitacion.Text = "          Tipo Habitacion";
+            this.btnTipoHabitacion.UseVisualStyleBackColor = false;
+            this.btnTipoHabitacion.Click += new System.EventHandler(this.btnTipoHabitacion_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.panel9.Location = new System.Drawing.Point(3, 331);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(5, 32);
+            this.panel9.TabIndex = 9;
+            // 
+            // btnCategoria
+            // 
+            this.btnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
+            this.btnCategoria.FlatAppearance.BorderSize = 0;
+            this.btnCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
+            this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoria.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
+            this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategoria.Location = new System.Drawing.Point(13, 331);
+            this.btnCategoria.Name = "btnCategoria";
+            this.btnCategoria.Size = new System.Drawing.Size(202, 32);
+            this.btnCategoria.TabIndex = 10;
+            this.btnCategoria.Text = "Categoria";
+            this.btnCategoria.UseVisualStyleBackColor = false;
+            this.btnCategoria.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel7
             // 
@@ -375,71 +440,6 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(880, 611);
             this.PanelContenedor.TabIndex = 4;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel8.Location = new System.Drawing.Point(3, 381);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 32);
-            this.panel8.TabIndex = 11;
-            // 
-            // btnTipoHabitacion
-            // 
-            this.btnTipoHabitacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.btnTipoHabitacion.FlatAppearance.BorderSize = 0;
-            this.btnTipoHabitacion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.btnTipoHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoHabitacion.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTipoHabitacion.ForeColor = System.Drawing.Color.White;
-            this.btnTipoHabitacion.Image = ((System.Drawing.Image)(resources.GetObject("btnTipoHabitacion.Image")));
-            this.btnTipoHabitacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipoHabitacion.Location = new System.Drawing.Point(13, 381);
-            this.btnTipoHabitacion.Name = "btnTipoHabitacion";
-            this.btnTipoHabitacion.Size = new System.Drawing.Size(202, 32);
-            this.btnTipoHabitacion.TabIndex = 12;
-            this.btnTipoHabitacion.Text = "          Tipo Habitacion";
-            this.btnTipoHabitacion.UseVisualStyleBackColor = false;
-            this.btnTipoHabitacion.Click += new System.EventHandler(this.btnTipoHabitacion_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.panel9.Location = new System.Drawing.Point(3, 331);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 32);
-            this.panel9.TabIndex = 9;
-            // 
-            // btnCategoria
-            // 
-            this.btnCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.btnCategoria.FlatAppearance.BorderSize = 0;
-            this.btnCategoria.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(117)))));
-            this.btnCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoria.Font = new System.Drawing.Font("Century", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoria.ForeColor = System.Drawing.Color.White;
-            this.btnCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnCategoria.Image")));
-            this.btnCategoria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCategoria.Location = new System.Drawing.Point(13, 331);
-            this.btnCategoria.Name = "btnCategoria";
-            this.btnCategoria.Size = new System.Drawing.Size(202, 32);
-            this.btnCategoria.TabIndex = 10;
-            this.btnCategoria.Text = "Categoria";
-            this.btnCategoria.UseVisualStyleBackColor = false;
-            this.btnCategoria.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // lblAcercaDe
-            // 
-            this.lblAcercaDe.AutoSize = true;
-            this.lblAcercaDe.Font = new System.Drawing.Font("Century", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcercaDe.ForeColor = System.Drawing.Color.White;
-            this.lblAcercaDe.Location = new System.Drawing.Point(0, 595);
-            this.lblAcercaDe.Name = "lblAcercaDe";
-            this.lblAcercaDe.Size = new System.Drawing.Size(61, 16);
-            this.lblAcercaDe.TabIndex = 0;
-            this.lblAcercaDe.Text = "Acerca de";
-            this.lblAcercaDe.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lblAcercaDe.Click += new System.EventHandler(this.lblAcercaDe_Click);
             // 
             // frmMenu
             // 

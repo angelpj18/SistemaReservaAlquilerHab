@@ -125,5 +125,11 @@ namespace Interfaz_Reserva_Alqui_Habi
                 txtDescripcion.Text = c.descripcion;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //cierra
+            this.Close();
+        }
     }
 }

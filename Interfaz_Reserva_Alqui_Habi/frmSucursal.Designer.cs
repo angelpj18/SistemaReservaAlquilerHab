@@ -40,11 +40,13 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(213, 95);
+            this.txtId.Location = new System.Drawing.Point(180, 70);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
@@ -55,7 +57,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(110, 98);
+            this.label1.Location = new System.Drawing.Point(90, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 18);
@@ -64,7 +66,7 @@
             // 
             // txtNroSucursal
             // 
-            this.txtNroSucursal.Location = new System.Drawing.Point(213, 138);
+            this.txtNroSucursal.Location = new System.Drawing.Point(180, 113);
             this.txtNroSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.txtNroSucursal.Name = "txtNroSucursal";
             this.txtNroSucursal.Size = new System.Drawing.Size(140, 26);
@@ -77,7 +79,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(508, 260);
+            this.btnLimpiar.Location = new System.Drawing.Point(499, 238);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(141, 54);
@@ -94,7 +96,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._6;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(354, 260);
+            this.btnEditar.Location = new System.Drawing.Point(345, 238);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(141, 54);
@@ -111,7 +113,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._7;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(202, 260);
+            this.btnEliminar.Location = new System.Drawing.Point(193, 238);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(141, 54);
@@ -128,7 +130,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(56, 260);
+            this.btnAgregar.Location = new System.Drawing.Point(47, 238);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 54);
@@ -142,7 +144,7 @@
             // 
             this.lstSucursal.FormattingEnabled = true;
             this.lstSucursal.ItemHeight = 18;
-            this.lstSucursal.Location = new System.Drawing.Point(419, 57);
+            this.lstSucursal.Location = new System.Drawing.Point(386, 32);
             this.lstSucursal.Margin = new System.Windows.Forms.Padding(4);
             this.lstSucursal.Name = "lstSucursal";
             this.lstSucursal.Size = new System.Drawing.Size(232, 184);
@@ -152,7 +154,7 @@
             // 
             this.lblNroPiso.AutoSize = true;
             this.lblNroPiso.ForeColor = System.Drawing.Color.White;
-            this.lblNroPiso.Location = new System.Drawing.Point(85, 138);
+            this.lblNroPiso.Location = new System.Drawing.Point(52, 113);
             this.lblNroPiso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNroPiso.Name = "lblNroPiso";
             this.lblNroPiso.Size = new System.Drawing.Size(100, 18);
@@ -161,7 +163,7 @@
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(213, 179);
+            this.txtDireccion.Location = new System.Drawing.Point(180, 154);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(180, 26);
@@ -171,7 +173,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(95, 182);
+            this.label4.Location = new System.Drawing.Point(62, 157);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 18);
@@ -185,15 +187,26 @@
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(30, 331);
+            this.BarraTitulo.Size = new System.Drawing.Size(30, 305);
             this.BarraTitulo.TabIndex = 91;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._1576267475833;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(670, -12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 50);
+            this.pictureBox1.TabIndex = 92;
+            this.pictureBox1.TabStop = false;
             // 
             // frmSucursal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(680, 331);
+            this.ClientSize = new System.Drawing.Size(707, 305);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -212,6 +225,7 @@
             this.Name = "frmSucursal";
             this.Text = "frmSucursal";
             this.Load += new System.EventHandler(this.frmSucursal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +245,6 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

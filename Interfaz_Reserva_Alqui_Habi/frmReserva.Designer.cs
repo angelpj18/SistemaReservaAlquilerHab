@@ -57,7 +57,9 @@
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.cboTipoRe = new System.Windows.Forms.ComboBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cboCliente
@@ -363,12 +365,24 @@
             this.BarraTitulo.Size = new System.Drawing.Size(20, 461);
             this.BarraTitulo.TabIndex = 90;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._1576267475833;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(818, -10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(48, 47);
+            this.pictureBox1.TabIndex = 91;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(856, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.cboTipoRe);
             this.Controls.Add(this.cboEstado);
@@ -404,6 +418,7 @@
             this.Text = "RESERVA";
             this.Load += new System.EventHandler(this.frmReserva_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +455,6 @@
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.ComboBox cboTipoRe;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

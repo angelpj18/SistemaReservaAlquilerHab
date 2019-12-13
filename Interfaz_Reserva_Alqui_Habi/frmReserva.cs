@@ -238,6 +238,10 @@ namespace Interfaz_Reserva_Alqui_Habi
             reserva = new Reserva();
         }
 
-      
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            //cierra
+            this.Close();
+        }
     }
 }

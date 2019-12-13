@@ -63,6 +63,16 @@ namespace Interfaz_Reserva_Alqui_Habi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1576267475833 {
+            get {
+                object obj = ResourceManager.GetObject("1576267475833", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _167188_home_icon_png_white {
             get {
                 object obj = ResourceManager.GetObject("167188_home-icon-png-white", resourceCulture);

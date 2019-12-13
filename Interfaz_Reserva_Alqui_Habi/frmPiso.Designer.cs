@@ -40,12 +40,14 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNroPiso
             // 
             this.txtNroPiso.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtNroPiso.Location = new System.Drawing.Point(185, 109);
+            this.txtNroPiso.Location = new System.Drawing.Point(141, 122);
             this.txtNroPiso.Name = "txtNroPiso";
             this.txtNroPiso.Size = new System.Drawing.Size(141, 26);
             this.txtNroPiso.TabIndex = 12;
@@ -53,7 +55,7 @@
             // lstPiso
             // 
             this.lstPiso.FormattingEnabled = true;
-            this.lstPiso.Location = new System.Drawing.Point(350, 27);
+            this.lstPiso.Location = new System.Drawing.Point(300, 40);
             this.lstPiso.Name = "lstPiso";
             this.lstPiso.Size = new System.Drawing.Size(199, 186);
             this.lstPiso.TabIndex = 21;
@@ -64,7 +66,7 @@
             this.lblNroPiso.AutoSize = true;
             this.lblNroPiso.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblNroPiso.ForeColor = System.Drawing.Color.White;
-            this.lblNroPiso.Location = new System.Drawing.Point(84, 109);
+            this.lblNroPiso.Location = new System.Drawing.Point(40, 122);
             this.lblNroPiso.Name = "lblNroPiso";
             this.lblNroPiso.Size = new System.Drawing.Size(69, 18);
             this.lblNroPiso.TabIndex = 11;
@@ -73,7 +75,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtDescripcion.Location = new System.Drawing.Point(185, 141);
+            this.txtDescripcion.Location = new System.Drawing.Point(141, 154);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(141, 26);
             this.txtDescripcion.TabIndex = 14;
@@ -83,7 +85,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century", 11.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(84, 142);
+            this.label4.Location = new System.Drawing.Point(40, 155);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 13;
@@ -95,7 +97,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Century", 11.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(93, 71);
+            this.label1.Location = new System.Drawing.Point(49, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 18);
             this.label1.TabIndex = 22;
@@ -104,7 +106,7 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtId.Location = new System.Drawing.Point(185, 71);
+            this.txtId.Location = new System.Drawing.Point(141, 84);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(95, 26);
@@ -116,7 +118,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 304);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 294);
             this.BarraTitulo.TabIndex = 25;
             // 
             // btnAgregar
@@ -126,7 +128,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(38, 229);
+            this.btnAgregar.Location = new System.Drawing.Point(31, 232);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 54);
             this.btnAgregar.TabIndex = 17;
@@ -142,7 +144,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._7;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(185, 229);
+            this.btnEliminar.Location = new System.Drawing.Point(178, 232);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(140, 54);
             this.btnEliminar.TabIndex = 18;
@@ -158,7 +160,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._6;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(331, 229);
+            this.btnEditar.Location = new System.Drawing.Point(324, 232);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(141, 54);
             this.btnEditar.TabIndex = 19;
@@ -174,7 +176,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(478, 229);
+            this.btnLimpiar.Location = new System.Drawing.Point(471, 232);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(141, 54);
             this.btnLimpiar.TabIndex = 20;
@@ -183,12 +185,24 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._1576267475833;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(580, -10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(46, 47);
+            this.pictureBox1.TabIndex = 53;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmPiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(627, 304);
+            this.ClientSize = new System.Drawing.Size(618, 294);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -206,6 +220,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPiso";
             this.Load += new System.EventHandler(this.frmPiso_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +240,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
