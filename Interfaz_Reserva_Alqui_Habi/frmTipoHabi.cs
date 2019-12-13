@@ -16,5 +16,10 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
             InitializeComponent();
         }
+
+        private void frmTipoHabi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
