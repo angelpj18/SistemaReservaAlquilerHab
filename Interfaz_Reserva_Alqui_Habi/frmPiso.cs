@@ -61,12 +61,9 @@ namespace Interfaz_Reserva_Alqui_Habi
                 pis.NroPiso = txtNroPiso.Text;
                 pis.Descripcion = txtDescripcion.Text;
 
-
-
                 Piso.AgregarPiso(pis);
                 LimpiarFormulario();
                 ActualizarListaPiso();
-
             }
         }
 

@@ -35,7 +35,7 @@ namespace Interfaz_Reserva_Alqui_Habi
         private tipoHabitacion ObtenerTipHabFormulario()
         {
             tipoHabitacion  t = new tipoHabitacion();
-            t.Id = Convert.ToInt32(txtId.Text);
+            t.Id = Convert.ToInt16(txtId.Text);
             t.Descripcion = txtDescripcion.Text;
             t.precioTipoHab = txtPrecio.Text;
 
