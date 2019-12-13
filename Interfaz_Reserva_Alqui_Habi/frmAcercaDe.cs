@@ -21,5 +21,15 @@ namespace Interfaz_Reserva_Alqui_Habi
         {
 
         }
+
+        private void lblIntegrantes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVersion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
