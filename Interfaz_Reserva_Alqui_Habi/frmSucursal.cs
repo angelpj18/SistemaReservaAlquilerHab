@@ -37,6 +37,9 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         }
 
-     
+        private void frmSucursal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

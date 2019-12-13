@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlquiler));
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.cboTipoAlquiler = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,9 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -54,7 +57,7 @@
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblCodigo.ForeColor = System.Drawing.Color.White;
-            this.lblCodigo.Location = new System.Drawing.Point(50, 20);
+            this.lblCodigo.Location = new System.Drawing.Point(41, 58);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(119, 18);
             this.lblCodigo.TabIndex = 64;
@@ -63,7 +66,7 @@
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(221, 22);
+            this.txtCodigo.Location = new System.Drawing.Point(212, 60);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(130, 21);
             this.txtCodigo.TabIndex = 65;
@@ -71,7 +74,7 @@
             // cboTipoAlquiler
             // 
             this.cboTipoAlquiler.FormattingEnabled = true;
-            this.cboTipoAlquiler.Location = new System.Drawing.Point(221, 75);
+            this.cboTipoAlquiler.Location = new System.Drawing.Point(212, 97);
             this.cboTipoAlquiler.Name = "cboTipoAlquiler";
             this.cboTipoAlquiler.Size = new System.Drawing.Size(130, 23);
             this.cboTipoAlquiler.TabIndex = 67;
@@ -81,7 +84,7 @@
             this.lblTipoReserva.AutoSize = true;
             this.lblTipoReserva.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblTipoReserva.ForeColor = System.Drawing.Color.White;
-            this.lblTipoReserva.Location = new System.Drawing.Point(50, 72);
+            this.lblTipoReserva.Location = new System.Drawing.Point(41, 94);
             this.lblTipoReserva.Name = "lblTipoReserva";
             this.lblTipoReserva.Size = new System.Drawing.Size(102, 18);
             this.lblTipoReserva.TabIndex = 66;
@@ -90,7 +93,7 @@
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(221, 176);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(212, 168);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(130, 21);
             this.dtpFechaHasta.TabIndex = 73;
@@ -100,7 +103,7 @@
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblFechaHasta.ForeColor = System.Drawing.Color.White;
-            this.lblFechaHasta.Location = new System.Drawing.Point(38, 176);
+            this.lblFechaHasta.Location = new System.Drawing.Point(29, 168);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(158, 18);
             this.lblFechaHasta.TabIndex = 72;
@@ -109,7 +112,7 @@
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(221, 123);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(212, 134);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(130, 21);
             this.dtpFechaDesde.TabIndex = 71;
@@ -119,7 +122,7 @@
             this.lblFechaAlquiDesde.AutoSize = true;
             this.lblFechaAlquiDesde.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblFechaAlquiDesde.ForeColor = System.Drawing.Color.White;
-            this.lblFechaAlquiDesde.Location = new System.Drawing.Point(38, 126);
+            this.lblFechaAlquiDesde.Location = new System.Drawing.Point(29, 137);
             this.lblFechaAlquiDesde.Name = "lblFechaAlquiDesde";
             this.lblFechaAlquiDesde.Size = new System.Drawing.Size(160, 18);
             this.lblFechaAlquiDesde.TabIndex = 70;
@@ -128,7 +131,7 @@
             // dtgDetalleReserva
             // 
             this.dtgDetalleReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetalleReserva.Location = new System.Drawing.Point(414, 172);
+            this.dtgDetalleReserva.Location = new System.Drawing.Point(348, 178);
             this.dtgDetalleReserva.Name = "dtgDetalleReserva";
             this.dtgDetalleReserva.Size = new System.Drawing.Size(527, 228);
             this.dtgDetalleReserva.TabIndex = 76;
@@ -140,7 +143,7 @@
             this.lblHabitacion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblHabitacion.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblHabitacion.ForeColor = System.Drawing.Color.White;
-            this.lblHabitacion.Location = new System.Drawing.Point(507, 33);
+            this.lblHabitacion.Location = new System.Drawing.Point(415, 65);
             this.lblHabitacion.Name = "lblHabitacion";
             this.lblHabitacion.Size = new System.Drawing.Size(85, 18);
             this.lblHabitacion.TabIndex = 81;
@@ -149,7 +152,7 @@
             // cmbHabitacion
             // 
             this.cmbHabitacion.FormattingEnabled = true;
-            this.cmbHabitacion.Location = new System.Drawing.Point(657, 33);
+            this.cmbHabitacion.Location = new System.Drawing.Point(565, 65);
             this.cmbHabitacion.Name = "cmbHabitacion";
             this.cmbHabitacion.Size = new System.Drawing.Size(140, 23);
             this.cmbHabitacion.TabIndex = 80;
@@ -159,7 +162,7 @@
             this.lblPrecio1.AutoSize = true;
             this.lblPrecio1.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblPrecio1.ForeColor = System.Drawing.Color.White;
-            this.lblPrecio1.Location = new System.Drawing.Point(491, 78);
+            this.lblPrecio1.Location = new System.Drawing.Point(399, 102);
             this.lblPrecio1.Name = "lblPrecio1";
             this.lblPrecio1.Size = new System.Drawing.Size(126, 18);
             this.lblPrecio1.TabIndex = 83;
@@ -167,7 +170,7 @@
             // 
             // txtPrecioCat
             // 
-            this.txtPrecioCat.Location = new System.Drawing.Point(657, 75);
+            this.txtPrecioCat.Location = new System.Drawing.Point(565, 99);
             this.txtPrecioCat.Name = "txtPrecioCat";
             this.txtPrecioCat.Size = new System.Drawing.Size(146, 21);
             this.txtPrecioCat.TabIndex = 82;
@@ -178,7 +181,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 11.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(485, 123);
+            this.label1.Location = new System.Drawing.Point(393, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 18);
             this.label1.TabIndex = 85;
@@ -186,7 +189,7 @@
             // 
             // txtPrecioTipo
             // 
-            this.txtPrecioTipo.Location = new System.Drawing.Point(657, 123);
+            this.txtPrecioTipo.Location = new System.Drawing.Point(565, 134);
             this.txtPrecioTipo.Name = "txtPrecioTipo";
             this.txtPrecioTipo.Size = new System.Drawing.Size(146, 21);
             this.txtPrecioTipo.TabIndex = 84;
@@ -199,7 +202,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._8;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(130, 323);
+            this.btnGuardar.Location = new System.Drawing.Point(200, 348);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(141, 58);
@@ -215,7 +218,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(131, 248);
+            this.btnAgregar.Location = new System.Drawing.Point(201, 273);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 58);
             this.btnAgregar.TabIndex = 86;
@@ -229,15 +232,26 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 421);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 424);
             this.BarraTitulo.TabIndex = 88;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
             // 
             // frmAlquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(951, 421);
+            this.ClientSize = new System.Drawing.Size(890, 424);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnAgregar);
@@ -261,7 +275,9 @@
             this.Name = "frmAlquiler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAlquiler";
+            this.Load += new System.EventHandler(this.frmAlquiler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgDetalleReserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +302,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

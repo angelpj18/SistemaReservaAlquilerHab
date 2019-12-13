@@ -36,6 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSistema
@@ -79,7 +80,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label3.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.label3.Location = new System.Drawing.Point(73, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 15);
@@ -91,7 +92,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label4.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.label4.Location = new System.Drawing.Point(73, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 15);
@@ -103,7 +104,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label5.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.label5.Location = new System.Drawing.Point(73, 191);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 15);
@@ -115,19 +116,33 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkOrange;
+            this.label6.ForeColor = System.Drawing.Color.MediumSpringGreen;
             this.label6.Location = new System.Drawing.Point(73, 229);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 15);
             this.label6.TabIndex = 6;
             this.label6.Text = "Angel Aquino";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumSpringGreen;
+            this.label1.Location = new System.Drawing.Point(73, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 15);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Leandro Portillo";
+            // 
             // frmAcercaDe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(422, 303);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -135,8 +150,12 @@
             this.Controls.Add(this.lblIntegrantes);
             this.Controls.Add(this.lblVersion);
             this.Controls.Add(this.lblSistema);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAcercaDe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAcercaDe";
+            this.Load += new System.EventHandler(this.frmAcercaDe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +170,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
     }
 }

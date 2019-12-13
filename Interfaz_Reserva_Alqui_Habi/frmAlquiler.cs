@@ -45,8 +45,10 @@ namespace Interfaz_Reserva_Alqui_Habi
 
         }
 
+        private void frmAlquiler_Load(object sender, EventArgs e)
+        {
 
-      
+        }
     }
 }
 

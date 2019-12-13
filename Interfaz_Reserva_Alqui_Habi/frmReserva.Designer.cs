@@ -64,7 +64,7 @@
             // 
             this.cboCliente.Font = new System.Drawing.Font("Century", 11.25F);
             this.cboCliente.FormattingEnabled = true;
-            this.cboCliente.Location = new System.Drawing.Point(181, 138);
+            this.cboCliente.Location = new System.Drawing.Point(169, 136);
             this.cboCliente.Name = "cboCliente";
             this.cboCliente.Size = new System.Drawing.Size(163, 26);
             this.cboCliente.TabIndex = 74;
@@ -74,7 +74,7 @@
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblCliente.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCliente.Location = new System.Drawing.Point(81, 141);
+            this.lblCliente.Location = new System.Drawing.Point(69, 139);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(60, 18);
             this.lblCliente.TabIndex = 73;
@@ -85,7 +85,7 @@
             this.lblTipoReserva.AutoSize = true;
             this.lblTipoReserva.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblTipoReserva.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblTipoReserva.Location = new System.Drawing.Point(70, 98);
+            this.lblTipoReserva.Location = new System.Drawing.Point(58, 96);
             this.lblTipoReserva.Name = "lblTipoReserva";
             this.lblTipoReserva.Size = new System.Drawing.Size(101, 18);
             this.lblTipoReserva.TabIndex = 71;
@@ -96,7 +96,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 11.25F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label1.Location = new System.Drawing.Point(70, 70);
+            this.label1.Location = new System.Drawing.Point(69, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 18);
             this.label1.TabIndex = 69;
@@ -107,7 +107,7 @@
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblFechaFin.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblFechaFin.Location = new System.Drawing.Point(67, 280);
+            this.lblFechaFin.Location = new System.Drawing.Point(53, 279);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(99, 18);
             this.lblFechaFin.TabIndex = 67;
@@ -117,7 +117,7 @@
             // 
             this.dtpFechaFin.Font = new System.Drawing.Font("Century", 11.25F);
             this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaFin.Location = new System.Drawing.Point(211, 278);
+            this.dtpFechaFin.Location = new System.Drawing.Point(197, 277);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(108, 26);
             this.dtpFechaFin.TabIndex = 66;
@@ -127,7 +127,7 @@
             this.blFechaInicio.AutoSize = true;
             this.blFechaInicio.Font = new System.Drawing.Font("Century", 11.25F);
             this.blFechaInicio.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.blFechaInicio.Location = new System.Drawing.Point(67, 248);
+            this.blFechaInicio.Location = new System.Drawing.Point(53, 247);
             this.blFechaInicio.Name = "blFechaInicio";
             this.blFechaInicio.Size = new System.Drawing.Size(115, 18);
             this.blFechaInicio.TabIndex = 65;
@@ -137,7 +137,7 @@
             // 
             this.dtpFechaInicio.Font = new System.Drawing.Font("Century", 11.25F);
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(211, 247);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(197, 246);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(108, 26);
             this.dtpFechaInicio.TabIndex = 64;
@@ -147,7 +147,7 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblCategoria.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCategoria.Location = new System.Drawing.Point(81, 180);
+            this.lblCategoria.Location = new System.Drawing.Point(69, 178);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(69, 18);
             this.lblCategoria.TabIndex = 63;
@@ -158,7 +158,7 @@
             this.lblFechaReserva.AutoSize = true;
             this.lblFechaReserva.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblFechaReserva.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblFechaReserva.Location = new System.Drawing.Point(67, 220);
+            this.lblFechaReserva.Location = new System.Drawing.Point(53, 219);
             this.lblFechaReserva.Name = "lblFechaReserva";
             this.lblFechaReserva.Size = new System.Drawing.Size(132, 18);
             this.lblFechaReserva.TabIndex = 62;
@@ -168,7 +168,7 @@
             // 
             this.dtpFechaReserva.Font = new System.Drawing.Font("Century", 11.25F);
             this.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaReserva.Location = new System.Drawing.Point(210, 218);
+            this.dtpFechaReserva.Location = new System.Drawing.Point(196, 217);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
             this.dtpFechaReserva.Size = new System.Drawing.Size(108, 26);
             this.dtpFechaReserva.TabIndex = 61;
@@ -176,7 +176,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtDescripcion.Location = new System.Drawing.Point(181, 31);
+            this.txtDescripcion.Location = new System.Drawing.Point(169, 29);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(163, 26);
             this.txtDescripcion.TabIndex = 59;
@@ -188,7 +188,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(384, 377);
+            this.btnLimpiar.Location = new System.Drawing.Point(372, 400);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(141, 54);
             this.btnLimpiar.TabIndex = 58;
@@ -204,7 +204,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(181, 334);
+            this.btnAgregar.Location = new System.Drawing.Point(182, 340);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 54);
             this.btnAgregar.TabIndex = 53;
@@ -218,7 +218,7 @@
             this.lblDetalle.AutoSize = true;
             this.lblDetalle.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblDetalle.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDetalle.Location = new System.Drawing.Point(70, 35);
+            this.lblDetalle.Location = new System.Drawing.Point(58, 33);
             this.lblDetalle.Name = "lblDetalle";
             this.lblDetalle.Size = new System.Drawing.Size(96, 18);
             this.lblDetalle.TabIndex = 51;
@@ -227,7 +227,7 @@
             // dtgDetalleReserva
             // 
             this.dtgDetalleReserva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgDetalleReserva.Location = new System.Drawing.Point(384, 164);
+            this.dtgDetalleReserva.Location = new System.Drawing.Point(372, 175);
             this.dtgDetalleReserva.Name = "dtgDetalleReserva";
             this.dtgDetalleReserva.Size = new System.Drawing.Size(451, 198);
             this.dtgDetalleReserva.TabIndex = 75;
@@ -237,7 +237,7 @@
             this.lblHabitacion.AutoSize = true;
             this.lblHabitacion.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblHabitacion.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblHabitacion.Location = new System.Drawing.Point(381, 60);
+            this.lblHabitacion.Location = new System.Drawing.Point(369, 61);
             this.lblHabitacion.Name = "lblHabitacion";
             this.lblHabitacion.Size = new System.Drawing.Size(121, 18);
             this.lblHabitacion.TabIndex = 79;
@@ -247,7 +247,7 @@
             // 
             this.cboTipoHabitacion.Font = new System.Drawing.Font("Century", 11.25F);
             this.cboTipoHabitacion.FormattingEnabled = true;
-            this.cboTipoHabitacion.Location = new System.Drawing.Point(527, 55);
+            this.cboTipoHabitacion.Location = new System.Drawing.Point(515, 56);
             this.cboTipoHabitacion.Name = "cboTipoHabitacion";
             this.cboTipoHabitacion.Size = new System.Drawing.Size(121, 26);
             this.cboTipoHabitacion.TabIndex = 76;
@@ -257,7 +257,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 11.25F);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(381, 28);
+            this.label3.Location = new System.Drawing.Point(369, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 18);
             this.label3.TabIndex = 78;
@@ -266,7 +266,7 @@
             // txtNroDetalle
             // 
             this.txtNroDetalle.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtNroDetalle.Location = new System.Drawing.Point(527, 24);
+            this.txtNroDetalle.Location = new System.Drawing.Point(515, 25);
             this.txtNroDetalle.Name = "txtNroDetalle";
             this.txtNroDetalle.Size = new System.Drawing.Size(64, 26);
             this.txtNroDetalle.TabIndex = 77;
@@ -276,7 +276,7 @@
             this.lblCantHabi.AutoSize = true;
             this.lblCantHabi.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblCantHabi.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCantHabi.Location = new System.Drawing.Point(381, 136);
+            this.lblCantHabi.Location = new System.Drawing.Point(369, 137);
             this.lblCantHabi.Name = "lblCantHabi";
             this.lblCantHabi.Size = new System.Drawing.Size(121, 18);
             this.lblCantHabi.TabIndex = 83;
@@ -285,7 +285,7 @@
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Century", 11.25F);
-            this.txtCantidad.Location = new System.Drawing.Point(527, 132);
+            this.txtCantidad.Location = new System.Drawing.Point(515, 133);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(50, 26);
             this.txtCantidad.TabIndex = 82;
@@ -297,7 +297,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._8;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(181, 393);
+            this.btnGuardar.Location = new System.Drawing.Point(182, 399);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(141, 54);
@@ -311,7 +311,7 @@
             // 
             this.cboSucursal.Font = new System.Drawing.Font("Century", 11.25F);
             this.cboSucursal.FormattingEnabled = true;
-            this.cboSucursal.Location = new System.Drawing.Point(181, 177);
+            this.cboSucursal.Location = new System.Drawing.Point(169, 175);
             this.cboSucursal.Name = "cboSucursal";
             this.cboSucursal.Size = new System.Drawing.Size(163, 26);
             this.cboSucursal.TabIndex = 85;
@@ -321,7 +321,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 11.25F);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(381, 95);
+            this.label2.Location = new System.Drawing.Point(369, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 18);
             this.label2.TabIndex = 87;
@@ -331,7 +331,7 @@
             // 
             this.cboCategoria.Font = new System.Drawing.Font("Century", 11.25F);
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(527, 90);
+            this.cboCategoria.Location = new System.Drawing.Point(515, 91);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 26);
             this.cboCategoria.TabIndex = 86;
@@ -340,7 +340,7 @@
             // 
             this.cboEstado.Font = new System.Drawing.Font("Century", 11.25F);
             this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(181, 66);
+            this.cboEstado.Location = new System.Drawing.Point(169, 64);
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(163, 26);
             this.cboEstado.TabIndex = 88;
@@ -349,7 +349,7 @@
             // 
             this.cboTipoRe.Font = new System.Drawing.Font("Century", 11.25F);
             this.cboTipoRe.FormattingEnabled = true;
-            this.cboTipoRe.Location = new System.Drawing.Point(181, 97);
+            this.cboTipoRe.Location = new System.Drawing.Point(169, 95);
             this.cboTipoRe.Name = "cboTipoRe";
             this.cboTipoRe.Size = new System.Drawing.Size(163, 26);
             this.cboTipoRe.TabIndex = 89;
@@ -360,7 +360,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 459);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 461);
             this.BarraTitulo.TabIndex = 90;
             // 
             // frmReserva
@@ -368,7 +368,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(876, 459);
+            this.ClientSize = new System.Drawing.Size(856, 461);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.cboTipoRe);
             this.Controls.Add(this.cboEstado);

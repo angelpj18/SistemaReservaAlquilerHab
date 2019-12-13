@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCategoria));
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPrecioC = new System.Windows.Forms.TextBox();
@@ -40,11 +41,13 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(155, 42);
+            this.txtId.Location = new System.Drawing.Point(141, 65);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(140, 26);
@@ -55,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 11.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(72, 50);
+            this.label1.Location = new System.Drawing.Point(58, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 18);
@@ -65,7 +68,7 @@
             // 
             // txtPrecioC
             // 
-            this.txtPrecioC.Location = new System.Drawing.Point(156, 130);
+            this.txtPrecioC.Location = new System.Drawing.Point(142, 153);
             this.txtPrecioC.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioC.Name = "txtPrecioC";
             this.txtPrecioC.Size = new System.Drawing.Size(180, 26);
@@ -75,7 +78,7 @@
             // 
             this.lstCategoria.FormattingEnabled = true;
             this.lstCategoria.ItemHeight = 18;
-            this.lstCategoria.Location = new System.Drawing.Point(373, 0);
+            this.lstCategoria.Location = new System.Drawing.Point(359, 23);
             this.lstCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.lstCategoria.Name = "lstCategoria";
             this.lstCategoria.Size = new System.Drawing.Size(261, 166);
@@ -87,7 +90,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblDescripcion.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcion.Location = new System.Drawing.Point(40, 96);
+            this.lblDescripcion.Location = new System.Drawing.Point(26, 119);
             this.lblDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(92, 18);
@@ -97,7 +100,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(155, 86);
+            this.txtDescripcion.Location = new System.Drawing.Point(141, 109);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(180, 26);
@@ -108,7 +111,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Century", 11.25F);
             this.lblPrecio.ForeColor = System.Drawing.Color.White;
-            this.lblPrecio.Location = new System.Drawing.Point(58, 138);
+            this.lblPrecio.Location = new System.Drawing.Point(44, 161);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(53, 18);
@@ -122,7 +125,7 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 265);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 301);
             this.BarraTitulo.TabIndex = 35;
             // 
             // btnLimpiar
@@ -132,7 +135,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(493, 190);
+            this.btnLimpiar.Location = new System.Drawing.Point(479, 213);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(141, 54);
@@ -149,7 +152,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._6;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(344, 190);
+            this.btnEditar.Location = new System.Drawing.Point(330, 213);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(141, 54);
@@ -166,7 +169,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._7;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(195, 190);
+            this.btnEliminar.Location = new System.Drawing.Point(181, 213);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(141, 54);
@@ -183,7 +186,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._5;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(43, 190);
+            this.btnAgregar.Location = new System.Drawing.Point(29, 213);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 54);
@@ -193,12 +196,23 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(657, 265);
+            this.ClientSize = new System.Drawing.Size(645, 301);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
@@ -217,6 +231,7 @@
             this.Name = "frmCategoria";
             this.Text = "frmCategoria";
             this.Load += new System.EventHandler(this.frmCategoria_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +251,6 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

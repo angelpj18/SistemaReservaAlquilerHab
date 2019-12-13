@@ -47,6 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEliminar
@@ -56,7 +58,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._7;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(317, 264);
+            this.btnEliminar.Location = new System.Drawing.Point(297, 292);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(138, 54);
             this.btnEliminar.TabIndex = 7;
@@ -72,7 +74,7 @@
             this.btnEditar.ForeColor = System.Drawing.Color.White;
             this.btnEditar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources._6;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(193, 264);
+            this.btnEditar.Location = new System.Drawing.Point(173, 292);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(118, 54);
             this.btnEditar.TabIndex = 6;
@@ -88,7 +90,7 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(46, 264);
+            this.btnAgregar.Location = new System.Drawing.Point(26, 292);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(141, 54);
             this.btnAgregar.TabIndex = 5;
@@ -100,7 +102,7 @@
             // lstCliente
             // 
             this.lstCliente.FormattingEnabled = true;
-            this.lstCliente.Location = new System.Drawing.Point(341, 4);
+            this.lstCliente.Location = new System.Drawing.Point(329, 40);
             this.lstCliente.Name = "lstCliente";
             this.lstCliente.Size = new System.Drawing.Size(222, 225);
             this.lstCliente.TabIndex = 9;
@@ -113,7 +115,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Interfaz_Reserva_Alqui_Habi.Properties.Resources.PicsArt_12_11_12_49_37;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiar.Location = new System.Drawing.Point(461, 264);
+            this.btnLimpiar.Location = new System.Drawing.Point(441, 292);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(131, 54);
             this.btnLimpiar.TabIndex = 8;
@@ -127,18 +129,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century", 11.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(93, 209);
+            this.label4.Location = new System.Drawing.Point(73, 237);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 18);
+            this.label4.Size = new System.Drawing.Size(55, 18);
             this.label4.TabIndex = 14;
-            this.label4.Text = "E-MAIL";
+            this.label4.Text = "E-mail";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century", 11.25F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(93, 172);
+            this.label3.Location = new System.Drawing.Point(73, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 18);
             this.label3.TabIndex = 13;
@@ -149,7 +151,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century", 11.25F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(93, 136);
+            this.label2.Location = new System.Drawing.Point(73, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 18);
             this.label2.TabIndex = 12;
@@ -160,7 +162,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century", 11.25F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(93, 99);
+            this.label1.Location = new System.Drawing.Point(73, 127);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 11;
@@ -170,7 +172,7 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(183, 209);
+            this.txtEmail.Location = new System.Drawing.Point(159, 237);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 26);
             this.txtEmail.TabIndex = 4;
@@ -179,7 +181,7 @@
             // 
             this.txtTelefono.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtTelefono.ForeColor = System.Drawing.Color.White;
-            this.txtTelefono.Location = new System.Drawing.Point(179, 172);
+            this.txtTelefono.Location = new System.Drawing.Point(159, 200);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(148, 26);
             this.txtTelefono.TabIndex = 3;
@@ -188,7 +190,7 @@
             // 
             this.txtDireccion.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtDireccion.ForeColor = System.Drawing.Color.White;
-            this.txtDireccion.Location = new System.Drawing.Point(180, 136);
+            this.txtDireccion.Location = new System.Drawing.Point(160, 164);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(148, 26);
             this.txtDireccion.TabIndex = 2;
@@ -197,7 +199,7 @@
             // 
             this.txtCi.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtCi.ForeColor = System.Drawing.Color.White;
-            this.txtCi.Location = new System.Drawing.Point(180, 65);
+            this.txtCi.Location = new System.Drawing.Point(160, 93);
             this.txtCi.Name = "txtCi";
             this.txtCi.Size = new System.Drawing.Size(87, 26);
             this.txtCi.TabIndex = 0;
@@ -207,7 +209,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century", 11.25F);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(93, 65);
+            this.label5.Location = new System.Drawing.Point(73, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 18);
             this.label5.TabIndex = 10;
@@ -217,7 +219,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtNombre.ForeColor = System.Drawing.Color.White;
-            this.txtNombre.Location = new System.Drawing.Point(179, 99);
+            this.txtNombre.Location = new System.Drawing.Point(159, 127);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 26);
             this.txtNombre.TabIndex = 1;
@@ -227,7 +229,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century", 11.25F);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(93, 28);
+            this.label6.Location = new System.Drawing.Point(73, 56);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 18);
             this.label6.TabIndex = 16;
@@ -238,7 +240,7 @@
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Century", 11.25F);
             this.txtId.ForeColor = System.Drawing.Color.White;
-            this.txtId.Location = new System.Drawing.Point(181, 24);
+            this.txtId.Location = new System.Drawing.Point(161, 52);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(72, 26);
@@ -250,15 +252,26 @@
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Left;
             this.BarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(20, 339);
+            this.BarraTitulo.Size = new System.Drawing.Size(20, 357);
             this.BarraTitulo.TabIndex = 36;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(20, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 34);
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // frmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(36)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(622, 339);
+            this.ClientSize = new System.Drawing.Size(585, 357);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BarraTitulo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtId);
@@ -283,6 +296,7 @@
             this.Text = "Cliente";
             this.TransparencyKey = System.Drawing.Color.Transparent;
             this.Load += new System.EventHandler(this.frmCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +322,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Panel BarraTitulo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
